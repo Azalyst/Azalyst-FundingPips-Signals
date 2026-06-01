@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-01 10:59 UTC",
-  "updated_iso": "2026-06-01T10:59:40.207813+00:00",
+  "updated": "2026-06-01 16:45 UTC",
+  "updated_iso": "2026-06-01T16:45:20.953098+00:00",
   "status": "active",
   "challenge": {
     "day": 1,
@@ -36,9 +36,34 @@
     "wins": 1,
     "losses": 0,
     "win_rate": 100.0,
-    "open": 0
+    "open": 2
   },
-  "positions": [],
+  "positions": [
+    {
+      "strategy": "smt_divergence",
+      "symbol": "BTCUSD",
+      "side": "SELL",
+      "entry": 71222.90625,
+      "stop": 71534.890625,
+      "target": 70598.9375,
+      "lots": 3.2053,
+      "risk": 1000.0,
+      "be": false,
+      "opened": "2026-06-01 16:45"
+    },
+    {
+      "strategy": "quantx",
+      "symbol": "BTCUSD",
+      "side": "SELL",
+      "entry": 71222.90625,
+      "stop": 71657.32008224695,
+      "target": 70354.0785855061,
+      "lots": 2.302,
+      "risk": 1000.0,
+      "be": false,
+      "opened": "2026-06-01 16:45"
+    }
+  ],
   "closed": [
     {
       "strategy": "quantx",
@@ -61,19 +86,19 @@
   "tape": [
     {
       "sym": "EURUSD",
-      "px": 1.16509
+      "px": 1.16252
     },
     {
       "sym": "GBPUSD",
-      "px": 1.34633
+      "px": 1.34483
     },
     {
       "sym": "XAUUSD",
-      "px": 4539.3
+      "px": 4499.5
     },
     {
       "sym": "NAS100",
-      "px": 30504.25
+      "px": 30533.75
     },
     {
       "sym": "SP500",
@@ -81,11 +106,11 @@
     },
     {
       "sym": "BTCUSD",
-      "px": 72652.01
+      "px": 71222.91
     },
     {
       "sym": "ETHUSD",
-      "px": 1982.18
+      "px": 1968.69
     }
   ],
   "equity_curve": [
@@ -99,6 +124,10 @@
     },
     {
       "t": "2026-06-01T10:59",
+      "e": 102000.0
+    },
+    {
+      "t": "2026-06-01T16:45",
       "e": 102000.0
     }
   ]
