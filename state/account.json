@@ -1,17 +1,16 @@
 {
   "account_size": 100000.0,
-  "equity": 100000.0,
-  "balance": 100000.0,
+  "equity": 99000.0,
+  "balance": 99000.0,
   "today_start_equity": 100000.0,
-  "current_day": "2026-05-31",
-  "daily_realized_pnl": 0.0,
+  "current_day": "2026-06-01",
+  "daily_realized_pnl": -1000.0,
   "peak_balance": 102000.0,
   "status": "active",
   "sl_count": {
-    "smt_divergence": 1,
-    "quantx": 1
+    "ema5": 1
   },
-  "trades_total": 3,
+  "trades_total": 4,
   "wins": 1,
-  "losses": 2
+  "losses": 3
 }
