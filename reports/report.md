@@ -1,15 +1,15 @@
 # Azalyst FundingPips - Paper PnL
-_updated 2026-06-02 21:51 UTC_  |  status: **active**
+_updated 2026-06-02 23:47 UTC_  |  status: **active**
 
 | Metric | Value |
 |---|---|
 | Balance | $96,000.00 |
 | Equity (incl. open) | $96,000.00 |
 | Net PnL | $-4,000.00 |
-| Today PnL | $-4,000.00 |
+| Today PnL | $0.00 |
 | Trades | 7  (W 1 / L 6) |
 | Win rate | 14.3% |
-| Open positions | 0 |
+| Open positions | 1 |
 
 ## By strategy
 | Strategy | Trades | Win% | PnL |
@@ -17,6 +17,11 @@ _updated 2026-06-02 21:51 UTC_  |  status: **active**
 | ema5 | 2 | 0% | $-2,000.00 |
 | quantx | 2 | 50% | $1,000.00 |
 | smt_divergence | 3 | 0% | $-3,000.00 |
+
+## Open positions
+| Strategy | Symbol | Side | Entry | Stop | Target | Lots | Risk |
+|---|---|---|---|---|---|---|---|
+| quantx | BTCUSD | SELL | 66613 | 67222.8 | 65393.5 | 1.63991 | $1,000 |
 
 ## Recent closed trades (last 15)
 | Closed | Strategy | Symbol | Side | Exit | PnL | R |

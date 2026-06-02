@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-02 21:51 UTC",
-  "updated_iso": "2026-06-02T21:51:37.629972+00:00",
+  "updated": "2026-06-02 23:47 UTC",
+  "updated_iso": "2026-06-02T23:47:30.036994+00:00",
   "status": "active",
   "challenge": {
     "day": 2,
@@ -14,15 +14,15 @@
     "equity": 96000.0,
     "net_pnl": -4000.0,
     "net_pnl_pct": -4.0,
-    "today_pnl": -4000.0,
+    "today_pnl": 0.0,
     "peak_balance": 102000.0
   },
   "objectives": {
     "daily": {
-      "used": 4000.0,
+      "used": 0.0,
       "limit": 5000.0,
-      "remaining": 1000.0,
-      "threshold": 95000.0
+      "remaining": 5000.0,
+      "threshold": 91000.0
     },
     "overall": {
       "used": 4000.0,
@@ -36,9 +36,22 @@
     "wins": 1,
     "losses": 6,
     "win_rate": 14.3,
-    "open": 0
+    "open": 1
   },
-  "positions": [],
+  "positions": [
+    {
+      "strategy": "quantx",
+      "symbol": "BTCUSD",
+      "side": "SELL",
+      "entry": 66613.0390625,
+      "stop": 67222.83005638963,
+      "target": 65393.457074720725,
+      "lots": 1.6399,
+      "risk": 1000.0,
+      "be": false,
+      "opened": "2026-06-02 23:47"
+    }
+  ],
   "closed": [
     {
       "strategy": "ema5",
@@ -131,19 +144,19 @@
   "tape": [
     {
       "sym": "EURUSD",
-      "px": 1.1636
+      "px": 1.16252
     },
     {
       "sym": "GBPUSD",
-      "px": 1.34649
+      "px": 1.3455
     },
     {
       "sym": "XAUUSD",
-      "px": 4519.2
+      "px": 4496.0
     },
     {
       "sym": "NAS100",
-      "px": 30743.0
+      "px": 30632.75
     },
     {
       "sym": "SP500",
@@ -151,11 +164,11 @@
     },
     {
       "sym": "BTCUSD",
-      "px": 67613.52
+      "px": 66613.04
     },
     {
       "sym": "ETHUSD",
-      "px": 1899.0
+      "px": 1853.35
     }
   ],
   "equity_curve": [
@@ -205,6 +218,10 @@
     },
     {
       "t": "2026-06-02T21:51",
+      "e": 96000.0
+    },
+    {
+      "t": "2026-06-02T23:47",
       "e": 96000.0
     }
   ]

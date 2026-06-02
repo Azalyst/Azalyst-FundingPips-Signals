@@ -1,15 +1,15 @@
 {
-  "updated": "2026-06-02T21:51:37.629972+00:00",
+  "updated": "2026-06-02T23:47:30.036994+00:00",
   "status": "active",
   "balance": 96000.0,
   "equity": 96000.0,
   "net_pnl": -4000.0,
-  "today_pnl": -4000.0,
+  "today_pnl": 0.0,
   "trades_total": 7,
   "wins": 1,
   "losses": 6,
   "win_rate": 14.3,
-  "open_positions": 0,
+  "open_positions": 1,
   "by_strategy": {
     "quantx": {
       "trades": 2,
