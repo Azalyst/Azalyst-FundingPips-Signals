@@ -1,14 +1,14 @@
 {
-  "updated": "2026-06-02T01:37:07.725052+00:00",
+  "updated": "2026-06-02T06:22:45.369888+00:00",
   "status": "active",
-  "balance": 98000.0,
-  "equity": 98000.0,
-  "net_pnl": -2000.0,
-  "today_pnl": -2000.0,
-  "trades_total": 5,
+  "balance": 97000.0,
+  "equity": 97000.0,
+  "net_pnl": -3000.0,
+  "today_pnl": -3000.0,
+  "trades_total": 6,
   "wins": 1,
-  "losses": 4,
-  "win_rate": 20.0,
+  "losses": 5,
+  "win_rate": 16.7,
   "open_positions": 1,
   "by_strategy": {
     "quantx": {
@@ -17,9 +17,9 @@
       "pnl": 1000.0
     },
     "smt_divergence": {
-      "trades": 2,
+      "trades": 3,
       "wins": 0,
-      "pnl": -2000.0
+      "pnl": -3000.0
     },
     "ema5": {
       "trades": 1,

@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-02 01:37 UTC",
-  "updated_iso": "2026-06-02T01:37:07.725052+00:00",
+  "updated": "2026-06-02 06:22 UTC",
+  "updated_iso": "2026-06-02T06:22:45.369888+00:00",
   "status": "active",
   "challenge": {
     "day": 2,
@@ -10,49 +10,59 @@
   },
   "account": {
     "size": 100000.0,
-    "balance": 98000.0,
-    "equity": 98000.0,
-    "net_pnl": -2000.0,
-    "net_pnl_pct": -2.0,
-    "today_pnl": -2000.0,
+    "balance": 97000.0,
+    "equity": 97000.0,
+    "net_pnl": -3000.0,
+    "net_pnl_pct": -3.0,
+    "today_pnl": -3000.0,
     "peak_balance": 102000.0
   },
   "objectives": {
     "daily": {
-      "used": 2000.0,
+      "used": 3000.0,
       "limit": 5000.0,
-      "remaining": 3000.0,
+      "remaining": 2000.0,
       "threshold": 95000.0
     },
     "overall": {
-      "used": 2000.0,
+      "used": 3000.0,
       "limit": 10000.0,
-      "remaining": 8000.0,
+      "remaining": 7000.0,
       "threshold": 90000.0
     }
   },
   "stats": {
-    "trades": 5,
+    "trades": 6,
     "wins": 1,
-    "losses": 4,
-    "win_rate": 20.0,
+    "losses": 5,
+    "win_rate": 16.7,
     "open": 1
   },
   "positions": [
     {
-      "strategy": "smt_divergence",
-      "symbol": "BTCUSD",
-      "side": "BUY",
-      "entry": 70863.953125,
-      "stop": 70489.7578125,
-      "target": 71612.34375,
-      "lots": 2.6724,
+      "strategy": "ema5",
+      "symbol": "NAS100",
+      "side": "SELL",
+      "entry": 30478.5,
+      "stop": 30492.75,
+      "target": 30435.75,
+      "lots": 70.1754,
       "risk": 1000.0,
       "be": false,
-      "opened": "2026-06-02 01:37"
+      "opened": "2026-06-02 06:22"
     }
   ],
   "closed": [
+    {
+      "strategy": "smt_divergence",
+      "symbol": "BTCUSD",
+      "side": "BUY",
+      "exit": 70489.7578125,
+      "reason": "sl",
+      "pnl": -1000.0,
+      "r": -1.0,
+      "closed": "2026-06-02 02:00"
+    },
     {
       "strategy": "smt_divergence",
       "symbol": "BTCUSD",
@@ -111,9 +121,9 @@
       "pnl": 1000.0
     },
     "smt_divergence": {
-      "trades": 2,
+      "trades": 3,
       "wins": 0,
-      "pnl": -2000.0
+      "pnl": -3000.0
     },
     "ema5": {
       "trades": 1,
@@ -124,31 +134,31 @@
   "tape": [
     {
       "sym": "EURUSD",
-      "px": 1.16374
+      "px": 1.16482
     },
     {
       "sym": "GBPUSD",
-      "px": 1.3458
+      "px": 1.3474
     },
     {
       "sym": "XAUUSD",
-      "px": 4516.6
+      "px": 4550.7
     },
     {
       "sym": "NAS100",
-      "px": 30370.5
+      "px": 30481.5
     },
     {
       "sym": "SP500",
-      "px": 7582.25
+      "px": 7613.25
     },
     {
       "sym": "BTCUSD",
-      "px": 71106.07
+      "px": 70203.38
     },
     {
       "sym": "ETHUSD",
-      "px": 1985.51
+      "px": 1977.39
     }
   ],
   "equity_curve": [
@@ -179,6 +189,10 @@
     {
       "t": "2026-06-02T01:37",
       "e": 98000.0
+    },
+    {
+      "t": "2026-06-02T06:22",
+      "e": 97000.0
     }
   ]
 }
