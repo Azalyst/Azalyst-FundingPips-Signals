@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-02 06:22 UTC",
-  "updated_iso": "2026-06-02T06:22:45.369888+00:00",
+  "updated": "2026-06-02 11:05 UTC",
+  "updated_iso": "2026-06-02T11:05:54.177504+00:00",
   "status": "active",
   "challenge": {
     "day": 2,
@@ -10,49 +10,46 @@
   },
   "account": {
     "size": 100000.0,
-    "balance": 97000.0,
-    "equity": 97000.0,
-    "net_pnl": -3000.0,
-    "net_pnl_pct": -3.0,
-    "today_pnl": -3000.0,
+    "balance": 96000.0,
+    "equity": 96000.0,
+    "net_pnl": -4000.0,
+    "net_pnl_pct": -4.0,
+    "today_pnl": -4000.0,
     "peak_balance": 102000.0
   },
   "objectives": {
     "daily": {
-      "used": 3000.0,
+      "used": 4000.0,
       "limit": 5000.0,
-      "remaining": 2000.0,
+      "remaining": 1000.0,
       "threshold": 95000.0
     },
     "overall": {
-      "used": 3000.0,
+      "used": 4000.0,
       "limit": 10000.0,
-      "remaining": 7000.0,
+      "remaining": 6000.0,
       "threshold": 90000.0
     }
   },
   "stats": {
-    "trades": 6,
+    "trades": 7,
     "wins": 1,
-    "losses": 5,
-    "win_rate": 16.7,
-    "open": 1
+    "losses": 6,
+    "win_rate": 14.3,
+    "open": 0
   },
-  "positions": [
+  "positions": [],
+  "closed": [
     {
       "strategy": "ema5",
       "symbol": "NAS100",
       "side": "SELL",
-      "entry": 30478.5,
-      "stop": 30492.75,
-      "target": 30435.75,
-      "lots": 70.1754,
-      "risk": 1000.0,
-      "be": false,
-      "opened": "2026-06-02 06:22"
-    }
-  ],
-  "closed": [
+      "exit": 30492.75,
+      "reason": "sl",
+      "pnl": -1000.0,
+      "r": -1.0,
+      "closed": "2026-06-02 06:25"
+    },
     {
       "strategy": "smt_divergence",
       "symbol": "BTCUSD",
@@ -126,27 +123,27 @@
       "pnl": -3000.0
     },
     "ema5": {
-      "trades": 1,
+      "trades": 2,
       "wins": 0,
-      "pnl": -1000.0
+      "pnl": -2000.0
     }
   },
   "tape": [
     {
       "sym": "EURUSD",
-      "px": 1.16482
+      "px": 1.16469
     },
     {
       "sym": "GBPUSD",
-      "px": 1.3474
+      "px": 1.34686
     },
     {
       "sym": "XAUUSD",
-      "px": 4550.7
+      "px": 4561.2
     },
     {
       "sym": "NAS100",
-      "px": 30481.5
+      "px": 30540.25
     },
     {
       "sym": "SP500",
@@ -154,11 +151,11 @@
     },
     {
       "sym": "BTCUSD",
-      "px": 70203.38
+      "px": 69546.62
     },
     {
       "sym": "ETHUSD",
-      "px": 1977.39
+      "px": 1978.36
     }
   ],
   "equity_curve": [
@@ -193,6 +190,10 @@
     {
       "t": "2026-06-02T06:22",
       "e": 97000.0
+    },
+    {
+      "t": "2026-06-02T11:05",
+      "e": 96000.0
     }
   ]
 }
