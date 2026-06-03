@@ -8,8 +8,8 @@ account:
   max_overall_loss: 10000.0 # 10% - balance floor $90,000. Breach -> strategy FAILED.
   profit_target_pct: 8.0    # +8% balance ($108,000) -> strategy PASSED.
   daily_reset_utc_hour: 22  # FundingPips server day rollover (~00:00 GMT+2). Adjust if needed.
-  challenge_start: "2026-06-01"
-  challenge_end: "2026-06-30"
+  challenge_start: "2026-06-03"   # Day 1 (fresh per-strategy reset)
+  challenge_end: "2026-07-02"     # 30-day window
 
 risk:
   risk_per_trade_pct: 1.0   # % of account size risked per trade (stop-loss = this loss)

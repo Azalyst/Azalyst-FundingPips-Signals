@@ -12,8 +12,6 @@ import datetime as dt
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DOCS = os.path.join(ROOT, "docs")
 STATE = os.path.join(ROOT, "state")
-CHALLENGE_START = dt.date(2026, 6, 1)
-CHALLENGE_END = dt.date(2026, 6, 30)
 
 
 def _equity_curve(equity: float, now: dt.datetime) -> list:
@@ -95,8 +93,8 @@ def build_status(books, positions, rules, prices: dict, instruments: dict, now: 
 
     n_books = len(books)
     fleet_size = size * n_books
-    day_num = (now.date() - CHALLENGE_START).days + 1
-    total_days = (CHALLENGE_END - CHALLENGE_START).days + 1
+    day_num = (now.date() - rules.start).days + 1
+    total_days = (rules.end - rules.start).days + 1
 
     tape = []
     for sym, cfg in instruments.items():
@@ -109,7 +107,7 @@ def build_status(books, positions, rules, prices: dict, instruments: dict, now: 
         "updated_iso": now.isoformat(),
         "model": "per-strategy",
         "challenge": {"day": max(1, day_num), "total": total_days,
-                      "start": CHALLENGE_START.isoformat(), "end": CHALLENGE_END.isoformat()},
+                      "start": rules.start.isoformat(), "end": rules.end.isoformat()},
         "rules": {"size": size, "max_daily": max_daily, "max_overall": max_overall,
                   "target_usd": target_usd, "target_pct": rules.profit_target_pct,
                   "floor": rules.overall_floor},

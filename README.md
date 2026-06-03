@@ -119,7 +119,7 @@ account. Before any trade opens, the gate verifies:
 
 - `realized_loss_today + worst_case_open_risk + new_trade_risk ≤ daily_budget`
 - `equity − worst_case_open_risk − new_trade_risk ≥ overall_floor` ($90,000)
-- the trade is inside the challenge window (2026-06-01 → 2026-06-30)
+- the trade is inside the challenge window (2026-06-03 → 2026-07-02, Day 1 = 2026-06-03)
 - the stop is wider than the per-instrument noise floor and notional is within 30×
 
 Open positions that have moved to break-even contribute zero to worst-case risk. The
