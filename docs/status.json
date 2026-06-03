@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-03 14:11 UTC",
-  "updated_iso": "2026-06-03T14:11:13.783140+00:00",
+  "updated": "2026-06-03 18:33 UTC",
+  "updated_iso": "2026-06-03T18:33:52.146459+00:00",
   "model": "per-strategy",
   "challenge": {
     "day": 1,
@@ -23,7 +23,7 @@
     "active": 6,
     "size_total": 600000.0,
     "balance_total": 598000.0,
-    "equity_total": 598000.0,
+    "equity_total": 597651.61,
     "net_pnl": -2000.0,
     "net_pnl_pct": -0.33,
     "trades": 2,
@@ -139,7 +139,7 @@
       "resolved_at": "",
       "size": 100000.0,
       "balance": 100000.0,
-      "equity": 100000.0,
+      "equity": 99651.61,
       "net_pnl": 0.0,
       "net_pnl_pct": 0.0,
       "today_pnl": 0.0,
@@ -150,14 +150,14 @@
       "win_rate": 0.0,
       "open": 1,
       "daily": {
-        "used": 0.0,
+        "used": 348.39,
         "limit": 5000.0,
-        "remaining": 5000.0
+        "remaining": 4651.61
       },
       "overall": {
-        "used": 0.0,
+        "used": 348.39,
         "limit": 10000.0,
-        "remaining": 10000.0
+        "remaining": 9651.61
       },
       "target": {
         "usd": 108000.0,
@@ -271,31 +271,31 @@
   "tape": [
     {
       "sym": "EURUSD",
-      "px": 1.16063
+      "px": 1.16009
     },
     {
       "sym": "GBPUSD",
-      "px": 1.34277
+      "px": 1.34162
     },
     {
       "sym": "XAUUSD",
-      "px": 4475.2
+      "px": 4466.9
     },
     {
       "sym": "NAS100",
-      "px": 30558.75
+      "px": 30653.5
     },
     {
       "sym": "SP500",
-      "px": 7586.25
+      "px": 7623.75
     },
     {
       "sym": "BTCUSD",
-      "px": 66786.0
+      "px": 65808.81
     },
     {
       "sym": "ETHUSD",
-      "px": 1859.67
+      "px": 1822.94
     }
   ],
   "equity_curve": [
@@ -314,6 +314,10 @@
     {
       "t": "2026-06-03T14:11",
       "e": 598000.0
+    },
+    {
+      "t": "2026-06-03T18:33",
+      "e": 597651.61
     }
   ]
 }

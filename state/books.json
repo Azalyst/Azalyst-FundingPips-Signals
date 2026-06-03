@@ -72,7 +72,7 @@
   "jadecap": {
     "strategy": "jadecap",
     "account_size": 100000.0,
-    "equity": 100000.0,
+    "equity": 99651.61,
     "balance": 100000.0,
     "today_start_equity": 100000.0,
     "current_day": "2026-06-02",
