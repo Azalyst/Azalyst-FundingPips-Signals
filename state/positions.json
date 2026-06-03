@@ -58,11 +58,11 @@
     "interval": "15m",
     "initial_stop": 30807.75,
     "be_moved": false,
-    "status": "open",
-    "exit_price": null,
-    "closed_at": null,
-    "pnl_usd": 0.0,
-    "r_multiple": 0.0,
-    "exit_reason": ""
+    "status": "closed",
+    "exit_price": 30370.5,
+    "closed_at": "2026-06-03T22:45:00+00:00",
+    "pnl_usd": 756.02,
+    "r_multiple": 0.76,
+    "exit_reason": "tp"
   }
 ]
