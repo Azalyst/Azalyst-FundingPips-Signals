@@ -196,5 +196,27 @@
     "pnl_usd": -1000.0,
     "r_multiple": -1.0,
     "exit_reason": "sl"
+  },
+  {
+    "id": "smt_divergence-BTCUSD-1780601121334",
+    "strategy": "smt_divergence",
+    "symbol": "BTCUSD",
+    "side": "BUY",
+    "entry": 63925.0,
+    "stop": 63475.96763125,
+    "target": 64823.0647375,
+    "units": 2.227010945299482,
+    "lots": 2.227010945299482,
+    "risk_usd": 1000.0,
+    "opened_at": "2026-06-04T19:24:11.423524+00:00",
+    "interval": "5m",
+    "initial_stop": 63475.96763125,
+    "be_moved": false,
+    "status": "open",
+    "exit_price": null,
+    "closed_at": null,
+    "pnl_usd": 0.0,
+    "r_multiple": 0.0,
+    "exit_reason": ""
   }
 ]

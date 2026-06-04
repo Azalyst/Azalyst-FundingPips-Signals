@@ -36,7 +36,7 @@
   "eth_blueprint": {
     "strategy": "eth_blueprint",
     "account_size": 100000.0,
-    "equity": 99794.49,
+    "equity": 99800.07,
     "balance": 100000.0,
     "today_start_equity": 100000.0,
     "current_day": "2026-06-03",
