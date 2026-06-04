@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-04 10:41 UTC",
-  "updated_iso": "2026-06-04T10:41:43.728688+00:00",
+  "updated": "2026-06-04 13:49 UTC",
+  "updated_iso": "2026-06-04T13:49:59.295209+00:00",
   "model": "per-strategy",
   "challenge": {
     "day": 2,
@@ -22,50 +22,17 @@
     "failed": 0,
     "active": 6,
     "size_total": 600000.0,
-    "balance_total": 599756.02,
-    "equity_total": 599715.38,
-    "net_pnl": -243.98,
-    "net_pnl_pct": -0.04,
-    "trades": 5,
+    "balance_total": 598756.02,
+    "equity_total": 598443.37,
+    "net_pnl": -1243.98,
+    "net_pnl_pct": -0.21,
+    "trades": 6,
     "wins": 2,
-    "losses": 3,
-    "win_rate": 40.0,
-    "open": 4
+    "losses": 4,
+    "win_rate": 33.3,
+    "open": 3
   },
   "books": [
-    {
-      "strategy": "smt_divergence",
-      "status": "active",
-      "failed_reason": "",
-      "resolved_at": "",
-      "size": 100000.0,
-      "balance": 101000.0,
-      "equity": 101000.0,
-      "net_pnl": 1000.0,
-      "net_pnl_pct": 1.0,
-      "today_pnl": 2000.0,
-      "peak_balance": 101000.0,
-      "trades": 2,
-      "wins": 1,
-      "losses": 1,
-      "win_rate": 50.0,
-      "open": 1,
-      "daily": {
-        "used": 0.0,
-        "limit": 5000.0,
-        "remaining": 5000.0
-      },
-      "overall": {
-        "used": 0.0,
-        "limit": 10000.0,
-        "remaining": 10000.0
-      },
-      "target": {
-        "usd": 108000.0,
-        "pct": 8.0,
-        "progress": 12.5
-      }
-    },
     {
       "strategy": "jadecap",
       "status": "active",
@@ -172,7 +139,7 @@
       "resolved_at": "",
       "size": 100000.0,
       "balance": 100000.0,
-      "equity": 100050.54,
+      "equity": 99778.53,
       "net_pnl": 0.0,
       "net_pnl_pct": 0.0,
       "today_pnl": 0.0,
@@ -182,6 +149,39 @@
       "losses": 0,
       "win_rate": 0.0,
       "open": 1,
+      "daily": {
+        "used": 221.47,
+        "limit": 5000.0,
+        "remaining": 4778.53
+      },
+      "overall": {
+        "used": 221.47,
+        "limit": 10000.0,
+        "remaining": 9778.53
+      },
+      "target": {
+        "usd": 108000.0,
+        "pct": 8.0,
+        "progress": 0.0
+      }
+    },
+    {
+      "strategy": "smt_divergence",
+      "status": "active",
+      "failed_reason": "",
+      "resolved_at": "",
+      "size": 100000.0,
+      "balance": 100000.0,
+      "equity": 100000.0,
+      "net_pnl": 0.0,
+      "net_pnl_pct": 0.0,
+      "today_pnl": 1000.0,
+      "peak_balance": 101000.0,
+      "trades": 3,
+      "wins": 1,
+      "losses": 2,
+      "win_rate": 33.3,
+      "open": 0,
       "daily": {
         "used": 0.0,
         "limit": 5000.0,
@@ -268,21 +268,19 @@
       "risk": 1000.0,
       "be": false,
       "opened": "2026-06-04 06:57"
-    },
+    }
+  ],
+  "closed": [
     {
       "strategy": "smt_divergence",
       "symbol": "ETHUSD",
       "side": "BUY",
-      "entry": 1758.760009765625,
-      "stop": 1748.80979296875,
-      "target": 1778.6604433593752,
-      "lots": 100.5003,
-      "risk": 1000.0,
-      "be": false,
-      "opened": "2026-06-04 10:41"
-    }
-  ],
-  "closed": [
+      "exit": 1748.80979296875,
+      "reason": "sl",
+      "pnl": -1000.0,
+      "r": -1.0,
+      "closed": "2026-06-04 10:45"
+    },
     {
       "strategy": "smt_divergence",
       "symbol": "BTCUSD",
@@ -337,31 +335,31 @@
   "tape": [
     {
       "sym": "EURUSD",
-      "px": 1.1632
+      "px": 1.16414
     },
     {
       "sym": "GBPUSD",
-      "px": 1.34392
+      "px": 1.34524
     },
     {
       "sym": "XAUUSD",
-      "px": 4495.1
+      "px": 4533.7
     },
     {
       "sym": "NAS100",
-      "px": 30271.5
+      "px": 30298.75
     },
     {
       "sym": "SP500",
-      "px": 7571.75
+      "px": 7553.75
     },
     {
       "sym": "BTCUSD",
-      "px": 62435.97
+      "px": 63738.01
     },
     {
       "sym": "ETHUSD",
-      "px": 1758.76
+      "px": 1778.9
     }
   ],
   "equity_curve": [
@@ -404,6 +402,10 @@
     {
       "t": "2026-06-04T10:41",
       "e": 599715.38
+    },
+    {
+      "t": "2026-06-04T13:49",
+      "e": 598443.37
     }
   ]
 }

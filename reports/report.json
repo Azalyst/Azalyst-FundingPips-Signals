@@ -1,12 +1,12 @@
 {
-  "updated": "2026-06-04T10:41:43.728688+00:00",
+  "updated": "2026-06-04T13:49:59.295209+00:00",
   "model": "per-strategy isolated challenges",
   "account_size_each": 100000.0,
   "profit_target_pct": 8.0,
   "passed": 0,
   "failed": 0,
   "active": 6,
-  "open_positions": 4,
+  "open_positions": 3,
   "books": [
     {
       "strategy": "rsi",
@@ -39,7 +39,7 @@
       "status": "active",
       "failed_reason": "",
       "balance": 100000.0,
-      "equity": 100050.54,
+      "equity": 99778.53,
       "net_pnl": 0.0,
       "net_pnl_pct": 0.0,
       "trades": 0,
@@ -51,14 +51,14 @@
       "strategy": "smt_divergence",
       "status": "active",
       "failed_reason": "",
-      "balance": 101000.0,
-      "equity": 101000.0,
-      "net_pnl": 1000.0,
-      "net_pnl_pct": 1.0,
-      "trades": 2,
+      "balance": 100000.0,
+      "equity": 100000.0,
+      "net_pnl": 0.0,
+      "net_pnl_pct": 0.0,
+      "trades": 3,
       "wins": 1,
-      "losses": 1,
-      "win_rate": 50.0
+      "losses": 2,
+      "win_rate": 33.3
     },
     {
       "strategy": "jadecap",
