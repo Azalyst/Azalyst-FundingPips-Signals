@@ -19,19 +19,21 @@
   "ema5": {
     "strategy": "ema5",
     "account_size": 100000.0,
-    "equity": 103000.0,
-    "balance": 103000.0,
+    "equity": 102000.0,
+    "balance": 102000.0,
     "today_start_equity": 100000.0,
     "current_day": "2026-06-04",
-    "daily_realized_pnl": 3000.0,
+    "daily_realized_pnl": 2000.0,
     "peak_balance": 103000.0,
     "status": "active",
     "failed_reason": "",
     "resolved_at": "",
-    "sl_count": {},
-    "trades_total": 1,
+    "sl_count": {
+      "ema5": 1
+    },
+    "trades_total": 2,
     "wins": 1,
-    "losses": 0
+    "losses": 1
   },
   "eth_blueprint": {
     "strategy": "eth_blueprint",
@@ -53,11 +55,11 @@
   "smt_divergence": {
     "strategy": "smt_divergence",
     "account_size": 100000.0,
-    "equity": 99000.0,
-    "balance": 99000.0,
+    "equity": 101000.0,
+    "balance": 101000.0,
     "today_start_equity": 99000.0,
     "current_day": "2026-06-04",
-    "daily_realized_pnl": 0.0,
+    "daily_realized_pnl": 2000.0,
     "peak_balance": 101000.0,
     "status": "active",
     "failed_reason": "",
@@ -65,8 +67,8 @@
     "sl_count": {
       "smt_divergence": 2
     },
-    "trades_total": 7,
-    "wins": 2,
+    "trades_total": 8,
+    "wins": 3,
     "losses": 5
   },
   "jadecap": {

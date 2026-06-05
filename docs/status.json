@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-05 11:52 UTC",
-  "updated_iso": "2026-06-05T11:52:38.023256+00:00",
+  "updated": "2026-06-05 14:55 UTC",
+  "updated_iso": "2026-06-05T14:55:21.699387+00:00",
   "model": "per-strategy",
   "challenge": {
     "day": 3,
@@ -22,14 +22,14 @@
     "failed": 0,
     "active": 6,
     "size_total": 600000.0,
-    "balance_total": 600756.02,
-    "equity_total": 600998.63,
-    "net_pnl": 756.02,
-    "net_pnl_pct": 0.13,
-    "trades": 12,
-    "wins": 5,
-    "losses": 7,
-    "win_rate": 41.7,
+    "balance_total": 601756.02,
+    "equity_total": 601998.63,
+    "net_pnl": 1756.02,
+    "net_pnl_pct": 0.29,
+    "trades": 14,
+    "wins": 6,
+    "losses": 8,
+    "win_rate": 42.9,
     "open": 6
   },
   "books": [
@@ -39,16 +39,49 @@
       "failed_reason": "",
       "resolved_at": "",
       "size": 100000.0,
-      "balance": 103000.0,
-      "equity": 103000.0,
-      "net_pnl": 3000.0,
-      "net_pnl_pct": 3.0,
-      "today_pnl": 3000.0,
+      "balance": 102000.0,
+      "equity": 102000.0,
+      "net_pnl": 2000.0,
+      "net_pnl_pct": 2.0,
+      "today_pnl": 2000.0,
       "peak_balance": 103000.0,
-      "trades": 1,
+      "trades": 2,
       "wins": 1,
-      "losses": 0,
-      "win_rate": 100.0,
+      "losses": 1,
+      "win_rate": 50.0,
+      "open": 0,
+      "daily": {
+        "used": 0.0,
+        "limit": 5000.0,
+        "remaining": 5000.0
+      },
+      "overall": {
+        "used": 0.0,
+        "limit": 10000.0,
+        "remaining": 10000.0
+      },
+      "target": {
+        "usd": 108000.0,
+        "pct": 8.0,
+        "progress": 25.0
+      }
+    },
+    {
+      "strategy": "smt_divergence",
+      "status": "active",
+      "failed_reason": "",
+      "resolved_at": "",
+      "size": 100000.0,
+      "balance": 101000.0,
+      "equity": 101000.0,
+      "net_pnl": 1000.0,
+      "net_pnl_pct": 1.0,
+      "today_pnl": 2000.0,
+      "peak_balance": 101000.0,
+      "trades": 8,
+      "wins": 3,
+      "losses": 5,
+      "win_rate": 37.5,
       "open": 1,
       "daily": {
         "used": 0.0,
@@ -63,7 +96,7 @@
       "target": {
         "usd": 108000.0,
         "pct": 8.0,
-        "progress": 37.5
+        "progress": 12.5
       }
     },
     {
@@ -166,39 +199,6 @@
       }
     },
     {
-      "strategy": "smt_divergence",
-      "status": "active",
-      "failed_reason": "",
-      "resolved_at": "",
-      "size": 100000.0,
-      "balance": 99000.0,
-      "equity": 99000.0,
-      "net_pnl": -1000.0,
-      "net_pnl_pct": -1.0,
-      "today_pnl": 0.0,
-      "peak_balance": 101000.0,
-      "trades": 7,
-      "wins": 2,
-      "losses": 5,
-      "win_rate": 28.6,
-      "open": 1,
-      "daily": {
-        "used": 0.0,
-        "limit": 5000.0,
-        "remaining": 5000.0
-      },
-      "overall": {
-        "used": 1000.0,
-        "limit": 10000.0,
-        "remaining": 9000.0
-      },
-      "target": {
-        "usd": 108000.0,
-        "pct": 8.0,
-        "progress": 0.0
-      }
-    },
-    {
       "strategy": "quantx",
       "status": "active",
       "failed_reason": "",
@@ -214,7 +214,7 @@
       "wins": 0,
       "losses": 2,
       "win_rate": 0.0,
-      "open": 0,
+      "open": 1,
       "daily": {
         "used": 0.0,
         "limit": 5000.0,
@@ -282,31 +282,51 @@
       "opened": "2026-06-05 00:10"
     },
     {
-      "strategy": "ema5",
-      "symbol": "NAS100",
-      "side": "BUY",
-      "entry": 30186.0,
-      "stop": 30135.5,
-      "target": 30337.5,
-      "lots": 19.802,
+      "strategy": "smt_divergence",
+      "symbol": "BTCUSD",
+      "side": "SELL",
+      "entry": 60731.98046875,
+      "stop": 61170.79595625,
+      "target": 59854.34949375001,
+      "lots": 2.2789,
       "risk": 1000.0,
       "be": false,
-      "opened": "2026-06-05 11:52"
+      "opened": "2026-06-05 14:55"
     },
+    {
+      "strategy": "quantx",
+      "symbol": "BTCUSD",
+      "side": "SELL",
+      "entry": 60771.05078125,
+      "stop": 61537.68999885258,
+      "target": 59237.772346044854,
+      "lots": 1.3044,
+      "risk": 1000.0,
+      "be": false,
+      "opened": "2026-06-05 14:55"
+    }
+  ],
+  "closed": [
     {
       "strategy": "smt_divergence",
       "symbol": "BTCUSD",
       "side": "SELL",
-      "entry": 62119.76953125,
-      "stop": 62593.34324062499,
-      "target": 61172.622112500016,
-      "lots": 2.1116,
-      "risk": 1000.0,
-      "be": false,
-      "opened": "2026-06-05 11:52"
-    }
-  ],
-  "closed": [
+      "exit": 61172.622112500016,
+      "reason": "tp",
+      "pnl": 2000.0,
+      "r": 2.0,
+      "closed": "2026-06-05 13:50"
+    },
+    {
+      "strategy": "ema5",
+      "symbol": "NAS100",
+      "side": "BUY",
+      "exit": 30135.5,
+      "reason": "sl",
+      "pnl": -1000.0,
+      "r": -1.0,
+      "closed": "2026-06-05 12:00"
+    },
     {
       "strategy": "smt_divergence",
       "symbol": "BTCUSD",
@@ -431,31 +451,31 @@
   "tape": [
     {
       "sym": "EURUSD",
-      "px": 1.16387
+      "px": 1.1554
     },
     {
       "sym": "GBPUSD",
-      "px": 1.34678
+      "px": 1.33815
     },
     {
       "sym": "XAUUSD",
-      "px": 4492.5
+      "px": 4374.4
     },
     {
       "sym": "NAS100",
-      "px": 30183.0
+      "px": 29843.0
     },
     {
       "sym": "SP500",
-      "px": 7601.0
+      "px": 7519.75
     },
     {
       "sym": "BTCUSD",
-      "px": 62055.5
+      "px": 60771.05
     },
     {
       "sym": "ETHUSD",
-      "px": 1667.2
+      "px": 1598.93
     }
   ],
   "equity_curve": [
@@ -534,6 +554,10 @@
     {
       "t": "2026-06-05T11:52",
       "e": 600998.63
+    },
+    {
+      "t": "2026-06-05T14:55",
+      "e": 601998.63
     }
   ]
 }
