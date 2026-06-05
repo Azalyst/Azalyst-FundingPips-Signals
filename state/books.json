@@ -91,18 +91,20 @@
   "quantx": {
     "strategy": "quantx",
     "account_size": 100000.0,
-    "equity": 100000.0,
-    "balance": 100000.0,
+    "equity": 99000.0,
+    "balance": 99000.0,
     "today_start_equity": 98000.0,
     "current_day": "2026-06-04",
-    "daily_realized_pnl": 2000.0,
+    "daily_realized_pnl": 1000.0,
     "peak_balance": 100000.0,
     "status": "active",
     "failed_reason": "",
     "resolved_at": "",
-    "sl_count": {},
-    "trades_total": 3,
+    "sl_count": {
+      "quantx": 1
+    },
+    "trades_total": 4,
     "wins": 1,
-    "losses": 2
+    "losses": 3
   }
 }

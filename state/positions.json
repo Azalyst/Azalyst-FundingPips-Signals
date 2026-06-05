@@ -476,11 +476,11 @@
     "interval": "15m",
     "initial_stop": 60156.59662856698,
     "be_moved": false,
-    "status": "open",
-    "exit_price": null,
-    "closed_at": null,
-    "pnl_usd": 0.0,
-    "r_multiple": 0.0,
-    "exit_reason": ""
+    "status": "closed",
+    "exit_price": 60156.59662856698,
+    "closed_at": "2026-06-05T19:45:00+00:00",
+    "pnl_usd": -1000.0,
+    "r_multiple": -1.0,
+    "exit_reason": "sl"
   }
 ]
