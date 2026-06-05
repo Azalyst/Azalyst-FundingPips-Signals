@@ -55,20 +55,20 @@
   "smt_divergence": {
     "strategy": "smt_divergence",
     "account_size": 100000.0,
-    "equity": 103000.0,
-    "balance": 103000.0,
+    "equity": 105000.0,
+    "balance": 105000.0,
     "today_start_equity": 99000.0,
     "current_day": "2026-06-04",
-    "daily_realized_pnl": 4000.0,
-    "peak_balance": 103000.0,
+    "daily_realized_pnl": 6000.0,
+    "peak_balance": 105000.0,
     "status": "active",
     "failed_reason": "",
     "resolved_at": "",
     "sl_count": {
       "smt_divergence": 2
     },
-    "trades_total": 9,
-    "wins": 4,
+    "trades_total": 10,
+    "wins": 5,
     "losses": 5
   },
   "jadecap": {
@@ -91,18 +91,18 @@
   "quantx": {
     "strategy": "quantx",
     "account_size": 100000.0,
-    "equity": 97696.24,
-    "balance": 98000.0,
+    "equity": 100000.0,
+    "balance": 100000.0,
     "today_start_equity": 98000.0,
     "current_day": "2026-06-04",
-    "daily_realized_pnl": 0.0,
+    "daily_realized_pnl": 2000.0,
     "peak_balance": 100000.0,
     "status": "active",
     "failed_reason": "",
     "resolved_at": "",
     "sl_count": {},
-    "trades_total": 2,
-    "wins": 0,
+    "trades_total": 3,
+    "wins": 1,
     "losses": 2
   }
 }
