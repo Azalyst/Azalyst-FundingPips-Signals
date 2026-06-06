@@ -2,7 +2,7 @@
   "rsi": {
     "strategy": "rsi",
     "account_size": 100000.0,
-    "equity": 95193.02,
+    "equity": 95008.49,
     "balance": 99000.0,
     "today_start_equity": 100242.61,
     "current_day": "2026-06-05",
@@ -55,18 +55,18 @@
   "smt_divergence": {
     "strategy": "smt_divergence",
     "account_size": 100000.0,
-    "equity": 105515.43,
-    "balance": 105000.0,
+    "equity": 107000.0,
+    "balance": 107000.0,
     "today_start_equity": 105000.0,
     "current_day": "2026-06-05",
-    "daily_realized_pnl": 0.0,
-    "peak_balance": 105000.0,
+    "daily_realized_pnl": 2000.0,
+    "peak_balance": 107000.0,
     "status": "active",
     "failed_reason": "",
     "resolved_at": "",
     "sl_count": {},
-    "trades_total": 10,
-    "wins": 5,
+    "trades_total": 11,
+    "wins": 6,
     "losses": 5
   },
   "jadecap": {

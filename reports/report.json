@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-06T03:39:15.582717+00:00",
+  "updated": "2026-06-06T06:43:59.520494+00:00",
   "model": "per-strategy isolated challenges",
   "account_size_each": 100000.0,
   "profit_target_pct": 8.0,
@@ -13,7 +13,7 @@
       "status": "failed",
       "failed_reason": "daily loss",
       "balance": 99000.0,
-      "equity": 95193.02,
+      "equity": 95008.49,
       "net_pnl": -1000.0,
       "net_pnl_pct": -1.0,
       "trades": 1,
@@ -51,14 +51,14 @@
       "strategy": "smt_divergence",
       "status": "active",
       "failed_reason": "",
-      "balance": 105000.0,
-      "equity": 105515.43,
-      "net_pnl": 5000.0,
-      "net_pnl_pct": 5.0,
-      "trades": 10,
-      "wins": 5,
+      "balance": 107000.0,
+      "equity": 107000.0,
+      "net_pnl": 7000.0,
+      "net_pnl_pct": 7.0,
+      "trades": 11,
+      "wins": 6,
       "losses": 5,
-      "win_rate": 50.0
+      "win_rate": 54.5
     },
     {
       "strategy": "jadecap",
