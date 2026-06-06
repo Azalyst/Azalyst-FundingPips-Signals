@@ -55,19 +55,21 @@
   "smt_divergence": {
     "strategy": "smt_divergence",
     "account_size": 100000.0,
-    "equity": 107000.0,
-    "balance": 107000.0,
+    "equity": 106000.0,
+    "balance": 106000.0,
     "today_start_equity": 105000.0,
     "current_day": "2026-06-05",
-    "daily_realized_pnl": 2000.0,
+    "daily_realized_pnl": 1000.0,
     "peak_balance": 107000.0,
     "status": "active",
     "failed_reason": "",
     "resolved_at": "",
-    "sl_count": {},
-    "trades_total": 11,
+    "sl_count": {
+      "smt_divergence": 1
+    },
+    "trades_total": 12,
     "wins": 6,
-    "losses": 5
+    "losses": 6
   },
   "jadecap": {
     "strategy": "jadecap",
