@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-06 21:18 UTC",
-  "updated_iso": "2026-06-06T21:18:53.577581+00:00",
+  "updated": "2026-06-06 22:36 UTC",
+  "updated_iso": "2026-06-06T22:36:49.629691+00:00",
   "model": "per-strategy",
   "challenge": {
     "day": 4,
@@ -30,7 +30,7 @@
     "wins": 11,
     "losses": 11,
     "win_rate": 50.0,
-    "open": 4
+    "open": 5
   },
   "books": [
     {
@@ -43,7 +43,7 @@
       "equity": 108000.0,
       "net_pnl": 8000.0,
       "net_pnl_pct": 8.0,
-      "today_pnl": 3000.0,
+      "today_pnl": 0.0,
       "peak_balance": 108000.0,
       "trades": 13,
       "wins": 7,
@@ -181,7 +181,7 @@
       "wins": 1,
       "losses": 3,
       "win_rate": 25.0,
-      "open": 0,
+      "open": 1,
       "daily": {
         "used": 0.0,
         "limit": 5000.0,
@@ -208,7 +208,7 @@
       "equity": 99954.09,
       "net_pnl": -1000.0,
       "net_pnl_pct": -1.0,
-      "today_pnl": -1000.0,
+      "today_pnl": 0.0,
       "peak_balance": 100000.0,
       "trades": 1,
       "wins": 0,
@@ -216,9 +216,9 @@
       "win_rate": 0.0,
       "open": 3,
       "daily": {
-        "used": 288.52,
+        "used": 0.0,
         "limit": 5000.0,
-        "remaining": 4711.48
+        "remaining": 5000.0
       },
       "overall": {
         "used": 45.91,
@@ -280,6 +280,18 @@
       "risk": 1000.0,
       "be": false,
       "opened": "2026-06-06 09:13"
+    },
+    {
+      "strategy": "quantx",
+      "symbol": "BTCUSD",
+      "side": "SELL",
+      "entry": 60423.94921875,
+      "stop": 60717.060636539645,
+      "target": 59837.7263831707,
+      "lots": 3.4117,
+      "risk": 1000.0,
+      "be": false,
+      "opened": "2026-06-06 22:36"
     }
   ],
   "closed": [
@@ -527,7 +539,7 @@
     },
     {
       "sym": "BTCUSD",
-      "px": 60800.86
+      "px": 60423.95
     }
   ],
   "equity_curve": [
@@ -673,6 +685,10 @@
     },
     {
       "t": "2026-06-06T21:18",
+      "e": 611777.85
+    },
+    {
+      "t": "2026-06-06T22:36",
       "e": 611777.85
     }
   ]
