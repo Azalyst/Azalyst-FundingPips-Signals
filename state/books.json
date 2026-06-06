@@ -21,7 +21,7 @@
   "ema5": {
     "strategy": "ema5",
     "account_size": 100000.0,
-    "equity": 102000.0,
+    "equity": 104067.74,
     "balance": 102000.0,
     "today_start_equity": 102000.0,
     "current_day": "2026-06-05",
@@ -55,20 +55,20 @@
   "smt_divergence": {
     "strategy": "smt_divergence",
     "account_size": 100000.0,
-    "equity": 106000.0,
-    "balance": 106000.0,
+    "equity": 108000.0,
+    "balance": 108000.0,
     "today_start_equity": 105000.0,
     "current_day": "2026-06-05",
-    "daily_realized_pnl": 1000.0,
-    "peak_balance": 107000.0,
-    "status": "active",
+    "daily_realized_pnl": 3000.0,
+    "peak_balance": 108000.0,
+    "status": "passed",
     "failed_reason": "",
-    "resolved_at": "",
+    "resolved_at": "2026-06-06T11:00:50.107307+00:00",
     "sl_count": {
       "smt_divergence": 1
     },
-    "trades_total": 12,
-    "wins": 6,
+    "trades_total": 13,
+    "wins": 7,
     "losses": 6
   },
   "jadecap": {
