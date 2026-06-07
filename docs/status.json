@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-07 21:15 UTC",
-  "updated_iso": "2026-06-07T21:15:15.604898+00:00",
+  "updated": "2026-06-07 22:32 UTC",
+  "updated_iso": "2026-06-07T22:32:01.530410+00:00",
   "model": "per-strategy",
   "challenge": {
     "day": 5,
@@ -23,14 +23,14 @@
     "active": 4,
     "size_total": 600000.0,
     "balance_total": 607756.02,
-    "equity_total": 610777.85,
+    "equity_total": 610529.46,
     "net_pnl": 7756.02,
     "net_pnl_pct": 1.29,
     "trades": 26,
     "wins": 12,
     "losses": 14,
     "win_rate": 46.2,
-    "open": 4
+    "open": 5
   },
   "books": [
     {
@@ -73,7 +73,7 @@
       "resolved_at": "",
       "size": 100000.0,
       "balance": 102000.0,
-      "equity": 104067.74,
+      "equity": 103819.35,
       "net_pnl": 2000.0,
       "net_pnl_pct": 2.0,
       "today_pnl": 0.0,
@@ -84,9 +84,9 @@
       "win_rate": 50.0,
       "open": 1,
       "daily": {
-        "used": 0.0,
+        "used": 248.39,
         "limit": 5000.0,
-        "remaining": 5000.0
+        "remaining": 4751.61
       },
       "overall": {
         "used": 0.0,
@@ -175,17 +175,17 @@
       "equity": 98000.0,
       "net_pnl": -2000.0,
       "net_pnl_pct": -2.0,
-      "today_pnl": -1000.0,
+      "today_pnl": 0.0,
       "peak_balance": 100000.0,
       "trades": 8,
       "wins": 2,
       "losses": 6,
       "win_rate": 25.0,
-      "open": 0,
+      "open": 1,
       "daily": {
-        "used": 1000.0,
+        "used": 0.0,
         "limit": 5000.0,
-        "remaining": 4000.0
+        "remaining": 5000.0
       },
       "overall": {
         "used": 2000.0,
@@ -280,6 +280,18 @@
       "risk": 1000.0,
       "be": false,
       "opened": "2026-06-06 09:13"
+    },
+    {
+      "strategy": "quantx",
+      "symbol": "BTCUSD",
+      "side": "BUY",
+      "entry": 62963.01171875,
+      "stop": 62336.43311291042,
+      "target": 64216.168930429165,
+      "lots": 1.596,
+      "risk": 1000.0,
+      "be": false,
+      "opened": "2026-06-07 22:32"
     }
   ],
   "closed": [
@@ -555,11 +567,11 @@
     },
     {
       "sym": "XAUUSD",
-      "px": 4365.3
+      "px": 4348.4
     },
     {
       "sym": "NAS100",
-      "px": 29026.5
+      "px": 29002.0
     },
     {
       "sym": "SP500",
@@ -567,7 +579,7 @@
     },
     {
       "sym": "BTCUSD",
-      "px": 61925.24
+      "px": 62963.01
     }
   ],
   "equity_curve": [
@@ -762,6 +774,10 @@
     {
       "t": "2026-06-07T21:15",
       "e": 610777.85
+    },
+    {
+      "t": "2026-06-07T22:32",
+      "e": 610529.46
     }
   ]
 }
