@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-07 06:40 UTC",
-  "updated_iso": "2026-06-07T06:40:11.945458+00:00",
+  "updated": "2026-06-07 09:51 UTC",
+  "updated_iso": "2026-06-07T09:51:38.978031+00:00",
   "model": "per-strategy",
   "challenge": {
     "day": 5,
@@ -22,14 +22,14 @@
     "failed": 1,
     "active": 4,
     "size_total": 600000.0,
-    "balance_total": 607756.02,
-    "equity_total": 612257.17,
-    "net_pnl": 7756.02,
-    "net_pnl_pct": 1.29,
-    "trades": 23,
-    "wins": 11,
+    "balance_total": 609756.02,
+    "equity_total": 612777.85,
+    "net_pnl": 9756.02,
+    "net_pnl_pct": 1.63,
+    "trades": 24,
+    "wins": 12,
     "losses": 12,
-    "win_rate": 47.8,
+    "win_rate": 50.0,
     "open": 5
   },
   "books": [
@@ -171,16 +171,16 @@
       "failed_reason": "",
       "resolved_at": "",
       "size": 100000.0,
-      "balance": 98000.0,
-      "equity": 99479.32,
-      "net_pnl": -2000.0,
-      "net_pnl_pct": -2.0,
-      "today_pnl": -1000.0,
+      "balance": 100000.0,
+      "equity": 100000.0,
+      "net_pnl": 0.0,
+      "net_pnl_pct": 0.0,
+      "today_pnl": 1000.0,
       "peak_balance": 100000.0,
-      "trades": 5,
-      "wins": 1,
+      "trades": 6,
+      "wins": 2,
       "losses": 4,
-      "win_rate": 20.0,
+      "win_rate": 33.3,
       "open": 1,
       "daily": {
         "used": 0.0,
@@ -188,9 +188,9 @@
         "remaining": 5000.0
       },
       "overall": {
-        "used": 520.68,
+        "used": 0.0,
         "limit": 10000.0,
-        "remaining": 9479.32
+        "remaining": 10000.0
       },
       "target": {
         "usd": 108000.0,
@@ -285,16 +285,26 @@
       "strategy": "quantx",
       "symbol": "BTCUSD",
       "side": "BUY",
-      "entry": 61441.9296875,
-      "stop": 61105.26244699657,
-      "target": 62115.264168506874,
-      "lots": 2.9703,
+      "entry": 62502.0,
+      "stop": 62162.305223755946,
+      "target": 63181.3895524881,
+      "lots": 2.9438,
       "risk": 1000.0,
       "be": false,
-      "opened": "2026-06-07 01:59"
+      "opened": "2026-06-07 09:51"
     }
   ],
   "closed": [
+    {
+      "strategy": "quantx",
+      "symbol": "BTCUSD",
+      "side": "BUY",
+      "exit": 62115.264168506874,
+      "reason": "tp",
+      "pnl": 2000.0,
+      "r": 2.0,
+      "closed": "2026-06-07 06:30"
+    },
     {
       "strategy": "quantx",
       "symbol": "BTCUSD",
@@ -549,7 +559,7 @@
     },
     {
       "sym": "BTCUSD",
-      "px": 61939.97
+      "px": 62502.0
     }
   ],
   "equity_curve": [
@@ -712,6 +722,10 @@
     {
       "t": "2026-06-07T06:40",
       "e": 612257.17
+    },
+    {
+      "t": "2026-06-07T09:51",
+      "e": 612777.85
     }
   ]
 }
