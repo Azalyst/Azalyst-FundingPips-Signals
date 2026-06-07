@@ -1,5 +1,5 @@
 # Azalyst FundingPips - Per-Strategy Challenges
-_updated 2026-06-07 11:48 UTC_
+_updated 2026-06-07 13:56 UTC_
 
 Each strategy runs its own **$100,000** challenge (pass +8%, fail -10% overall or -5% daily). Passed 1 / Failed 1 / Active 4.
 
@@ -9,7 +9,7 @@ Each strategy runs its own **$100,000** challenge (pass +8%, fail -10% overall o
 | ema5 | ACTIVE | $102,000 | $2,000.00 (+2%) | 2 | 50.0% |
 | jadecap | ACTIVE | $100,756 | $756.02 (+0.76%) | 1 | 100.0% |
 | eth_blueprint | ACTIVE | $100,000 | $0.00 (+0%) | 1 | 100.0% |
-| quantx | ACTIVE | $100,000 | $0.00 (+0%) | 6 | 33.3% |
+| quantx | ACTIVE | $99,000 | $-1,000.00 (-1%) | 7 | 28.6% |
 | rsi | FAILED (daily loss) | $99,000 | $-1,000.00 (-1%) | 1 | 0.0% |
 
 ## Open positions
@@ -19,12 +19,10 @@ Each strategy runs its own **$100,000** challenge (pass +8%, fail -10% overall o
 | rsi | GBPUSD | BUY | 1.34271 | 1.34088 | 1.34639 | 5.44538 | $1,000 |
 | rsi | NAS100 | SELL | 30237.8 | 32366.6 | 28108.9 | 0.46973 | $1,000 |
 | ema5 | NAS100 | BUY | 28866.2 | 28788.8 | 29098.8 | 12.9032 | $1,000 |
-| quantx | BTCUSD | BUY | 62502 | 62162.3 | 63181.4 | 2.94382 | $1,000 |
 
 ## Recent closed trades (last 15)
 | Closed | Strategy | Symbol | Side | Exit | PnL | R |
 |---|---|---|---|---|---|---|
-| 2026-06-04 21:40 | smt_divergence | BTCUSD | SELL | tp | $2,000.00 | +2R |
 | 2026-06-04 23:00 | ema5 | XAUUSD | SELL | tp | $3,000.00 | +3R |
 | 2026-06-05 01:00 | smt_divergence | BTCUSD | BUY | sl | $-1,000.00 | -1R |
 | 2026-06-05 05:55 | smt_divergence | BTCUSD | BUY | sl | $-1,000.00 | -1R |
@@ -39,3 +37,4 @@ Each strategy runs its own **$100,000** challenge (pass +8%, fail -10% overall o
 | 2026-06-06 10:15 | smt_divergence | BTCUSD | SELL | tp | $2,000.00 | +2R |
 | 2026-06-06 23:00 | quantx | BTCUSD | SELL | sl | $-1,000.00 | -1R |
 | 2026-06-07 06:30 | quantx | BTCUSD | BUY | tp | $2,000.00 | +2R |
+| 2026-06-07 12:00 | quantx | BTCUSD | BUY | sl | $-1,000.00 | -1R |
