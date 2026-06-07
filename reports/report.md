@@ -1,5 +1,5 @@
 # Azalyst FundingPips - Per-Strategy Challenges
-_updated 2026-06-06 23:45 UTC_
+_updated 2026-06-07 01:59 UTC_
 
 Each strategy runs its own **$100,000** challenge (pass +8%, fail -10% overall or -5% daily). Passed 1 / Failed 1 / Active 4.
 
@@ -19,6 +19,7 @@ Each strategy runs its own **$100,000** challenge (pass +8%, fail -10% overall o
 | rsi | GBPUSD | BUY | 1.34271 | 1.34088 | 1.34639 | 5.44538 | $1,000 |
 | rsi | NAS100 | SELL | 30237.8 | 32366.6 | 28108.9 | 0.46973 | $1,000 |
 | ema5 | NAS100 | BUY | 28866.2 | 28788.8 | 29098.8 | 12.9032 | $1,000 |
+| quantx | BTCUSD | BUY | 61441.9 | 61105.3 | 62115.3 | 2.97029 | $1,000 |
 
 ## Recent closed trades (last 15)
 | Closed | Strategy | Symbol | Side | Exit | PnL | R |
