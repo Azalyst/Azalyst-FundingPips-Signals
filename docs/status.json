@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-08 19:23 UTC",
-  "updated_iso": "2026-06-08T19:23:51.338277+00:00",
+  "updated": "2026-06-08 21:22 UTC",
+  "updated_iso": "2026-06-08T21:22:27.194578+00:00",
   "model": "per-strategy",
   "challenge": {
     "day": 6,
@@ -23,7 +23,7 @@
     "active": 3,
     "size_total": 600000.0,
     "balance_total": 613756.02,
-    "equity_total": 615393.88,
+    "equity_total": 615894.21,
     "net_pnl": 13756.02,
     "net_pnl_pct": 2.29,
     "trades": 28,
@@ -172,7 +172,7 @@
       "resolved_at": "",
       "size": 100000.0,
       "balance": 98000.0,
-      "equity": 98683.77,
+      "equity": 99184.1,
       "net_pnl": -2000.0,
       "net_pnl_pct": -2.0,
       "today_pnl": 0.0,
@@ -188,9 +188,9 @@
         "remaining": 5000.0
       },
       "overall": {
-        "used": 1316.23,
+        "used": 815.9,
         "limit": 10000.0,
-        "remaining": 8683.77
+        "remaining": 9184.1
       },
       "target": {
         "usd": 108000.0,
@@ -579,7 +579,7 @@
     },
     {
       "sym": "BTCUSD",
-      "px": 63391.45
+      "px": 63704.94
     }
   ],
   "equity_curve": [
@@ -802,6 +802,10 @@
     {
       "t": "2026-06-08T19:23",
       "e": 615393.88
+    },
+    {
+      "t": "2026-06-08T21:22",
+      "e": 615894.21
     }
   ]
 }
