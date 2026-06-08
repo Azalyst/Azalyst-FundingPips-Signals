@@ -1,12 +1,12 @@
 # Azalyst FundingPips - Per-Strategy Challenges
-_updated 2026-06-08 04:10 UTC_
+_updated 2026-06-08 09:04 UTC_
 
-Each strategy runs its own **$100,000** challenge (pass +8%, fail -10% overall or -5% daily). Passed 1 / Failed 1 / Active 4.
+Each strategy runs its own **$100,000** challenge (pass +8%, fail -10% overall or -5% daily). Passed 2 / Failed 1 / Active 3.
 
 | Strategy | Status | Balance | Net PnL | Trades | Win% |
 |---|---|---|---|---|---|
+| ema5 | PASSED | $108,000 | $8,000.00 (+8%) | 4 | 75.0% |
 | smt_divergence | PASSED | $108,000 | $8,000.00 (+8%) | 13 | 53.8% |
-| ema5 | ACTIVE | $105,000 | $5,000.00 (+5%) | 3 | 66.7% |
 | jadecap | ACTIVE | $100,756 | $756.02 (+0.76%) | 1 | 100.0% |
 | eth_blueprint | ACTIVE | $100,000 | $0.00 (+0%) | 1 | 100.0% |
 | quantx | ACTIVE | $98,000 | $-2,000.00 (-2%) | 8 | 25.0% |
@@ -19,12 +19,10 @@ Each strategy runs its own **$100,000** challenge (pass +8%, fail -10% overall o
 | rsi | GBPUSD | BUY | 1.34271 | 1.34088 | 1.34639 | 5.44538 | $1,000 |
 | rsi | NAS100 | SELL | 30237.8 | 32366.6 | 28108.9 | 0.46973 | $1,000 |
 | quantx | BTCUSD | BUY | 62963 | 62336.4 | 64216.2 | 1.59597 | $1,000 |
-| ema5 | NAS100 | SELL | 29213.5 | 29244.8 | 29119.7 | 31.966 | $1,000 |
 
 ## Recent closed trades (last 15)
 | Closed | Strategy | Symbol | Side | Exit | PnL | R |
 |---|---|---|---|---|---|---|
-| 2026-06-05 05:55 | smt_divergence | BTCUSD | BUY | sl | $-1,000.00 | -1R |
 | 2026-06-05 12:00 | ema5 | NAS100 | BUY | sl | $-1,000.00 | -1R |
 | 2026-06-05 13:50 | smt_divergence | BTCUSD | SELL | tp | $2,000.00 | +2R |
 | 2026-06-05 16:10 | smt_divergence | BTCUSD | SELL | tp | $2,000.00 | +2R |
@@ -39,3 +37,4 @@ Each strategy runs its own **$100,000** challenge (pass +8%, fail -10% overall o
 | 2026-06-07 06:30 | quantx | BTCUSD | BUY | tp | $2,000.00 | +2R |
 | 2026-06-07 12:00 | quantx | BTCUSD | BUY | sl | $-1,000.00 | -1R |
 | 2026-06-07 20:00 | quantx | BTCUSD | SELL | sl | $-1,000.00 | -1R |
+| 2026-06-08 04:40 | ema5 | NAS100 | SELL | tp | $3,000.00 | +3R |

@@ -696,11 +696,11 @@
     "interval": "5m",
     "initial_stop": 29244.7832605431,
     "be_moved": false,
-    "status": "open",
-    "exit_price": null,
-    "closed_at": null,
-    "pnl_usd": 0.0,
-    "r_multiple": 0.0,
-    "exit_reason": ""
+    "status": "closed",
+    "exit_price": 29119.650218370698,
+    "closed_at": "2026-06-08T04:40:00+00:00",
+    "pnl_usd": 3000.0,
+    "r_multiple": 3.0,
+    "exit_reason": "tp"
   }
 ]

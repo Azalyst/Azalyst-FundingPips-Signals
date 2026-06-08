@@ -1,12 +1,12 @@
 {
-  "updated": "2026-06-08T04:10:59.480360+00:00",
+  "updated": "2026-06-08T09:04:05.927868+00:00",
   "model": "per-strategy isolated challenges",
   "account_size_each": 100000.0,
   "profit_target_pct": 8.0,
-  "passed": 1,
+  "passed": 2,
   "failed": 1,
-  "active": 4,
-  "open_positions": 5,
+  "active": 3,
+  "open_positions": 4,
   "books": [
     {
       "strategy": "rsi",
@@ -23,16 +23,16 @@
     },
     {
       "strategy": "ema5",
-      "status": "active",
+      "status": "passed",
       "failed_reason": "",
-      "balance": 105000.0,
-      "equity": 105000.0,
-      "net_pnl": 5000.0,
-      "net_pnl_pct": 5.0,
-      "trades": 3,
-      "wins": 2,
+      "balance": 108000.0,
+      "equity": 108000.0,
+      "net_pnl": 8000.0,
+      "net_pnl_pct": 8.0,
+      "trades": 4,
+      "wins": 3,
       "losses": 1,
-      "win_rate": 66.7
+      "win_rate": 75.0
     },
     {
       "strategy": "eth_blueprint",
@@ -78,7 +78,7 @@
       "status": "active",
       "failed_reason": "",
       "balance": 98000.0,
-      "equity": 98199.54,
+      "equity": 98185.05,
       "net_pnl": -2000.0,
       "net_pnl_pct": -2.0,
       "trades": 8,
