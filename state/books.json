@@ -2,7 +2,7 @@
   "rsi": {
     "strategy": "rsi",
     "account_size": 100000.0,
-    "equity": 98745.67,
+    "equity": 98716.96,
     "balance": 98000.0,
     "today_start_equity": 99954.09,
     "current_day": "2026-06-08",
@@ -89,7 +89,7 @@
   "quantx": {
     "strategy": "quantx",
     "account_size": 100000.0,
-    "equity": 98981.07,
+    "equity": 97679.02,
     "balance": 98000.0,
     "today_start_equity": 99184.1,
     "current_day": "2026-06-08",
