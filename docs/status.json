@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-09 16:49 UTC",
-  "updated_iso": "2026-06-09T16:49:07.385353+00:00",
+  "updated": "2026-06-09 19:16 UTC",
+  "updated_iso": "2026-06-09T19:16:04.530770+00:00",
   "model": "per-strategy",
   "challenge": {
     "day": 7,
@@ -22,15 +22,15 @@
     "failed": 1,
     "active": 3,
     "size_total": 600000.0,
-    "balance_total": 613756.02,
-    "equity_total": 614472.98,
-    "net_pnl": 13756.02,
-    "net_pnl_pct": 2.29,
-    "trades": 31,
+    "balance_total": 612756.02,
+    "equity_total": 613472.98,
+    "net_pnl": 12756.02,
+    "net_pnl_pct": 2.13,
+    "trades": 32,
     "wins": 15,
-    "losses": 16,
-    "win_rate": 48.4,
-    "open": 3
+    "losses": 17,
+    "win_rate": 46.9,
+    "open": 2
   },
   "books": [
     {
@@ -171,26 +171,26 @@
       "failed_reason": "",
       "resolved_at": "",
       "size": 100000.0,
-      "balance": 99000.0,
-      "equity": 99000.0,
-      "net_pnl": -1000.0,
-      "net_pnl_pct": -1.0,
-      "today_pnl": 1000.0,
+      "balance": 98000.0,
+      "equity": 98000.0,
+      "net_pnl": -2000.0,
+      "net_pnl_pct": -2.0,
+      "today_pnl": 0.0,
       "peak_balance": 100000.0,
-      "trades": 10,
+      "trades": 11,
       "wins": 3,
-      "losses": 7,
-      "win_rate": 30.0,
-      "open": 1,
+      "losses": 8,
+      "win_rate": 27.3,
+      "open": 0,
       "daily": {
-        "used": 184.1,
+        "used": 1184.1,
         "limit": 5000.0,
-        "remaining": 4815.9
+        "remaining": 3815.9
       },
       "overall": {
-        "used": 1000.0,
+        "used": 2000.0,
         "limit": 10000.0,
-        "remaining": 9000.0
+        "remaining": 8000.0
       },
       "target": {
         "usd": 108000.0,
@@ -256,21 +256,19 @@
       "risk": 1000.0,
       "be": false,
       "opened": "2026-06-05 00:10"
-    },
+    }
+  ],
+  "closed": [
     {
       "strategy": "quantx",
       "symbol": "BTCUSD",
       "side": "SELL",
-      "entry": 61200.03125,
-      "stop": 61639.37561690313,
-      "target": 60321.342516193734,
-      "lots": 2.2761,
-      "risk": 1000.0,
-      "be": false,
-      "opened": "2026-06-09 16:49"
-    }
-  ],
-  "closed": [
+      "exit": 61639.37561690313,
+      "reason": "sl",
+      "pnl": -1000.0,
+      "r": -1.0,
+      "closed": "2026-06-09 17:15"
+    },
     {
       "strategy": "quantx",
       "symbol": "BTCUSD",
@@ -593,7 +591,7 @@
     },
     {
       "sym": "BTCUSD",
-      "px": 61200.03
+      "px": 61720.27
     }
   ],
   "equity_curve": [
@@ -848,6 +846,10 @@
     {
       "t": "2026-06-09T16:49",
       "e": 614472.98
+    },
+    {
+      "t": "2026-06-09T19:16",
+      "e": 613472.98
     }
   ]
 }

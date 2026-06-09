@@ -740,11 +740,11 @@
     "interval": "15m",
     "initial_stop": 61639.37561690313,
     "be_moved": false,
-    "status": "open",
-    "exit_price": null,
-    "closed_at": null,
-    "pnl_usd": 0.0,
-    "r_multiple": 0.0,
-    "exit_reason": ""
+    "status": "closed",
+    "exit_price": 61639.37561690313,
+    "closed_at": "2026-06-09T17:15:00+00:00",
+    "pnl_usd": -1000.0,
+    "r_multiple": -1.0,
+    "exit_reason": "sl"
   }
 ]
