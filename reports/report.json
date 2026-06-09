@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-09T14:05:57.415088+00:00",
+  "updated": "2026-06-09T16:49:07.385353+00:00",
   "model": "per-strategy isolated challenges",
   "account_size_each": 100000.0,
   "profit_target_pct": 8.0,
@@ -77,14 +77,14 @@
       "strategy": "quantx",
       "status": "active",
       "failed_reason": "",
-      "balance": 97000.0,
-      "equity": 97000.0,
-      "net_pnl": -3000.0,
-      "net_pnl_pct": -3.0,
-      "trades": 9,
-      "wins": 2,
+      "balance": 99000.0,
+      "equity": 99000.0,
+      "net_pnl": -1000.0,
+      "net_pnl_pct": -1.0,
+      "trades": 10,
+      "wins": 3,
       "losses": 7,
-      "win_rate": 22.2
+      "win_rate": 30.0
     }
   ]
 }
