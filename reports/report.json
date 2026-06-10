@@ -1,12 +1,12 @@
 {
-  "updated": "2026-06-10T04:58:48.027552+00:00",
+  "updated": "2026-06-10T08:58:17.487120+00:00",
   "model": "per-strategy isolated challenges",
   "account_size_each": 100000.0,
   "profit_target_pct": 8.0,
   "passed": 2,
   "failed": 1,
   "active": 3,
-  "open_positions": 3,
+  "open_positions": 2,
   "books": [
     {
       "strategy": "rsi",
@@ -39,11 +39,11 @@
       "status": "active",
       "failed_reason": "",
       "balance": 100000.0,
-      "equity": 100873.01,
+      "equity": 100000.0,
       "net_pnl": 0.0,
       "net_pnl_pct": 0.0,
-      "trades": 1,
-      "wins": 1,
+      "trades": 2,
+      "wins": 2,
       "losses": 0,
       "win_rate": 100.0
     },
