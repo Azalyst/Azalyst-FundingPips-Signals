@@ -2,7 +2,7 @@
   "rsi": {
     "strategy": "rsi",
     "account_size": 100000.0,
-    "equity": 98951.97,
+    "equity": 98941.34,
     "balance": 98000.0,
     "today_start_equity": 98716.96,
     "current_day": "2026-06-09",
@@ -36,7 +36,7 @@
   "eth_blueprint": {
     "strategy": "eth_blueprint",
     "account_size": 100000.0,
-    "equity": 100000.0,
+    "equity": 100873.01,
     "balance": 100000.0,
     "today_start_equity": 100000.0,
     "current_day": "2026-06-09",
