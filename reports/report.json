@@ -1,10 +1,15 @@
 {
-  "updated": "2026-06-11T07:07:00.097351+00:00",
-  "model": "ob-phase-challenge",
+  "updated": "2026-06-11T11:12:38.826480+00:00",
+  "model": "multi-phase-challenge",
   "account_size": 100000.0,
   "phase1_target_pct": 8.0,
   "phase2_target_pct": 5.0,
-  "open_positions": 0,
+  "passed": 0,
+  "failed": 0,
+  "active": 7,
+  "in_phase1": 7,
+  "in_phase2": 0,
+  "open_positions": 3,
   "books": [
     {
       "strategy": "rsi",
