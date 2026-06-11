@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-11 01:41 UTC",
-  "updated_iso": "2026-06-11T01:41:43.055335+00:00",
+  "updated": "2026-06-11 06:27 UTC",
+  "updated_iso": "2026-06-11T06:27:54.494900+00:00",
   "model": "per-strategy",
   "challenge": {
     "day": 9,
@@ -23,7 +23,7 @@
     "active": 3,
     "size_total": 600000.0,
     "balance_total": 612756.02,
-    "equity_total": 614146.07,
+    "equity_total": 616029.39,
     "net_pnl": 12756.02,
     "net_pnl_pct": 2.13,
     "trades": 33,
@@ -172,7 +172,7 @@
       "resolved_at": "",
       "size": 100000.0,
       "balance": 98000.0,
-      "equity": 98000.0,
+      "equity": 99744.56,
       "net_pnl": -2000.0,
       "net_pnl_pct": -2.0,
       "today_pnl": 0.0,
@@ -188,9 +188,9 @@
         "remaining": 5000.0
       },
       "overall": {
-        "used": 2000.0,
+        "used": 255.44,
         "limit": 10000.0,
-        "remaining": 8000.0
+        "remaining": 9744.56
       },
       "target": {
         "usd": 108000.0,
@@ -205,7 +205,7 @@
       "resolved_at": "2026-06-06 03:39",
       "size": 100000.0,
       "balance": 98000.0,
-      "equity": 99390.05,
+      "equity": 99528.81,
       "net_pnl": -2000.0,
       "net_pnl_pct": -2.0,
       "today_pnl": 0.0,
@@ -221,9 +221,9 @@
         "remaining": 5000.0
       },
       "overall": {
-        "used": 609.95,
+        "used": 471.19,
         "limit": 10000.0,
-        "remaining": 9390.05
+        "remaining": 9528.81
       },
       "target": {
         "usd": 108000.0,
@@ -605,19 +605,15 @@
   "tape": [
     {
       "sym": "NAS100",
-      "px": 28721.5
+      "px": 28554.0
     },
     {
       "sym": "SP500",
-      "px": 7299.75
+      "px": 7278.5
     },
     {
       "sym": "BTCUSD",
-      "px": 62116.07
-    },
-    {
-      "sym": "ETHUSD",
-      "px": 1638.9
+      "px": 62707.16
     }
   ],
   "equity_curve": [
@@ -920,6 +916,10 @@
     {
       "t": "2026-06-11T01:41",
       "e": 614146.07
+    },
+    {
+      "t": "2026-06-11T06:27",
+      "e": 616029.39
     }
   ]
 }
