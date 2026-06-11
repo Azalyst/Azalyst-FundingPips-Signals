@@ -3,17 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Azalyst OB Challenge — FundingPips</title>
+<title>Azalyst FundingPips — Phase 1/2 Challenge</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{font-size:13px}
-body{background:#000;font-family:'Courier New',monospace;color:#ff6600;overflow-x:hidden;min-width:900px}
+body{background:#000;font-family:'Courier New',monospace;color:#ff6600;overflow-x:hidden;min-width:1100px}
 a{color:#ff9900;text-decoration:none}
 
 /* TOP BAR */
-.topbar{background:#ff6600;color:#000;display:flex;align-items:center;gap:12px;padding:5px 14px;font-weight:700;font-size:13px;position:sticky;top:0;z-index:100}
-.logo{background:#000;color:#ff6600;padding:3px 14px;font-size:15px;font-weight:700;letter-spacing:.5px;white-space:nowrap}
+.topbar{background:#ff6600;color:#000;display:flex;align-items:center;gap:12px;padding:5px 12px;font-weight:700;font-size:13px;position:sticky;top:0;z-index:100}
+.logo{background:#000;color:#ff6600;padding:3px 12px;font-size:15px;font-weight:700;letter-spacing:.5px;white-space:nowrap}
 .logo span{color:#fff;font-size:10px;font-weight:400;margin-left:5px}
+.tabs{display:flex;gap:1px;margin-left:8px}
+.tab{background:#cc5200;color:#000;padding:3px 16px;cursor:pointer;font-size:11px;font-weight:700;border:none;font-family:'Courier New',monospace}
+.tab:hover{background:#e06000}.tab.active{background:#fff;color:#000}
 .topbar-right{margin-left:auto;display:flex;gap:16px;font-size:11px;align-items:center;white-space:nowrap}
 .live-dot{font-size:16px;animation:blink 1s step-end infinite}
 @keyframes blink{50%{opacity:0}}
@@ -25,46 +28,63 @@ a{color:#ff9900;text-decoration:none}
 .tape-item{margin-right:34px}
 .tape-item b{color:#ff9900}
 
-/* HERO — PHASE TRACKER */
-.hero{background:linear-gradient(135deg,#0a0800 0%,#0d0a02 50%,#0a0800 100%);border-bottom:2px solid #ff6600;padding:18px 20px;display:flex;gap:30px;align-items:center;flex-wrap:wrap}
-.phase-box{flex:1;min-width:260px;text-align:center;position:relative}
-.phase-num{font-size:10px;color:#888;text-transform:uppercase;letter-spacing:1px}
-.phase-title{font-size:28px;font-weight:700;color:#fff;margin:6px 0 10px}
-.phase-title.passed{color:#00ffff}
-.phase-title.active{color:#ff9900}
-.phase-title.failed{color:#ff3333}
-.days-big{font-size:60px;font-weight:700;line-height:1;margin:6px 0 2px}
-.days-big.done{color:#00ff41}
-.days-big.running{color:#ff9900}
-.days-label{font-size:10px;color:#888;text-transform:uppercase;letter-spacing:1px}
+/* BANNER */
+.banner{background:linear-gradient(90deg,#1a0d00,#0a0a0a);border-bottom:1px solid #333;padding:10px 14px;display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.bn-box{min-width:110px}
+.bn-label{font-size:8px;color:#666;text-transform:uppercase;letter-spacing:.5px}
+.bn-val{font-size:20px;font-weight:700;margin-top:2px}
+.bn-sub{font-size:9px;color:#888;margin-top:1px}
 
-/* PHASE PROGRESS */
-.phase-progress{flex:2;min-width:300px}
-.pp-item{margin-bottom:14px}
-.pp-top{display:flex;justify-content:space-between;margin-bottom:4px;font-size:10px;color:#aaa}
-.pp-top b{color:#fff}
-.pp-bar-wrap{background:#1a1a1a;height:10px;border-radius:3px;overflow:hidden}
-.pp-bar{height:10px;border-radius:3px;transition:width .5s}
-.pp-bar.p1{background:linear-gradient(90deg,#ff6600,#ff9900)}
-.pp-bar.p2{background:linear-gradient(90deg,#007a7a,#00ffff)}
-.pp-bar.done{background:linear-gradient(90deg,#00aa2a,#00ff41)}
-.pp-bar.fail{background:linear-gradient(90deg,#aa0000,#ff3333)}
+/* EXPLAIN */
+.explain{background:#0d0d0d;border-bottom:1px solid #222;padding:7px 14px;font-size:11px;line-height:1.5;color:#cfa06a}
+.explain b{color:#ff9900}.explain .k{color:#00ffff}.explain .x{color:#ff5555}
 
-/* DIVIDER */
-.section-divider{background:#0a0a0a;border-top:1px solid #222;border-bottom:1px solid #222;padding:5px 20px;font-size:9px;color:#555;text-transform:uppercase;letter-spacing:1px}
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#222;padding:2px}
+.card{background:#0a0a0a;border-top:3px solid #333;padding:10px 12px}
+.card.active{border-top-color:#ff9900}
+.card.passed{border-top-color:#00aaaa}
+.card.failed{border-top-color:#aa0000;opacity:.92}
+.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.card-name{font-size:14px;font-weight:700;color:#ff9900;letter-spacing:.5px;text-transform:uppercase}
+.card-bal{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+.card-bal .big{font-size:22px;font-weight:700;color:#fff}
+.card-bal .pnl{font-size:12px;font-weight:700}
+.card-reason{font-size:9px;color:#ff6666;margin-bottom:4px}
+.card-passed{font-size:9px;color:#00ffff;margin-bottom:4px}
 
-/* STAT BADGES */
-.stats-row{display:flex;gap:2px;background:#222;padding:2px}
-.stat-badge{flex:1;background:#0a0a0a;padding:8px 12px;min-width:100px}
-.stat-badge .lbl{font-size:8px;color:#666;text-transform:uppercase;letter-spacing:.5px}
-.stat-badge .val{font-size:20px;font-weight:700;color:#fff;margin-top:3px}
-.stat-badge .sub{font-size:9px;color:#888}
-.stat-badge .val.up{color:#00dd33}.stat-badge .val.dn{color:#ff5555}
+/* PHASE BADGE */
+.phase-badge{display:inline-block;font-size:8px;font-weight:700;padding:1px 6px;border-radius:2px;letter-spacing:.5px;margin-left:4px}
+.phase-badge.p1{background:#2a1a00;color:#ff9900;border:1px solid #ff6600}
+.phase-badge.p2{background:#001a2a;color:#00aaff;border:1px solid #0055aa}
+.phase-badge.done{background:#003d3d;color:#00ffff;border:1px solid #00aaaa}
+
+/* DAYS */
+.days-row{display:flex;gap:8px;margin-bottom:8px;font-size:9px;color:#888}
+.days-row .d{color:#ff9900;font-weight:700}
+.days-row .d.big{font-size:16px;color:#fff}
+
+/* BARS */
+.obj{margin-bottom:6px}
+.obj-top{display:flex;justify-content:space-between;font-size:9px;color:#999}
+.obj-top .rem{color:#fff;font-weight:700}
+.obj-wrap{background:#1a1a1a;height:7px;border-radius:2px;overflow:hidden}
+.obj-bar{height:7px;border-radius:2px;transition:width .4s}
+.obj-bar.ok{background:linear-gradient(90deg,#00aa2a,#00ff41)}
+.obj-bar.warn{background:linear-gradient(90deg,#cc7700,#ffaa00)}
+.obj-bar.crit{background:linear-gradient(90deg,#aa0000,#ff3333)}
+.obj-bar.p1bar{background:linear-gradient(90deg,#ff6600,#ff9900)}
+.obj-bar.p2bar{background:linear-gradient(90deg,#007a7a,#00ffff)}
+.obj-bar.done{background:linear-gradient(90deg,#00aa2a,#00ff41)}
+
+/* PANELS */
+.main{display:grid;gap:2px;background:#222;padding:2px}
+.grid-1{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr 1fr}.grid-3{grid-template-columns:1fr 1fr 1fr}
+.panel{background:#0a0a0a;padding:9px 11px}
+.panel-header{color:#ff6600;font-weight:700;font-size:11px;border-bottom:1px solid #333;padding-bottom:4px;margin-bottom:7px;display:flex;justify-content:space-between}
+.cmd{color:#ffaa00;font-size:10px}
 
 /* TABLES */
-.panel{background:#0a0a0a;padding:10px 14px}
-.panel-header{color:#ff6600;font-weight:700;font-size:11px;border-bottom:1px solid #333;padding-bottom:5px;margin-bottom:8px;display:flex;justify-content:space-between}
-.cmd{color:#ffaa00;font-size:10px}
 table{width:100%;border-collapse:collapse;font-size:10px}
 th{color:#888;text-align:left;font-size:8px;text-transform:uppercase;letter-spacing:.4px;border-bottom:1px solid #222;padding:4px 6px}
 td{padding:4px 6px;border-bottom:1px solid #0d0d0d;color:#ccc}
@@ -81,35 +101,26 @@ tr:hover td{background:#0d0d0d}
 .badge.active{background:#2a1a00;color:#ff9900;border:1px solid #ff6600}
 .badge.passed{background:#003d3d;color:#00ffff;border:1px solid #00aaaa}
 .badge.failed{background:#3d0000;color:#ff3333;border:1px solid #aa0000}
-.badge.phase1{background:#2a1a00;color:#ff9900;border:1px solid #ff6600}
-.badge.phase2{background:#001a2a;color:#00aaff;border:1px solid #0055aa}
+.badge.p1{background:#2a1a00;color:#ff9900;border:1px solid #ff6600}
+.badge.p2{background:#001a2a;color:#00aaff;border:1px solid #0055aa}
 
-/* EQUITY CHART */
-.eq-wrap{background:#0a0a0a;padding:10px 14px}
-.eq-cmd{color:#ffaa00;font-size:10px}
-
-/* FOOTER */
-.statusbar{background:#0a0a0a;border-top:1px solid #222;display:flex;justify-content:space-between;padding:4px 14px;font-size:9px;color:#555;gap:8px;flex-wrap:wrap}
-.btn{background:#1a0a00;color:#ff9900;border:1px solid #ff6600;padding:2px 14px;font-family:'Courier New',monospace;font-size:9px;font-weight:700;cursor:pointer}
+/* STATUS BAR */
+.statusbar{background:#0a0a0a;border-top:1px solid #222;display:flex;justify-content:space-between;padding:4px 12px;font-size:9px;color:#555;gap:8px}
+.btn{background:#1a0a00;color:#ff9900;border:1px solid #ff6600;padding:2px 12px;font-family:'Courier New',monospace;font-size:9px;font-weight:700;cursor:pointer}
 .btn:hover{background:#ff6600;color:#000}
+.page{display:none}.page.active{display:block}
 .empty{color:#444;font-size:10px;padding:8px 0;text-align:center}
-.disclaimer{font-size:8px;color:#444;padding:8px 14px;line-height:1.5;border-top:1px solid #1a1a1a;background:#000}
-.explain{background:#0d0d0d;border-bottom:1px solid #222;padding:7px 14px;font-size:11px;line-height:1.5;color:#cfa06a}
-.explain b{color:#ff9900}
-.explain .k{color:#00ffff}.explain .x{color:#ff5555}
-
-/* PHASE TIMELINE */
-.timeline{display:flex;gap:4px;align-items:center;margin:8px 0}
-.tl-dot{width:12px;height:12px;border-radius:50%;background:#333}
-.tl-dot.done{background:#00ff41;box-shadow:0 0 8px #00ff41}
-.tl-dot.current{background:#ff9900;box-shadow:0 0 8px #ff9900}
-.tl-line{flex:1;height:2px;background:#333}
-.tl-line.done{background:#00aa2a}
+.disclaimer{font-size:8px;color:#444;padding:8px 12px;line-height:1.5;border-top:1px solid #1a1a1a}
 </style>
 </head>
 <body>
 <div class="topbar">
-  <div class="logo">AZALYST <span>OB CHALLENGE</span></div>
+  <div class="logo">AZALYST <span>FUNDINGPIPS</span></div>
+  <div class="tabs">
+    <button class="tab active" data-page="overview">CHALLENGES</button>
+    <button class="tab" data-page="positions">POSITIONS</button>
+    <button class="tab" data-page="fleet">FLEET</button>
+  </div>
   <div class="topbar-right">
     <span class="live-dot">&#9679;</span><span id="updated">loading...</span>
   </div>
@@ -118,35 +129,39 @@ tr:hover td{background:#0d0d0d}
 <div class="tape"><div class="tape-inner" id="tape">&nbsp;</div></div>
 
 <div class="explain">
-  <b>Order Block (OB) Strategy</b> &mdash; running a live <b>$100,000 FundingPips challenge</b>.
-  ICT/SMC order block detection on the 4H, entries on the 15M retrace into the OB zone.
+  <b>7 strategies, each running its own independent $100,000 FundingPips challenge</b> &mdash;
   <span class="k">Phase 1: +8%</span> &rarr; <span class="k">Phase 2: +5%</span>.
-  Tracked live — every trade simulated under real prop-firm risk rules.
+  Every card tracks how many days to pass each phase. $5k daily / $10k max loss limits enforced per strategy.
 </div>
 
-<!-- HERO -->
-<div id="hero"></div>
+<div class="banner" id="banner"></div>
 
-<!-- STATS -->
-<div class="stats-row" id="stats-row"></div>
+<div class="page active" id="overview"><div class="cards" id="cards"></div></div>
 
-<!-- POSITIONS -->
-<div class="section-divider">OPEN POSITIONS</div>
-<div class="panel" id="open-pos"></div>
+<div class="page" id="positions">
+  <div class="main grid-1"><div class="panel">
+    <div class="panel-header"><span>OPEN POSITIONS</span><span class="cmd">LIVE</span></div>
+    <div id="open-full"></div>
+  </div></div>
+  <div class="main grid-1"><div class="panel">
+    <div class="panel-header"><span>CLOSED TRADES</span><span class="cmd">TRACK RECORD</span></div>
+    <div id="closed-full"></div>
+  </div></div>
+</div>
 
-<!-- CLOSED -->
-<div class="section-divider">CLOSED TRADES</div>
-<div class="panel" id="closed-pos"></div>
-
-<!-- EQUITY -->
-<div class="section-divider">EQUITY CURVE</div>
-<div class="eq-wrap">
-  <div class="panel-header"><span>OB STRATEGY EQUITY</span><span class="cmd" id="eq-cmd"></span></div>
-  <div id="equity-chart"></div>
+<div class="page" id="fleet">
+  <div class="main grid-1"><div class="panel">
+    <div class="panel-header"><span>FLEET EQUITY CURVE</span><span class="cmd" id="eq-cmd"></span></div>
+    <div id="equity"></div>
+  </div></div>
+  <div class="main grid-1"><div class="panel">
+    <div class="panel-header"><span>FLEET STATS</span><span class="cmd">ALL BOOKS COMBINED</span></div>
+    <div class="stat-grid" id="stats"></div>
+  </div></div>
 </div>
 
 <div class="statusbar">
-  <span>SOURCE: yfinance (FX/metals/index) + Bybit (crypto) &middot; OB Strategy &middot; 15-min cron</span>
+  <span>SOURCE: yfinance + Bybit &middot; 7 strategies &middot; Phase 1 (+8%) → Phase 2 (+5%) &middot; 15-min cron</span>
   <span>
     <button class="btn" onclick="load()">&#8635; REFRESH</button>
     <a class="btn" href="https://github.com/Azalyst/Azalyst-FundingPips-Signals" target="_blank">REPO</a>
@@ -155,8 +170,9 @@ tr:hover td{background:#0d0d0d}
 
 <div class="disclaimer">
   Educational paper-trading record. Signals are mechanical interpretations and are not financial advice.
-  The OB strategy paper-trades a $100,000 FundingPips challenge at 1% risk/trade under a $5,000 daily /
-  $10,000 maximum loss limit. Past and simulated performance does not guarantee future results.
+  Each strategy independently paper-trades its own $100,000 FundingPips challenge at 1% risk/trade under
+  a $5,000 daily / $10,000 maximum loss limit. Phase 1 target: +8%. Phase 2 target: +5%.
+  Past and simulated performance does not guarantee future results.
 </div>
 
 <script>
@@ -164,100 +180,61 @@ const fmt = n => (n>=0?'+':'') + '$' + Math.abs(n).toLocaleString('en-US',{minim
 const usd = n => '$' + Number(n).toLocaleString('en-US',{maximumFractionDigits:0});
 const cls = n => n>0?'up':(n<0?'dn':'flat');
 
-function heroHTML(b){
-  if(!b){return '<div class="hero"><div class="phase-box"><div class="phase-title">Waiting for data...</div></div></div>';}
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+  t.classList.add('active');
+  document.getElementById(t.dataset.page).classList.add('active');
+});
 
+function card(b){
   const isPhase1 = b.phase === 1;
-  const isActive = b.status === 'active';
-  const isPassed = b.status === 'passed';
-  const isFailed = b.status === 'failed';
+  const phaseLabel = isPhase1 ? 'PHASE 1' : 'PHASE 2';
+  const phaseCls = isPhase1 ? 'p1' : 'p2';
+  const phaseBadgeCls = isPhase1 ? 'p1' : (b.status==='passed'?'done':'p2');
 
-  let phase1Class = 'done', phase2Class = 'current';
-  if(isPhase1 && isActive){phase1Class='current';phase2Class='';}
-  if(isFailed){phase1Class='failed';phase2Class='';}
-  if(isPassed){phase1Class='done';phase2Class='done';}
+  const reason = (b.status==='failed' && b.failed_reason)
+    ? `<div class="card-reason">FAILED: ${b.failed_reason}${b.resolved_at?' &middot; '+b.resolved_at:''}</div>` : '';
+  const passed = (b.status==='passed')
+    ? `<div class="card-passed">PASSED${b.resolved_at?' &middot; '+b.resolved_at:''}</div>` : '';
 
-  const p1TitleClass = isPhase1 ? 'active' : (isFailed ? 'failed' : 'passed');
-  const p2TitleClass = isPhase1 ? '' : (isPassed ? 'passed' : 'active');
+  const p1Days = b.phase1_days > 0 ? `${b.phase1_days}d` : (isPhase1 ? `${b.days_elapsed}d` : '—');
+  const p2Days = !isPhase1 ? (b.phase2_days > 0 ? `${b.phase2_days}d` : `${b.days_elapsed}d`) : '—';
 
-  return `
-  <div class="hero">
-    <div class="phase-box" style="border-right:1px solid #222;padding-right:20px">
-      <div class="phase-num">Phase 1</div>
-      <div class="phase-title ${p1TitleClass}">${isPhase1 && isActive ? 'IN PROGRESS' : (isFailed ? 'FAILED' : 'PASSED')}</div>
-      <div class="days-big ${b.phase1_days > 0 || isFailed ? 'done' : 'running'}">${b.phase1_days || (isPhase1 ? b.days_elapsed : '—')}</div>
-      <div class="days-label">${isPhase1 && isActive ? 'DAYS ELAPSED' : (isFailed ? 'DAYS UNTIL FAIL' : 'DAYS TO PASS')}</div>
-      ${b.phase1_passed_at ? `<div style="font-size:9px;color:#00ffff;margin-top:4px">${b.phase1_passed_at} UTC</div>` : ''}
+  return `<div class="card ${b.status}">
+    <div class="card-top">
+      <span class="card-name">${b.strategy} <span class="phase-badge ${phaseBadgeCls}">${phaseLabel}</span></span>
+      <span class="badge ${b.status==='active'?(isPhase1?'p1':'p2'):b.status}">${b.status.toUpperCase()}</span>
     </div>
-
-    <div style="color:#333;font-size:36px;font-weight:700">&rarr;</div>
-
-    <div class="phase-box">
-      <div class="phase-num">Phase 2</div>
-      <div class="phase-title ${p2TitleClass}">${isPhase1 ? 'LOCKED' : (isPassed ? 'PASSED' : 'IN PROGRESS')}</div>
-      <div class="days-big ${isPassed ? 'done' : (!isPhase1 ? 'running' : '')}" style="${isPhase1 ? 'color:#333' : ''}">${isPhase1 ? '—' : (b.phase2_days || b.days_elapsed || '1')}</div>
-      <div class="days-label">${isPhase1 ? 'COMPLETE PHASE 1 FIRST' : (isPassed ? 'DAYS TO PASS' : 'DAYS ELAPSED')}</div>
-      ${b.phase2_start ? `<div style="font-size:9px;color:#00aaff;margin-top:4px">Started ${b.phase2_start}</div>` : ''}
+    <div class="card-bal">
+      <span class="big">${usd(b.balance)}</span>
+      <span class="pnl ${cls(b.net_pnl)}">${fmt(b.net_pnl)} (${b.net_pnl_pct>=0?'+':''}${b.net_pnl_pct}%)</span>
     </div>
-
-    <div class="phase-progress">
-      <div class="pp-item">
-        <div class="pp-top"><span>Phase 1 &middot; +${b.target.pct}% target</span><span><b>${b.target.progress}%</b></span></div>
-        <div class="pp-bar-wrap"><div class="pp-bar p1${isPhase1 ? '' : ' done'}" style="width:${isPhase1 ? b.target.progress : 100}%"></div></div>
-      </div>
-      <div class="pp-item">
-        <div class="pp-top"><span>Phase 2 &middot; +5% target</span><span><b>${isPhase1 ? '0%' : b.target.progress}%</b></span></div>
-        <div class="pp-bar-wrap"><div class="pp-bar p2${!isPhase1 && isActive ? '' : (isPassed ? ' done' : '')}" style="width:${isPhase1 ? 0 : (isPassed ? 100 : b.target.progress)}%"></div></div>
-      </div>
-      <div class="pp-item" style="margin-bottom:0">
-        <div class="pp-top"><span>Daily loss</span><span><b>${usd(b.daily.remaining)} left</b></span></div>
-        <div class="pp-bar-wrap"><div class="pp-bar ${b.daily.used/b.daily.limit>=0.8?'fail':(b.daily.used/b.daily.limit>=0.5?'p1':'done')}" style="width:${Math.min(100,b.daily.used/b.daily.limit*100)}%"></div></div>
-      </div>
+    <div class="days-row">
+      <span>P1: <span class="d ${b.phase1_days>0?'big':''}">${p1Days}</span></span>
+      <span style="color:#444">|</span>
+      <span>P2: <span class="d ${!isPhase1 && b.status==='active'?'big':''}">${p2Days}</span></span>
     </div>
+    ${reason}${passed}
+    <div class="card-meta" style="font-size:9px;color:#666;margin-bottom:7px;display:flex;justify-content:space-between">
+      <span>${b.trades} trades &middot; ${b.win_rate}% win</span>
+      <span>${b.open} open &middot; peak ${usd(b.peak_balance)}</span>
+    </div>
+    <div class="obj">
+      <div class="obj-top"><span>${phaseLabel} +${b.target.pct}% target</span><span class="rem">${b.target.progress}%</span></div>
+      <div class="obj-wrap"><div class="obj-bar p${isPhase1?'1':'2'}bar" style="width:${b.target.progress}%"></div></div>
+    </div>
+    <div class="obj">
+      <div class="obj-top"><span>Daily loss</span><span class="rem">${usd(b.daily.remaining)} left</span></div>
+      <div class="obj-wrap"><div class="obj-bar ${b.daily.used/b.daily.limit>=0.8?'crit':(b.daily.used/b.daily.limit>=0.5?'warn':'ok')}" style="width:${Math.min(100,b.daily.used/b.daily.limit*100)}%"></div></div>
+    </div>
+    ${b.phase1_passed_at ? `<div style="font-size:8px;color:#00ffff;margin-top:2px">P1 passed ${b.phase1_passed_at}</div>` : ''}
   </div>`;
-}
-
-function statsHTML(b){
-  if(!b) return '';
-  return `
-    <div class="stat-badge"><div class="lbl">Balance</div><div class="val">${usd(b.balance)}</div><div class="sub">Equity ${usd(b.equity)}</div></div>
-    <div class="stat-badge"><div class="lbl">Net P&amp;L</div><div class="val ${cls(b.net_pnl)}">${fmt(b.net_pnl)}</div><div class="sub">${b.net_pnl_pct>=0?'+':''}${b.net_pnl_pct}%</div></div>
-    <div class="stat-badge"><div class="lbl">Peak Balance</div><div class="val" style="color:#ff9900">${usd(b.peak_balance)}</div><div class="sub">${b.trades} trades</div></div>
-    <div class="stat-badge"><div class="lbl">Win Rate</div><div class="val" style="color:#ff9900">${b.win_rate}%</div><div class="sub">W ${b.wins} / L ${b.losses}</div></div>
-    <div class="stat-badge"><div class="lbl">Max Loss Drawdown</div><div class="val" style="color:#ff5555">${usd(b.overall.used)}</div><div class="sub">of ${usd(b.overall.limit)} limit</div></div>
-    <div class="stat-badge"><div class="lbl">Status</div><div class="val" style="color:${b.status==='active'?'#ff9900':(b.status==='passed'?'#00ffff':'#ff3333')}">${b.status.toUpperCase()}</div>
-      ${b.failed_reason?`<div class="sub" style="color:#ff5555">${b.failed_reason}</div>`:''}
-      ${b.status==='active'?`<div class="sub"><span class="badge ${b.phase===1?'phase1':'phase2'}">${b.phase_label}</span></div>`:''}
-    </div>`;
-}
-
-function posRows(list){
-  if(!list||!list.length) return '<div class="empty">no open positions</div>';
-  let h='<table><tr><th>Symbol</th><th>Side</th><th>Entry</th><th>Stop</th><th>Target</th><th>Lots</th><th>Risk</th><th>Opened</th></tr>';
-  for(const p of list){
-    h+=`<tr><td class="sym">${p.symbol}</td>
-      <td class="${p.side==='BUY'?'buy':'sell'}">${p.side}${p.be?' <span class="tag be">BE</span>':''}</td>
-      <td>${p.entry}</td><td>${p.stop}</td><td>${p.target}</td><td>${p.lots}</td><td>${usd(p.risk)}</td><td>${p.opened}</td></tr>`;
-  }
-  return h+'</table>';
-}
-
-function closedRows(list){
-  if(!list||!list.length) return '<div class="empty">no closed trades yet</div>';
-  let h='<table><tr><th>Closed</th><th>Symbol</th><th>Side</th><th>Exit</th><th>Reason</th><th>PnL</th><th>R</th></tr>';
-  for(const p of list){
-    const rc = p.reason==='tp'?'tp':(p.reason==='sl'?'sl':(p.reason==='be'?'be':(p.reason==='phase'?'phase':'')));
-    h+=`<tr><td>${p.closed}</td><td class="sym">${p.symbol}</td>
-      <td class="${p.side==='BUY'?'buy':'sell'}">${p.side}</td><td>${p.exit}</td>
-      <td><span class="tag ${rc}">${(p.reason||'').toUpperCase()}</span></td>
-      <td class="${cls(p.pnl)}">${fmt(p.pnl)}</td><td class="${cls(p.r)}">${p.r>=0?'+':''}${p.r}R</td></tr>`;
-  }
-  return h+'</table>';
 }
 
 function equitySVG(curve, base){
   if(!curve||curve.length<2){return '<div class="empty">building equity history...</div>';}
-  const W=1100,H=220,P=4;
+  const W=1000,H=200,P=4;
   const es=curve.map(p=>p.e);
   let lo=Math.min(...es,base), hi=Math.max(...es,base);
   if(hi-lo<200){hi+=200;lo-=200;}
@@ -267,13 +244,37 @@ function equitySVG(curve, base){
   const last=es[es.length-1], up=last>=base;
   const col=up?'#00dd33':'#ff5555';
   const baseY=y(base).toFixed(1);
-  document.getElementById('eq-cmd').textContent = `${curve.length} pts · ${fmt(last-base)} from start`;
-  return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" style="width:100%;height:220px">
+  document.getElementById('eq-cmd').textContent = `${curve.length} pts · ${fmt(last-base)}`;
+  return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" style="width:100%;height:200px">
     <line x1="0" y1="${baseY}" x2="${W}" y2="${baseY}" stroke="#333" stroke-dasharray="4 4" stroke-width="1"/>
     <polyline fill="none" stroke="${col}" stroke-width="1.5" points="${pts}"/>
   </svg>
   <div style="display:flex;justify-content:space-between;font-size:9px;color:#555;margin-top:2px">
     <span>${usd(lo)}</span><span>start ${usd(base)}</span><span>${usd(hi)}</span></div>`;
+}
+
+function posRows(list){
+  if(!list.length) return '<div class="empty">no open positions</div>';
+  let h='<table><tr><th>Strat</th><th>Symbol</th><th>Side</th><th>Entry</th><th>Stop</th><th>Target</th><th>Lots</th><th>Risk</th><th>Opened</th></tr>';
+  for(const p of list){
+    h+=`<tr><td>${p.strategy}</td><td class="sym">${p.symbol}</td>
+      <td class="${p.side==='BUY'?'buy':'sell'}">${p.side}${p.be?' <span class="tag be">BE</span>':''}</td>
+      <td>${p.entry}</td><td>${p.stop}</td><td>${p.target}</td><td>${p.lots}</td><td>${usd(p.risk||0)}</td><td>${p.opened}</td></tr>`;
+  }
+  return h+'</table>';
+}
+
+function closedRows(list){
+  if(!list.length) return '<div class="empty">no closed trades yet</div>';
+  let h='<table><tr><th>Closed</th><th>Strat</th><th>Symbol</th><th>Side</th><th>Exit</th><th>Reason</th><th>PnL</th><th>R</th></tr>';
+  for(const p of list){
+    const rc = (p.reason||'').toLowerCase();
+    h+=`<tr><td>${p.closed}</td><td>${p.strategy}</td><td class="sym">${p.symbol}</td>
+      <td class="${p.side==='BUY'?'buy':'sell'}">${p.side}</td><td>${p.exit}</td>
+      <td><span class="tag ${rc}">${(p.reason||'').toUpperCase()}</span></td>
+      <td class="${cls(p.pnl)}">${fmt(p.pnl)}</td><td class="${cls(p.r)}">${p.r>=0?'+':''}${p.r}R</td></tr>`;
+  }
+  return h+'</table>';
 }
 
 async function load(){
@@ -285,19 +286,35 @@ async function load(){
     document.getElementById('tape').innerHTML =
       (d.tape||[]).concat(d.tape||[]).map(t=>`<span class="tape-item"><b>${t.sym}</b> ${t.px}</span>`).join('') || '&nbsp;';
 
-    const book = (d.books||[])[0];
-    document.getElementById('hero').innerHTML = heroHTML(book);
-    document.getElementById('stats-row').innerHTML = statsHTML(book);
-    document.getElementById('open-pos').innerHTML = posRows(d.positions||[]);
-    document.getElementById('closed-pos').innerHTML = closedRows(d.closed||[]);
-    document.getElementById('equity-chart').innerHTML = equitySVG(d.equity_curve, (d.rules||{}).size||100000);
+    const f=d.fleet||{}, ch=d.challenge||{};
+    document.getElementById('banner').innerHTML=`
+      <div class="bn-box"><div class="bn-label">Strategies</div><div class="bn-val" style="color:#fff">${f.books||0}</div></div>
+      <div class="bn-box"><div class="bn-label">Phase 1</div><div class="bn-val" style="color:#ff9900">${f.phase1||0}</div><div class="bn-sub">+8% target</div></div>
+      <div class="bn-box"><div class="bn-label">Phase 2</div><div class="bn-val" style="color:#00aaff">${f.phase2||0}</div><div class="bn-sub">+5% target</div></div>
+      <div class="bn-box"><div class="bn-label">Passed</div><div class="bn-val" style="color:#00ffff">${f.passed||0}</div></div>
+      <div class="bn-box"><div class="bn-label">Failed</div><div class="bn-val" style="color:#ff5555">${f.failed||0}</div></div>
+      <div class="bn-box"><div class="bn-label">Fleet Net PnL</div><div class="bn-val ${cls(f.net_pnl||0)}">${fmt(f.net_pnl||0)}</div></div>
+      <div class="bn-box"><div class="bn-label">Win Rate</div><div class="bn-val" style="color:#ff9900">${f.win_rate||0}%</div></div>
+      <div class="bn-box"><div class="bn-label">Challenge</div><div class="bn-val" style="color:#fff;font-size:15px">Day ${ch.day||1}</div></div>`;
+
+    document.getElementById('cards').innerHTML = (d.books||[]).map(card).join('')
+      || '<div class="empty">no strategy books yet</div>';
+
+    document.getElementById('open-full').innerHTML=posRows(d.positions||[]);
+    document.getElementById('closed-full').innerHTML=closedRows(d.closed||[]);
+
+    document.getElementById('equity').innerHTML=equitySVG(d.equity_curve, (f.size_total||((d.rules||{}).size||100000)*(f.books||1)));
+    document.getElementById('stats').innerHTML=`
+      <div class="stat-box"><div class="stat-label">Fleet Balance</div><div class="stat-val" style="color:#fff">${usd(f.balance_total||0)}</div><div class="stat-sub">of ${usd(f.size_total||0)}</div></div>
+      <div class="stat-box"><div class="stat-label">Fleet Equity</div><div class="stat-val" style="color:#fff">${usd(f.equity_total||0)}</div><div class="stat-sub">incl. open</div></div>
+      <div class="stat-box"><div class="stat-label">Trades</div><div class="stat-val" style="color:#ff9900">${f.trades||0}</div><div class="stat-sub">W ${f.wins||0} / L ${f.losses||0}</div></div>
+      <div class="stat-box"><div class="stat-label">Open</div><div class="stat-val" style="color:#ff9900">${f.open||0}</div><div class="stat-sub">positions</div></div>`;
   }catch(e){
-    document.getElementById('updated').textContent = 'status.json not found yet';
-    console.error(e);
+    document.getElementById('updated').textContent='status.json not found yet';
   }
 }
 load();
-setInterval(load, 60000);
+setInterval(load,60000);
 </script>
 </body>
 </html>

@@ -38,6 +38,7 @@ from dashboard import build_status
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SL_REASONS = {"sl"}
+EMA5_DAILY_SL_CAP = 3
 
 
 def load_config():
@@ -206,6 +207,9 @@ def main():
         # within this strategy's own book: no duplicate / no opposite-side hedge on a symbol
         existing = open_by_strat_sym.get((sig.strategy, sig.symbol), [])
         if existing:
+            continue
+        # 5 EMA 3-SL daily rule (per book)
+        if sig.strategy == "ema5" and b.sl_count.get("ema5", 0) >= EMA5_DAILY_SL_CAP:
             continue
 
         inst = instruments[sig.symbol]

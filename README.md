@@ -1,8 +1,8 @@
-# Azalyst OB Challenge — FundingPips Signal Engine
+# Azalyst FundingPips — Phase 1/2 Challenge Engine
 
-**Order Block (OB) strategy** running a live simulated $100,000 FundingPips prop-firm
-challenge. ICT/SMC order block detection on the 4H timeframe, entries on the 15M
-retrace into the OB zone.
+Autonomous multi-strategy signal engine running **7 independent $100,000 FundingPips
+prop-firm challenges**. Each strategy trades its own isolated account with
+**Phase 1 (+8%) → Phase 2 (+5%)** tracking and real-time day counters.
 
 📊 **Dashboard:** [azalyst.github.io/Azalyst-FundingPips-Signals](https://azalyst.github.io/Azalyst-FundingPips-Signals/)
 
@@ -13,49 +13,34 @@ retrace into the OB zone.
 | Phase 1 | +8% ($108,000) | $5,000 daily / $10,000 max |
 | Phase 2 | +5% ($105,000) | $5,000 daily / $10,000 max |
 
-The dashboard tracks **days to pass** each phase in real time.
+When Phase 1 passes (balance hits $108k), the strategy auto-transitions to Phase 2
+with a fresh $100k account. The dashboard tracks **days to pass each phase**.
 
-## Strategy — Order Block (OB)
+## Strategies (7)
 
-- **HTF (4H):** Detects order blocks — the last candle before a strong momentum breakout
-- **Entry (15M):** Price retraces into the OB zone with confirmation
-- **Stop:** Beyond the OB boundary + ATR buffer
-- **Target:** 1:2 risk-reward
-- **Risk:** 1% per trade
-
-### Instruments
-
-EURUSD, GBPUSD, XAUUSD, NAS100, SP500, BTCUSD, ETHUSD
-
-Data sources: yfinance (FX/metals/indices) + Bybit (crypto).
+| # | Strategy | Description |
+|---|---|---|
+| 1 | **RSI** | Classic Wilder RSI(14) 70/30 + Filtered 200MA/5MA/RSI2 |
+| 2 | **EMA5** | 5 EMA pullback entries on 5m/15m |
+| 3 | **Ethereum Blueprint** | Asia-session ETH scalp with 4H bias |
+| 4 | **SMT Divergence** | BTC/ETH SMT divergence on 5m |
+| 5 | **JadeCap** | NY-session liquidity sweeps on 15m |
+| 6 | **QUANT-X** | BTC 15m momentum breakout |
+| 7 | **OB** | Order Block — 4H OB detection, 15M retrace entries |
 
 ## Running
 
 ```bash
-# Install
 pip install -r requirements.txt
 
-# Single tick (cron/manual)
-python run.py
-
-# Dry run (no Discord alerts)
-python run.py --dry-run
-
-# Test Discord connectivity
+python run.py              # single tick
+python run.py --dry-run    # no Discord alerts
 python run.py --test-discord
-
-# Reset to fresh challenge
-python reset.py
+python reset.py            # fresh challenge reset
 ```
 
-Automated via GitHub Actions every 15 minutes (`.github/workflows/signals.yml`).
-
-## Dashboard
-
-The dashboard auto-refreshes from `docs/status.json` every 60s. Open
-`docs/index.html` locally or visit the GitHub Pages URL above.
+Automated via GitHub Actions every 15 minutes.
 
 ## Disclaimer
 
-Educational paper-trading record. Signals are mechanical interpretations and are
-not financial advice. Past and simulated performance does not guarantee future results.
+Educational paper-trading record. Not financial advice.

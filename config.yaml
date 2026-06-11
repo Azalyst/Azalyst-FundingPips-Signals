@@ -1,5 +1,5 @@
-# Azalyst FundingPips - Order Block (OB) Challenge Signal Engine
-# Single strategy, single challenge tracking Phase 1 → Phase 2
+# Azalyst FundingPips - Multi-Strategy Phase 1/2 Challenge Engine
+# 7 strategies running independent $100k FundingPips challenges
 
 account:
   size: 100000.0
@@ -18,20 +18,52 @@ risk:
 instruments:
   EURUSD:  {source: yfinance, ticker: "EURUSD=X", asset: fx,     value_per_point: 1.0, lot_units: 100000, pip: 0.0001, digits: 5, min_stop: 0.0010}
   GBPUSD:  {source: yfinance, ticker: "GBPUSD=X", asset: fx,     value_per_point: 1.0, lot_units: 100000, pip: 0.0001, digits: 5, min_stop: 0.0010}
+  AUDUSD:  {source: yfinance, ticker: "AUDUSD=X", asset: fx,     value_per_point: 1.0, lot_units: 100000, pip: 0.0001, digits: 5, min_stop: 0.0008}
+  NZDUSD:  {source: yfinance, ticker: "NZDUSD=X", asset: fx,     value_per_point: 1.0, lot_units: 100000, pip: 0.0001, digits: 5, min_stop: 0.0008}
   XAUUSD:  {source: yfinance, ticker: "GC=F",     asset: metal,  value_per_point: 1.0, lot_units: 100,    pip: 0.1,    digits: 2, min_stop: 2.5}
+  XAGUSD:  {source: yfinance, ticker: "SI=F",     asset: metal,  value_per_point: 1.0, lot_units: 5000,   pip: 0.01,   digits: 3, min_stop: 0.10}
   NAS100:  {source: yfinance, ticker: "NQ=F",     asset: index,  value_per_point: 1.0, lot_units: 1,      pip: 1.0,    digits: 2, min_stop: 25.0}
   SP500:   {source: yfinance, ticker: "ES=F",     asset: index,  value_per_point: 1.0, lot_units: 1,      pip: 1.0,    digits: 2, min_stop: 8.0}
   BTCUSD:  {source: bybit,    ticker: "BTCUSDT",  asset: crypto, value_per_point: 1.0, lot_units: 1,      pip: 1.0,    digits: 2, min_stop: 60.0}
   ETHUSD:  {source: bybit,    ticker: "ETHUSDT",  asset: crypto, value_per_point: 1.0, lot_units: 1,      pip: 0.1,    digits: 2, min_stop: 4.0}
+  XRPUSD:  {source: bybit,    ticker: "XRPUSDT",  asset: crypto, value_per_point: 1.0, lot_units: 1,      pip: 0.0001, digits: 4, min_stop: 0.004}
 
 strategies:
+  rsi:
+    enabled: true
+    instruments: [EURUSD, GBPUSD, XAUUSD, NAS100, SP500, BTCUSD, ETHUSD]
+    interval: "1d"
+  ema5:
+    enabled: true
+    instruments: [EURUSD, GBPUSD, XAUUSD, NAS100]
+    interval_sell: "5m"
+    interval_buy: "15m"
+  eth_blueprint:
+    enabled: true
+    instruments: [ETHUSD]
+    interval: "15m"
+    bias_interval: "4h"
+    session: asia
+  smt_divergence:
+    enabled: true
+    pair: [BTCUSD, ETHUSD]
+    interval: "5m"
+  jadecap:
+    enabled: true
+    instruments: [EURUSD, GBPUSD, NAS100, SP500]
+    interval: "15m"
+    session: ny
+  quantx:
+    enabled: true
+    instruments: [BTCUSD]
+    interval: "15m"
   ob:
     enabled: true
     instruments: [EURUSD, GBPUSD, XAUUSD, NAS100, SP500, BTCUSD, ETHUSD]
-    interval: "15m"           # entry timeframe
-    htf_interval: "4h"        # order block detection timeframe
-    rr_ratio: 2.0             # 1:2 risk-reward
-    ob_lookback: 20           # bars to scan for order blocks
+    interval: "15m"
+    htf_interval: "4h"
+    rr_ratio: 2.0
+    ob_lookback: 20
 
 discord:
   user_id: "1363959528194052118"
