@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-12 22:10 UTC",
-  "updated_iso": "2026-06-12T22:10:08.598896+00:00",
+  "updated": "2026-06-12 23:51 UTC",
+  "updated_iso": "2026-06-12T23:51:50.289392+00:00",
   "model": "multi-phase",
   "challenge": {
     "day": 2,
@@ -22,15 +22,15 @@
     "phase1": 7,
     "phase2": 0,
     "size_total": 700000.0,
-    "balance_total": 694000.0,
-    "equity_total": 701435.1,
-    "net_pnl": -6000.0,
-    "net_pnl_pct": -0.86,
-    "trades": 16,
+    "balance_total": 693000.0,
+    "equity_total": 700117.8,
+    "net_pnl": -7000.0,
+    "net_pnl_pct": -1.0,
+    "trades": 17,
     "wins": 4,
-    "losses": 12,
-    "win_rate": 25.0,
-    "open": 9
+    "losses": 13,
+    "win_rate": 23.5,
+    "open": 8
   },
   "books": [
     {
@@ -47,21 +47,21 @@
       "failed_reason": "",
       "resolved_at": "",
       "size": 100000.0,
-      "balance": 102000.0,
-      "equity": 101844.39,
-      "net_pnl": 2000.0,
-      "net_pnl_pct": 2.0,
-      "today_pnl": 0.0,
+      "balance": 101000.0,
+      "equity": 100871.71,
+      "net_pnl": 1000.0,
+      "net_pnl_pct": 1.0,
+      "today_pnl": -1000.0,
       "peak_balance": 106000.0,
-      "trades": 7,
+      "trades": 8,
       "wins": 3,
-      "losses": 4,
-      "win_rate": 42.9,
-      "open": 2,
+      "losses": 5,
+      "win_rate": 37.5,
+      "open": 1,
       "daily": {
-        "used": 0.0,
+        "used": 914.36,
         "limit": 5000.0,
-        "remaining": 5000.0
+        "remaining": 4085.64
       },
       "overall": {
         "used": 0.0,
@@ -71,7 +71,7 @@
       "target": {
         "usd": 108000.0,
         "pct": 8.0,
-        "progress": 25.0
+        "progress": 12.5
       }
     },
     {
@@ -294,7 +294,7 @@
       "resolved_at": "",
       "size": 100000.0,
       "balance": 94000.0,
-      "equity": 93930.43,
+      "equity": 93585.81,
       "net_pnl": -6000.0,
       "net_pnl_pct": -6.0,
       "today_pnl": 0.0,
@@ -305,14 +305,14 @@
       "win_rate": 0.0,
       "open": 2,
       "daily": {
-        "used": 109.9,
+        "used": 454.52,
         "limit": 5000.0,
-        "remaining": 4890.1
+        "remaining": 4545.48
       },
       "overall": {
-        "used": 6069.57,
+        "used": 6414.19,
         "limit": 10000.0,
-        "remaining": 3930.43
+        "remaining": 3585.81
       },
       "target": {
         "usd": 108000.0,
@@ -407,18 +407,6 @@
       "opened": "2026-06-12 20:29"
     },
     {
-      "strategy": "smt_divergence",
-      "symbol": "BTCUSD",
-      "side": "SELL",
-      "entry": 63522.69140625,
-      "stop": 63590.98055625,
-      "target": 63386.113106250006,
-      "lots": 14.6436,
-      "risk": 1000.0,
-      "be": false,
-      "opened": "2026-06-12 22:10"
-    },
-    {
       "strategy": "ob",
       "symbol": "XAUUSD",
       "side": "SELL",
@@ -432,6 +420,16 @@
     }
   ],
   "closed": [
+    {
+      "strategy": "smt_divergence",
+      "symbol": "BTCUSD",
+      "side": "SELL",
+      "exit": 63590.98055625,
+      "reason": "sl",
+      "pnl": -1000.0,
+      "r": -1.0,
+      "closed": "2026-06-12 22:20"
+    },
     {
       "strategy": "ob",
       "symbol": "NAS100",
@@ -679,6 +677,10 @@
     {
       "t": "2026-06-12T22:10",
       "e": 701435.1
+    },
+    {
+      "t": "2026-06-12T23:51",
+      "e": 700117.8
     }
   ]
 }
