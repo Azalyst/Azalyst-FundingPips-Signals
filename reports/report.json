@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-12T09:15:28.524721+00:00",
+  "updated": "2026-06-12T12:42:19.840006+00:00",
   "model": "multi-phase-challenge",
   "account_size": 100000.0,
   "phase1_target_pct": 8.0,
@@ -9,7 +9,7 @@
   "active": 7,
   "in_phase1": 7,
   "in_phase2": 0,
-  "open_positions": 7,
+  "open_positions": 8,
   "books": [
     {
       "strategy": "rsi",
@@ -66,14 +66,14 @@
       "phase1_days": 0,
       "phase2_days": 0,
       "failed_reason": "",
-      "balance": 104000.0,
-      "equity": 103790.01,
-      "net_pnl": 4000.0,
-      "net_pnl_pct": 4.0,
-      "trades": 5,
+      "balance": 103000.0,
+      "equity": 103000.0,
+      "net_pnl": 3000.0,
+      "net_pnl_pct": 3.0,
+      "trades": 6,
       "wins": 3,
-      "losses": 2,
-      "win_rate": 60.0
+      "losses": 3,
+      "win_rate": 50.0
     },
     {
       "strategy": "jadecap",
@@ -115,7 +115,7 @@
       "phase2_days": 0,
       "failed_reason": "",
       "balance": 96000.0,
-      "equity": 95330.16,
+      "equity": 95482.43,
       "net_pnl": -4000.0,
       "net_pnl_pct": -4.0,
       "trades": 4,
