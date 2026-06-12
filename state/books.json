@@ -71,7 +71,7 @@
   "smt_divergence": {
     "strategy": "smt_divergence",
     "account_size": 100000.0,
-    "equity": 102000.0,
+    "equity": 101734.21,
     "balance": 102000.0,
     "today_start_equity": 104000.0,
     "current_day": "2026-06-11",
@@ -144,7 +144,7 @@
   "ob": {
     "strategy": "ob",
     "account_size": 100000.0,
-    "equity": 94136.98,
+    "equity": 94053.87,
     "balance": 94000.0,
     "today_start_equity": 97000.0,
     "current_day": "2026-06-11",
