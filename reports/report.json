@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-12T05:14:43.681808+00:00",
+  "updated": "2026-06-12T09:15:28.524721+00:00",
   "model": "multi-phase-challenge",
   "account_size": 100000.0,
   "phase1_target_pct": 8.0,
@@ -9,7 +9,7 @@
   "active": 7,
   "in_phase1": 7,
   "in_phase2": 0,
-  "open_positions": 9,
+  "open_positions": 7,
   "books": [
     {
       "strategy": "rsi",
@@ -51,13 +51,13 @@
       "phase2_days": 0,
       "failed_reason": "",
       "balance": 100000.0,
-      "equity": 100541.95,
+      "equity": 100000.0,
       "net_pnl": 0.0,
       "net_pnl_pct": 0.0,
-      "trades": 0,
-      "wins": 0,
+      "trades": 1,
+      "wins": 1,
       "losses": 0,
-      "win_rate": 0.0
+      "win_rate": 100.0
     },
     {
       "strategy": "smt_divergence",
@@ -66,14 +66,14 @@
       "phase1_days": 0,
       "phase2_days": 0,
       "failed_reason": "",
-      "balance": 105000.0,
-      "equity": 105426.62,
-      "net_pnl": 5000.0,
-      "net_pnl_pct": 5.0,
-      "trades": 4,
+      "balance": 104000.0,
+      "equity": 103790.01,
+      "net_pnl": 4000.0,
+      "net_pnl_pct": 4.0,
+      "trades": 5,
       "wins": 3,
-      "losses": 1,
-      "win_rate": 75.0
+      "losses": 2,
+      "win_rate": 60.0
     },
     {
       "strategy": "jadecap",
@@ -98,13 +98,13 @@
       "phase1_days": 0,
       "phase2_days": 0,
       "failed_reason": "",
-      "balance": 100000.0,
-      "equity": 99897.22,
-      "net_pnl": 0.0,
-      "net_pnl_pct": 0.0,
-      "trades": 0,
+      "balance": 99000.0,
+      "equity": 99000.0,
+      "net_pnl": -1000.0,
+      "net_pnl_pct": -1.0,
+      "trades": 1,
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "win_rate": 0.0
     },
     {
@@ -115,7 +115,7 @@
       "phase2_days": 0,
       "failed_reason": "",
       "balance": 96000.0,
-      "equity": 95718.86,
+      "equity": 95330.16,
       "net_pnl": -4000.0,
       "net_pnl_pct": -4.0,
       "trades": 4,
