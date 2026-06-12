@@ -2,7 +2,7 @@
   "rsi": {
     "strategy": "rsi",
     "account_size": 100000.0,
-    "equity": 107368.21,
+    "equity": 106294.58,
     "balance": 100000.0,
     "today_start_equity": 100000.0,
     "current_day": "2026-06-11",
@@ -48,7 +48,7 @@
   "eth_blueprint": {
     "strategy": "eth_blueprint",
     "account_size": 100000.0,
-    "equity": 100000.0,
+    "equity": 100541.95,
     "balance": 100000.0,
     "today_start_equity": 100000.0,
     "current_day": "2026-06-11",
@@ -71,19 +71,21 @@
   "smt_divergence": {
     "strategy": "smt_divergence",
     "account_size": 100000.0,
-    "equity": 105837.13,
-    "balance": 106000.0,
+    "equity": 105426.62,
+    "balance": 105000.0,
     "today_start_equity": 104000.0,
     "current_day": "2026-06-11",
-    "daily_realized_pnl": 2000.0,
+    "daily_realized_pnl": 1000.0,
     "peak_balance": 106000.0,
     "status": "active",
     "failed_reason": "",
     "resolved_at": "",
-    "sl_count": {},
-    "trades_total": 3,
+    "sl_count": {
+      "smt_divergence": 1
+    },
+    "trades_total": 4,
     "wins": 3,
-    "losses": 0,
+    "losses": 1,
     "phase": 1,
     "phase1_start": "",
     "phase1_passed_at": "",
@@ -117,7 +119,7 @@
   "quantx": {
     "strategy": "quantx",
     "account_size": 100000.0,
-    "equity": 100641.09,
+    "equity": 99897.22,
     "balance": 100000.0,
     "today_start_equity": 99843.0,
     "current_day": "2026-06-11",
@@ -140,7 +142,7 @@
   "ob": {
     "strategy": "ob",
     "account_size": 100000.0,
-    "equity": 96000.0,
+    "equity": 95718.86,
     "balance": 96000.0,
     "today_start_equity": 97000.0,
     "current_day": "2026-06-11",

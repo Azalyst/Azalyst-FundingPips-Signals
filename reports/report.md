@@ -1,11 +1,11 @@
 # Azalyst FundingPips — Phase 1/2 Challenges
-_updated 2026-06-12 00:23 UTC_
+_updated 2026-06-12 05:14 UTC_
 
 **7 strategies** running independent **$100,000** challenges. Phase 1: +8% | Phase 2: +5%. Passed 0 / Failed 0 / Active 7 (P1: 7 / P2: 0).
 
 | Strategy | Status | Phase | Balance | Net PnL | P1 Days | P2 Days | Trades | Win% |
 |---|---|---|---|---|---|---|---|---|
-| smt_divergence | ACTIVE | P1 | $106,000 | $6,000.00 (+6%) | — | — | 3 | 100.0% |
+| smt_divergence | ACTIVE | P1 | $105,000 | $5,000.00 (+5%) | — | — | 4 | 75.0% |
 | rsi | ACTIVE | P1 | $100,000 | $0.00 (+0%) | — | — | 0 | 0.0% |
 | eth_blueprint | ACTIVE | P1 | $100,000 | $0.00 (+0%) | — | — | 0 | 0.0% |
 | jadecap | ACTIVE | P1 | $100,000 | $0.00 (+0%) | — | — | 0 | 0.0% |
@@ -22,8 +22,9 @@ _updated 2026-06-12 00:23 UTC_
 | smt_divergence | ETHUSD | SELL | 1670.67 | 1682.77 | 1646.48 | 82.6779 | $1,000 |
 | rsi | XAUUSD | BUY | 4237.3 | 3665.29 | 4809.31 | 0.0174822 | $1,000 |
 | eth_blueprint | ETHUSD | SELL | 1674.23 | 1690.32 | 1642.05 | 62.1505 | $1,000 |
-| smt_divergence | BTCUSD | BUY | 63511.6 | 63336.1 | 63862.5 | 5.69869 | $1,000 |
 | ob | XAUUSD | SELL | 4194.2 | 4250.04 | 4082.51 | 0.179071 | $1,000 |
+| smt_divergence | BTCUSD | BUY | 63355 | 63085.6 | 63893.9 | 3.71127 | $1,000 |
+| ob | ETHUSD | BUY | 1665.36 | 1632.87 | 1730.33 | 30.7814 | $1,000 |
 
 ## Recent closed trades (last 15)
 | Closed | Strategy | Symbol | Side | Exit | PnL | R |
@@ -36,3 +37,4 @@ _updated 2026-06-12 00:23 UTC_
 | 2026-06-11 18:45 | ob | GBPUSD | SELL | sl | $-1,000.00 | -1R |
 | 2026-06-11 22:45 | ob | XAUUSD | SELL | sl | $-1,000.00 | -1R |
 | 2026-06-12 00:05 | smt_divergence | BTCUSD | BUY | tp | $2,000.00 | +2R |
+| 2026-06-12 01:20 | smt_divergence | BTCUSD | BUY | sl | $-1,000.00 | -1R |
