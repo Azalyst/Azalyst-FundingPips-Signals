@@ -119,7 +119,7 @@
   "quantx": {
     "strategy": "quantx",
     "account_size": 100000.0,
-    "equity": 103000.0,
+    "equity": 102884.05,
     "balance": 103000.0,
     "today_start_equity": 101000.0,
     "current_day": "2026-06-13",
@@ -142,7 +142,7 @@
   "ob": {
     "strategy": "ob",
     "account_size": 100000.0,
-    "equity": 94338.54,
+    "equity": 94151.7,
     "balance": 94000.0,
     "today_start_equity": 94000.56,
     "current_day": "2026-06-13",
