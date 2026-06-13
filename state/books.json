@@ -2,7 +2,7 @@
   "rsi": {
     "strategy": "rsi",
     "account_size": 100000.0,
-    "equity": 104004.55,
+    "equity": 103943.93,
     "balance": 104000.0,
     "today_start_equity": 106294.58,
     "current_day": "2026-06-12",
@@ -71,7 +71,7 @@
   "smt_divergence": {
     "strategy": "smt_divergence",
     "account_size": 100000.0,
-    "equity": 100801.11,
+    "equity": 100511.38,
     "balance": 101000.0,
     "today_start_equity": 101786.07,
     "current_day": "2026-06-12",
@@ -142,7 +142,7 @@
   "ob": {
     "strategy": "ob",
     "account_size": 100000.0,
-    "equity": 93660.3,
+    "equity": 93911.17,
     "balance": 94000.0,
     "today_start_equity": 94040.33,
     "current_day": "2026-06-12",

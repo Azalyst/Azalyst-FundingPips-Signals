@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-13 03:56 UTC",
-  "updated_iso": "2026-06-13T03:56:51.786589+00:00",
+  "updated": "2026-06-13 07:52 UTC",
+  "updated_iso": "2026-06-13T07:52:47.662385+00:00",
   "model": "multi-phase",
   "challenge": {
     "day": 3,
@@ -23,7 +23,7 @@
     "phase2": 0,
     "size_total": 700000.0,
     "balance_total": 697000.0,
-    "equity_total": 697831.66,
+    "equity_total": 697732.18,
     "net_pnl": -3000.0,
     "net_pnl_pct": -0.43,
     "trades": 19,
@@ -48,7 +48,7 @@
       "resolved_at": "",
       "size": 100000.0,
       "balance": 104000.0,
-      "equity": 104004.55,
+      "equity": 103943.93,
       "net_pnl": 4000.0,
       "net_pnl_pct": 4.0,
       "today_pnl": 4000.0,
@@ -59,9 +59,9 @@
       "win_rate": 100.0,
       "open": 3,
       "daily": {
-        "used": 2290.03,
+        "used": 2350.65,
         "limit": 5000.0,
-        "remaining": 2709.97
+        "remaining": 2649.35
       },
       "overall": {
         "used": 0.0,
@@ -89,7 +89,7 @@
       "resolved_at": "",
       "size": 100000.0,
       "balance": 101000.0,
-      "equity": 100801.11,
+      "equity": 100511.38,
       "net_pnl": 1000.0,
       "net_pnl_pct": 1.0,
       "today_pnl": -1000.0,
@@ -100,9 +100,9 @@
       "win_rate": 37.5,
       "open": 1,
       "daily": {
-        "used": 984.96,
+        "used": 1274.69,
         "limit": 5000.0,
-        "remaining": 4015.04
+        "remaining": 3725.31
       },
       "overall": {
         "used": 0.0,
@@ -294,7 +294,7 @@
       "resolved_at": "",
       "size": 100000.0,
       "balance": 94000.0,
-      "equity": 93660.3,
+      "equity": 93911.17,
       "net_pnl": -6000.0,
       "net_pnl_pct": -6.0,
       "today_pnl": 0.0,
@@ -305,14 +305,14 @@
       "win_rate": 0.0,
       "open": 2,
       "daily": {
-        "used": 380.03,
+        "used": 129.16,
         "limit": 5000.0,
-        "remaining": 4619.97
+        "remaining": 4870.84
       },
       "overall": {
-        "used": 6339.7,
+        "used": 6088.83,
         "limit": 10000.0,
-        "remaining": 3660.3
+        "remaining": 3911.17
       },
       "target": {
         "usd": 108000.0,
@@ -622,11 +622,11 @@
     },
     {
       "sym": "BTCUSD",
-      "px": 63538.43
+      "px": 63494.14
     },
     {
       "sym": "ETHUSD",
-      "px": 1665.52
+      "px": 1664.17
     }
   ],
   "equity_curve": [
@@ -693,6 +693,10 @@
     {
       "t": "2026-06-13T03:56",
       "e": 697831.66
+    },
+    {
+      "t": "2026-06-13T07:52",
+      "e": 697732.18
     }
   ]
 }
