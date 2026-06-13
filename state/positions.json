@@ -636,5 +636,27 @@
     "pnl_usd": -1000.0,
     "r_multiple": -1.0,
     "exit_reason": "sl"
+  },
+  {
+    "id": "quantx-BTCUSD-1781383989567",
+    "strategy": "quantx",
+    "symbol": "BTCUSD",
+    "side": "BUY",
+    "entry": 64217.87890625,
+    "stop": 64060.51632897954,
+    "target": 64532.604060790916,
+    "units": 6.354751030044982,
+    "lots": 6.354751030044982,
+    "risk_usd": 1000.0,
+    "opened_at": "2026-06-13T20:50:28.387162+00:00",
+    "interval": "15m",
+    "initial_stop": 64060.51632897954,
+    "be_moved": false,
+    "status": "open",
+    "exit_price": null,
+    "closed_at": null,
+    "pnl_usd": 0.0,
+    "r_multiple": 0.0,
+    "exit_reason": ""
   }
 ]
