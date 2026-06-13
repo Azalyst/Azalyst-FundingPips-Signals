@@ -1,5 +1,5 @@
 # Azalyst FundingPips — Phase 1/2 Challenges
-_updated 2026-06-13 10:31 UTC_
+_updated 2026-06-13 12:15 UTC_
 
 **7 strategies** running independent **$100,000** challenges. Phase 1: +8% | Phase 2: +5%. Passed 0 / Failed 0 / Active 7 (P1: 7 / P2: 0).
 
@@ -23,6 +23,8 @@ _updated 2026-06-13 10:31 UTC_
 | ema5 | NAS100 | SELL | 29712 | 29737.1 | 29636.8 | 39.8744 | $1,000 |
 | ob | XAUUSD | SELL | 4226.2 | 4270.64 | 4137.33 | 0.225045 | $1,000 |
 | rsi | ETHUSD | BUY | 1672.28 | 1216.93 | 2127.63 | 2.19613 | $1,000 |
+| smt_divergence | BTCUSD | BUY | 63904.4 | 63798.2 | 64116.8 | 9.41788 | $1,000 |
+| quantx | BTCUSD | BUY | 63904.4 | 63784.5 | 64144.3 | 8.33783 | $1,000 |
 
 ## Recent closed trades (last 15)
 | Closed | Strategy | Symbol | Side | Exit | PnL | R |

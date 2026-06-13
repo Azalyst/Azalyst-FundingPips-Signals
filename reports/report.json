@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T10:31:15.585317+00:00",
+  "updated": "2026-06-13T12:15:42.987510+00:00",
   "model": "multi-phase-challenge",
   "account_size": 100000.0,
   "phase1_target_pct": 8.0,
@@ -9,7 +9,7 @@
   "active": 7,
   "in_phase1": 7,
   "in_phase2": 0,
-  "open_positions": 7,
+  "open_positions": 9,
   "books": [
     {
       "strategy": "rsi",
@@ -67,7 +67,7 @@
       "phase2_days": 0,
       "failed_reason": "",
       "balance": 101000.0,
-      "equity": 100574.61,
+      "equity": 100455.22,
       "net_pnl": 1000.0,
       "net_pnl_pct": 1.0,
       "trades": 8,
@@ -115,7 +115,7 @@
       "phase2_days": 0,
       "failed_reason": "",
       "balance": 94000.0,
-      "equity": 93930.38,
+      "equity": 94050.12,
       "net_pnl": -6000.0,
       "net_pnl_pct": -6.0,
       "trades": 6,
