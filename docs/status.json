@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-14 22:12 UTC",
-  "updated_iso": "2026-06-14T22:12:44.057065+00:00",
+  "updated": "2026-06-14 23:39 UTC",
+  "updated_iso": "2026-06-14T23:39:12.059811+00:00",
   "model": "multi-phase",
   "challenge": {
     "day": 4,
@@ -22,15 +22,15 @@
     "phase1": 7,
     "phase2": 0,
     "size_total": 700000.0,
-    "balance_total": 699000.0,
-    "equity_total": 702370.73,
-    "net_pnl": -1000.0,
-    "net_pnl_pct": -0.14,
-    "trades": 29,
+    "balance_total": 697000.0,
+    "equity_total": 700002.19,
+    "net_pnl": -3000.0,
+    "net_pnl_pct": -0.43,
+    "trades": 31,
     "wins": 10,
-    "losses": 19,
-    "win_rate": 34.5,
-    "open": 7
+    "losses": 21,
+    "win_rate": 32.3,
+    "open": 5
   },
   "books": [
     {
@@ -130,7 +130,7 @@
       "resolved_at": "",
       "size": 100000.0,
       "balance": 101000.0,
-      "equity": 101000.0,
+      "equity": 102188.04,
       "net_pnl": 1000.0,
       "net_pnl_pct": 1.0,
       "today_pnl": 0.0,
@@ -252,26 +252,26 @@
       "failed_reason": "",
       "resolved_at": "",
       "size": 100000.0,
-      "balance": 99000.0,
-      "equity": 100993.72,
-      "net_pnl": -1000.0,
-      "net_pnl_pct": -1.0,
-      "today_pnl": 0.0,
+      "balance": 98000.0,
+      "equity": 98000.0,
+      "net_pnl": -2000.0,
+      "net_pnl_pct": -2.0,
+      "today_pnl": -1000.0,
       "peak_balance": 100000.0,
-      "trades": 1,
+      "trades": 2,
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "win_rate": 0.0,
-      "open": 1,
+      "open": 0,
       "daily": {
-        "used": 0.0,
+        "used": 2993.72,
         "limit": 5000.0,
-        "remaining": 5000.0
+        "remaining": 2006.28
       },
       "overall": {
-        "used": 0.0,
+        "used": 2000.0,
         "limit": 10000.0,
-        "remaining": 10000.0
+        "remaining": 8000.0
       },
       "target": {
         "usd": 108000.0,
@@ -293,26 +293,26 @@
       "failed_reason": "",
       "resolved_at": "",
       "size": 100000.0,
-      "balance": 94000.0,
-      "equity": 95332.17,
-      "net_pnl": -6000.0,
-      "net_pnl_pct": -6.0,
-      "today_pnl": 0.0,
+      "balance": 93000.0,
+      "equity": 94769.31,
+      "net_pnl": -7000.0,
+      "net_pnl_pct": -7.0,
+      "today_pnl": -1000.0,
       "peak_balance": 100000.0,
-      "trades": 6,
+      "trades": 7,
       "wins": 0,
-      "losses": 6,
+      "losses": 7,
       "win_rate": 0.0,
-      "open": 2,
+      "open": 1,
       "daily": {
         "used": 0.0,
         "limit": 5000.0,
         "remaining": 5000.0
       },
       "overall": {
-        "used": 4667.83,
+        "used": 5230.69,
         "limit": 10000.0,
-        "remaining": 5332.17
+        "remaining": 4769.31
       },
       "target": {
         "usd": 108000.0,
@@ -357,30 +357,6 @@
       "risk": 1000.0,
       "be": false,
       "opened": "2026-06-12 09:15"
-    },
-    {
-      "strategy": "ema5",
-      "symbol": "NAS100",
-      "side": "SELL",
-      "entry": 29712.0,
-      "stop": 29737.078719597215,
-      "target": 29636.763841208354,
-      "lots": 39.8744,
-      "risk": 1000.0,
-      "be": false,
-      "opened": "2026-06-12 20:29"
-    },
-    {
-      "strategy": "ob",
-      "symbol": "XAUUSD",
-      "side": "SELL",
-      "entry": 4226.2002,
-      "stop": 4270.63574,
-      "target": 4137.3291,
-      "lots": 0.225,
-      "risk": 1000.0,
-      "be": false,
-      "opened": "2026-06-12 22:10"
     },
     {
       "strategy": "rsi",
@@ -499,6 +475,16 @@
       "closed": "2026-06-13 12:55"
     },
     {
+      "strategy": "ob",
+      "symbol": "XAUUSD",
+      "side": "SELL",
+      "exit": 4270.63574,
+      "reason": "sl",
+      "pnl": -1000.0,
+      "r": -1.0,
+      "closed": "2026-06-14 22:00"
+    },
+    {
       "strategy": "smt_divergence",
       "symbol": "BTCUSD",
       "side": "SELL",
@@ -507,6 +493,16 @@
       "pnl": -1000.0,
       "r": -1.0,
       "closed": "2026-06-12 22:20"
+    },
+    {
+      "strategy": "ema5",
+      "symbol": "NAS100",
+      "side": "SELL",
+      "exit": 29737.078719597215,
+      "reason": "sl",
+      "pnl": -1000.0,
+      "r": -1.0,
+      "closed": "2026-06-14 22:10"
     },
     {
       "strategy": "smt_divergence",
@@ -873,6 +869,10 @@
     {
       "t": "2026-06-14T22:12",
       "e": 702370.73
+    },
+    {
+      "t": "2026-06-14T23:39",
+      "e": 700002.19
     }
   ]
 }
