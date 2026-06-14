@@ -1,9 +1,9 @@
 {
-  "updated": "2026-06-13 23:33 UTC",
-  "updated_iso": "2026-06-13T23:33:44.992111+00:00",
+  "updated": "2026-06-14 02:01 UTC",
+  "updated_iso": "2026-06-14T02:01:12.498841+00:00",
   "model": "multi-phase",
   "challenge": {
-    "day": 3,
+    "day": 4,
     "start": "2026-06-11",
     "phase1_target_pct": 8.0,
     "phase2_target_pct": 5.0
@@ -22,15 +22,15 @@
     "phase1": 7,
     "phase2": 0,
     "size_total": 700000.0,
-    "balance_total": 701000.0,
-    "equity_total": 702973.4,
-    "net_pnl": 1000.0,
-    "net_pnl_pct": 0.14,
-    "trades": 24,
-    "wins": 9,
-    "losses": 15,
-    "win_rate": 37.5,
-    "open": 9
+    "balance_total": 702000.0,
+    "equity_total": 704901.22,
+    "net_pnl": 2000.0,
+    "net_pnl_pct": 0.29,
+    "trades": 26,
+    "wins": 10,
+    "losses": 16,
+    "win_rate": 38.5,
+    "open": 7
   },
   "books": [
     {
@@ -39,8 +39,8 @@
       "phase": 1,
       "phase_label": "Phase 1",
       "phase_status": "phase1",
-      "days_elapsed": 3,
-      "phase1_days": 3,
+      "days_elapsed": 4,
+      "phase1_days": 4,
       "phase2_days": 0,
       "phase1_passed_at": "",
       "phase2_start": "",
@@ -80,8 +80,8 @@
       "phase": 1,
       "phase_label": "Phase 1",
       "phase_status": "phase1",
-      "days_elapsed": 3,
-      "phase1_days": 3,
+      "days_elapsed": 4,
+      "phase1_days": 4,
       "phase2_days": 0,
       "phase1_passed_at": "",
       "phase2_start": "",
@@ -89,7 +89,7 @@
       "resolved_at": "",
       "size": 100000.0,
       "balance": 103000.0,
-      "equity": 102884.05,
+      "equity": 103691.82,
       "net_pnl": 3000.0,
       "net_pnl_pct": 3.0,
       "today_pnl": 2000.0,
@@ -121,29 +121,29 @@
       "phase": 1,
       "phase_label": "Phase 1",
       "phase_status": "phase1",
-      "days_elapsed": 3,
-      "phase1_days": 3,
+      "days_elapsed": 4,
+      "phase1_days": 4,
       "phase2_days": 0,
       "phase1_passed_at": "",
       "phase2_start": "",
       "failed_reason": "",
       "resolved_at": "",
       "size": 100000.0,
-      "balance": 101000.0,
-      "equity": 101000.0,
-      "net_pnl": 1000.0,
-      "net_pnl_pct": 1.0,
-      "today_pnl": -1000.0,
+      "balance": 102000.0,
+      "equity": 102000.0,
+      "net_pnl": 2000.0,
+      "net_pnl_pct": 2.0,
+      "today_pnl": 0.0,
       "peak_balance": 106000.0,
-      "trades": 11,
-      "wins": 4,
-      "losses": 7,
-      "win_rate": 36.4,
-      "open": 2,
+      "trades": 13,
+      "wins": 5,
+      "losses": 8,
+      "win_rate": 38.5,
+      "open": 0,
       "daily": {
-        "used": 489.59,
+        "used": 0.0,
         "limit": 5000.0,
-        "remaining": 4510.41
+        "remaining": 5000.0
       },
       "overall": {
         "used": 0.0,
@@ -153,7 +153,7 @@
       "target": {
         "usd": 108000.0,
         "pct": 8.0,
-        "progress": 12.5
+        "progress": 25.0
       }
     },
     {
@@ -162,8 +162,8 @@
       "phase": 1,
       "phase_label": "Phase 1",
       "phase_status": "phase1",
-      "days_elapsed": 3,
-      "phase1_days": 3,
+      "days_elapsed": 4,
+      "phase1_days": 4,
       "phase2_days": 0,
       "phase1_passed_at": "",
       "phase2_start": "",
@@ -203,8 +203,8 @@
       "phase": 1,
       "phase_label": "Phase 1",
       "phase_status": "phase1",
-      "days_elapsed": 3,
-      "phase1_days": 3,
+      "days_elapsed": 4,
+      "phase1_days": 4,
       "phase2_days": 0,
       "phase1_passed_at": "",
       "phase2_start": "",
@@ -244,8 +244,8 @@
       "phase": 1,
       "phase_label": "Phase 1",
       "phase_status": "phase1",
-      "days_elapsed": 3,
-      "phase1_days": 3,
+      "days_elapsed": 4,
+      "phase1_days": 4,
       "phase2_days": 0,
       "phase1_passed_at": "",
       "phase2_start": "",
@@ -285,8 +285,8 @@
       "phase": 1,
       "phase_label": "Phase 1",
       "phase_status": "phase1",
-      "days_elapsed": 3,
-      "phase1_days": 3,
+      "days_elapsed": 4,
+      "phase1_days": 4,
       "phase2_days": 0,
       "phase1_passed_at": "",
       "phase2_start": "",
@@ -294,7 +294,7 @@
       "resolved_at": "",
       "size": 100000.0,
       "balance": 94000.0,
-      "equity": 94151.7,
+      "equity": 94271.75,
       "net_pnl": -6000.0,
       "net_pnl_pct": -6.0,
       "today_pnl": 0.0,
@@ -310,9 +310,9 @@
         "remaining": 5000.0
       },
       "overall": {
-        "used": 5848.3,
+        "used": 5728.25,
         "limit": 10000.0,
-        "remaining": 4151.7
+        "remaining": 4271.75
       },
       "target": {
         "usd": 108000.0,
@@ -405,33 +405,29 @@
       "risk": 1000.0,
       "be": false,
       "opened": "2026-06-13 22:05"
+    }
+  ],
+  "closed": [
+    {
+      "strategy": "smt_divergence",
+      "symbol": "BTCUSD",
+      "side": "BUY",
+      "exit": 64598.5394375,
+      "reason": "tp",
+      "pnl": 2000.0,
+      "r": 2.0,
+      "closed": "2026-06-14 01:10"
     },
     {
       "strategy": "smt_divergence",
       "symbol": "ETHUSD",
       "side": "SELL",
-      "entry": 1680.0799560546875,
-      "stop": 1684.7667799804685,
-      "target": 1670.7063082031254,
-      "lots": 213.3641,
-      "risk": 1000.0,
-      "be": false,
-      "opened": "2026-06-13 23:33"
+      "exit": 1684.7667799804685,
+      "reason": "sl",
+      "pnl": -1000.0,
+      "r": -1.0,
+      "closed": "2026-06-14 01:10"
     },
-    {
-      "strategy": "smt_divergence",
-      "symbol": "BTCUSD",
-      "side": "BUY",
-      "entry": 64434.8515625,
-      "stop": 64353.007625,
-      "target": 64598.5394375,
-      "lots": 12.2184,
-      "risk": 1000.0,
-      "be": false,
-      "opened": "2026-06-13 23:33"
-    }
-  ],
-  "closed": [
     {
       "strategy": "quantx",
       "symbol": "BTCUSD",
@@ -696,11 +692,11 @@
     },
     {
       "sym": "BTCUSD",
-      "px": 64260.01
+      "px": 64416.0
     },
     {
       "sym": "ETHUSD",
-      "px": 1677.58
+      "px": 1679.5
     }
   ],
   "equity_curve": [
@@ -807,6 +803,10 @@
     {
       "t": "2026-06-13T23:33",
       "e": 702973.4
+    },
+    {
+      "t": "2026-06-14T02:01",
+      "e": 704901.22
     }
   ]
 }

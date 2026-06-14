@@ -1,5 +1,5 @@
 # Azalyst FundingPips — Phase 1/2 Challenges
-_updated 2026-06-13 23:33 UTC_
+_updated 2026-06-14 02:01 UTC_
 
 **7 strategies** running independent **$100,000** challenges. Phase 1: +8% | Phase 2: +5%. Passed 0 / Failed 0 / Active 7 (P1: 7 / P2: 0).
 
@@ -7,7 +7,7 @@ _updated 2026-06-13 23:33 UTC_
 |---|---|---|---|---|---|---|---|---|
 | rsi | ACTIVE | P1 | $104,000 | $4,000.00 (+4%) | — | — | 2 | 100.0% |
 | quantx | ACTIVE | P1 | $103,000 | $3,000.00 (+3%) | — | — | 3 | 66.7% |
-| smt_divergence | ACTIVE | P1 | $101,000 | $1,000.00 (+1%) | — | — | 11 | 36.4% |
+| smt_divergence | ACTIVE | P1 | $102,000 | $2,000.00 (+2%) | — | — | 13 | 38.5% |
 | eth_blueprint | ACTIVE | P1 | $100,000 | $0.00 (+0%) | — | — | 1 | 100.0% |
 | jadecap | ACTIVE | P1 | $100,000 | $0.00 (+0%) | — | — | 0 | 0.0% |
 | ema5 | ACTIVE | P1 | $99,000 | $-1,000.00 (-1%) | — | — | 1 | 0.0% |
@@ -23,14 +23,10 @@ _updated 2026-06-13 23:33 UTC_
 | ob | XAUUSD | SELL | 4226.2 | 4270.64 | 4137.33 | 0.225045 | $1,000 |
 | rsi | ETHUSD | BUY | 1672.28 | 1216.93 | 2127.63 | 2.19613 | $1,000 |
 | quantx | BTCUSD | BUY | 64438 | 64248.2 | 64817.7 | 5.26784 | $1,000 |
-| smt_divergence | ETHUSD | SELL | 1680.08 | 1684.77 | 1670.71 | 213.364 | $1,000 |
-| smt_divergence | BTCUSD | BUY | 64434.9 | 64353 | 64598.5 | 12.2184 | $1,000 |
 
 ## Recent closed trades (last 15)
 | Closed | Strategy | Symbol | Side | Exit | PnL | R |
 |---|---|---|---|---|---|---|
-| 2026-06-12 09:45 | smt_divergence | ETHUSD | SELL | sl | $-1,000.00 | -1R |
-| 2026-06-11 22:45 | ob | XAUUSD | SELL | sl | $-1,000.00 | -1R |
 | 2026-06-12 00:05 | smt_divergence | BTCUSD | BUY | tp | $2,000.00 | +2R |
 | 2026-06-12 08:15 | eth_blueprint | ETHUSD | SELL | be | $-0.00 | -0R |
 | 2026-06-12 01:20 | smt_divergence | BTCUSD | BUY | sl | $-1,000.00 | -1R |
@@ -44,3 +40,5 @@ _updated 2026-06-13 23:33 UTC_
 | 2026-06-13 12:45 | quantx | BTCUSD | BUY | tp | $2,000.00 | +2R |
 | 2026-06-13 16:00 | smt_divergence | BTCUSD | BUY | sl | $-1,000.00 | -1R |
 | 2026-06-13 21:30 | quantx | BTCUSD | BUY | tp | $2,000.00 | +2R |
+| 2026-06-14 01:10 | smt_divergence | ETHUSD | SELL | sl | $-1,000.00 | -1R |
+| 2026-06-14 01:10 | smt_divergence | BTCUSD | BUY | tp | $2,000.00 | +2R |
