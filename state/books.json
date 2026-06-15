@@ -2,7 +2,7 @@
   "rsi": {
     "strategy": "rsi",
     "account_size": 100000.0,
-    "equity": 104259.18,
+    "equity": 104044.84,
     "balance": 104000.0,
     "today_start_equity": 104086.45,
     "current_day": "2026-06-14",
@@ -73,21 +73,21 @@
   "smt_divergence": {
     "strategy": "smt_divergence",
     "account_size": 100000.0,
-    "equity": 101000.0,
-    "balance": 101000.0,
+    "equity": 100788.63,
+    "balance": 100000.0,
     "today_start_equity": 101728.57,
     "current_day": "2026-06-14",
-    "daily_realized_pnl": -1000.0,
+    "daily_realized_pnl": -2000.0,
     "peak_balance": 106000.0,
     "status": "active",
     "failed_reason": "",
     "resolved_at": "",
     "sl_count": {
-      "smt_divergence": 1
+      "smt_divergence": 2
     },
-    "trades_total": 14,
+    "trades_total": 15,
     "wins": 5,
-    "losses": 9,
+    "losses": 10,
     "phase": 1,
     "phase1_start": "",
     "phase1_passed_at": "",
