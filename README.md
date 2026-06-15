@@ -26,7 +26,7 @@ with a fresh $100k account. The dashboard tracks **days to pass each phase**.
 | 4 | **SMT Divergence** | BTC/ETH SMT divergence on 5m |
 | 5 | **JadeCap** | NY-session liquidity sweeps on 15m |
 | 6 | **QUANT-X** | BTC 15m momentum breakout |
-| 7 | **OB** | Order Block — 4H OB detection, 15M retrace entries |
+| 7 | **Rebel Funding ML** | Advanced XGBoost ML Strategy trained on dynamic spreads and momentum metrics |
 
 ## Running
 
