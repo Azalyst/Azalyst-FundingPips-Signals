@@ -1,5 +1,5 @@
 # Azalyst FundingPips — Phase 1/2 Challenges
-_updated 2026-06-15 21:33 UTC_
+_updated 2026-06-15 23:25 UTC_
 
 **7 strategies** running independent **$100,000** challenges. Phase 1: +8% | Phase 2: +5%. Passed 0 / Failed 1 / Active 6 (P1: 7 / P2: 0).
 
