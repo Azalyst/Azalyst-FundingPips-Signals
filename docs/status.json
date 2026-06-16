@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-16 20:54 UTC",
-  "updated_iso": "2026-06-16T20:54:06.264469+00:00",
+  "updated": "2026-06-16 22:54 UTC",
+  "updated_iso": "2026-06-16T22:54:01.938542+00:00",
   "model": "multi-phase",
   "challenge": {
     "day": 6,
@@ -23,7 +23,7 @@
     "phase2": 0,
     "size_total": 700000.0,
     "balance_total": 698144.37,
-    "equity_total": 698782.97,
+    "equity_total": 697957.81,
     "net_pnl": -1855.63,
     "net_pnl_pct": -0.27,
     "trades": 37,
@@ -171,10 +171,10 @@
       "resolved_at": "",
       "size": 100000.0,
       "balance": 100000.0,
-      "equity": 100000.0,
+      "equity": 99174.84,
       "net_pnl": 0.0,
       "net_pnl_pct": 0.0,
-      "today_pnl": -1000.0,
+      "today_pnl": 0.0,
       "peak_balance": 106000.0,
       "trades": 21,
       "wins": 7,
@@ -182,14 +182,14 @@
       "win_rate": 33.3,
       "open": 1,
       "daily": {
-        "used": 1000.0,
+        "used": 825.16,
         "limit": 5000.0,
-        "remaining": 4000.0
+        "remaining": 4174.84
       },
       "overall": {
-        "used": 0.0,
+        "used": 825.16,
         "limit": 10000.0,
-        "remaining": 10000.0
+        "remaining": 9174.84
       },
       "target": {
         "usd": 108000.0,
@@ -796,11 +796,11 @@
     },
     {
       "sym": "BTCUSD",
-      "px": 65778.75
+      "px": 65656.9
     },
     {
       "sym": "ETHUSD",
-      "px": 1795.45
+      "px": 1792.49
     }
   ],
   "equity_curve": [
@@ -995,6 +995,10 @@
     {
       "t": "2026-06-16T20:54",
       "e": 698782.97
+    },
+    {
+      "t": "2026-06-16T22:54",
+      "e": 697957.81
     }
   ]
 }
