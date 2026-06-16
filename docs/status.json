@@ -1,9 +1,9 @@
 {
-  "updated": "2026-06-15 23:25 UTC",
-  "updated_iso": "2026-06-15T23:25:10.751789+00:00",
+  "updated": "2026-06-16 02:08 UTC",
+  "updated_iso": "2026-06-16T02:08:22.617056+00:00",
   "model": "multi-phase",
   "challenge": {
-    "day": 5,
+    "day": 6,
     "start": "2026-06-11",
     "phase1_target_pct": 8.0,
     "phase2_target_pct": 5.0
@@ -23,14 +23,14 @@
     "phase2": 0,
     "size_total": 700000.0,
     "balance_total": 699144.37,
-    "equity_total": 699386.22,
+    "equity_total": 699592.86,
     "net_pnl": -855.63,
     "net_pnl_pct": -0.12,
     "trades": 33,
     "wins": 12,
     "losses": 21,
     "win_rate": 36.4,
-    "open": 3
+    "open": 4
   },
   "books": [
     {
@@ -39,8 +39,8 @@
       "phase": 1,
       "phase_label": "Phase 1",
       "phase_status": "phase1",
-      "days_elapsed": 5,
-      "phase1_days": 5,
+      "days_elapsed": 6,
+      "phase1_days": 6,
       "phase2_days": 0,
       "phase1_passed_at": "",
       "phase2_start": "",
@@ -48,7 +48,7 @@
       "resolved_at": "",
       "size": 100000.0,
       "balance": 104000.0,
-      "equity": 104241.85,
+      "equity": 104448.49,
       "net_pnl": 4000.0,
       "net_pnl_pct": 4.0,
       "today_pnl": 0.0,
@@ -80,8 +80,8 @@
       "phase": 1,
       "phase_label": "Phase 1",
       "phase_status": "phase1",
-      "days_elapsed": 5,
-      "phase1_days": 5,
+      "days_elapsed": 6,
+      "phase1_days": 6,
       "phase2_days": 0,
       "phase1_passed_at": "",
       "phase2_start": "",
@@ -98,7 +98,7 @@
       "wins": 6,
       "losses": 11,
       "win_rate": 35.3,
-      "open": 0,
+      "open": 1,
       "daily": {
         "used": 0.0,
         "limit": 5000.0,
@@ -121,8 +121,8 @@
       "phase": 1,
       "phase_label": "Phase 1",
       "phase_status": "phase1",
-      "days_elapsed": 5,
-      "phase1_days": 5,
+      "days_elapsed": 6,
+      "phase1_days": 6,
       "phase2_days": 0,
       "phase1_passed_at": "",
       "phase2_start": "",
@@ -162,8 +162,8 @@
       "phase": 1,
       "phase_label": "Phase 1",
       "phase_status": "phase1",
-      "days_elapsed": 5,
-      "phase1_days": 5,
+      "days_elapsed": 6,
+      "phase1_days": 6,
       "phase2_days": 0,
       "phase1_passed_at": "",
       "phase2_start": "",
@@ -203,8 +203,8 @@
       "phase": 1,
       "phase_label": "Phase 1",
       "phase_status": "phase1",
-      "days_elapsed": 5,
-      "phase1_days": 5,
+      "days_elapsed": 6,
+      "phase1_days": 6,
       "phase2_days": 0,
       "phase1_passed_at": "",
       "phase2_start": "",
@@ -244,8 +244,8 @@
       "phase": 1,
       "phase_label": "Phase 1",
       "phase_status": "phase1",
-      "days_elapsed": 5,
-      "phase1_days": 5,
+      "days_elapsed": 6,
+      "phase1_days": 6,
       "phase2_days": 0,
       "phase1_passed_at": "",
       "phase2_start": "",
@@ -285,8 +285,8 @@
       "phase": 1,
       "phase_label": "Phase 1",
       "phase_status": "phase1",
-      "days_elapsed": 5,
-      "phase1_days": 5,
+      "days_elapsed": 6,
+      "phase1_days": 6,
       "phase2_days": 0,
       "phase1_passed_at": "",
       "phase2_start": "",
@@ -357,6 +357,18 @@
       "risk": 1000.0,
       "be": false,
       "opened": "2026-06-13 03:56"
+    },
+    {
+      "strategy": "smt_divergence",
+      "symbol": "ETHUSD",
+      "side": "SELL",
+      "entry": 1792.0,
+      "stop": 1797.5268377929685,
+      "target": 1780.946324414063,
+      "lots": 180.9353,
+      "risk": 1000.0,
+      "be": false,
+      "opened": "2026-06-16 02:08"
     }
   ],
   "closed": [
@@ -772,23 +784,23 @@
     },
     {
       "sym": "XAUUSD",
-      "px": 4215.0
+      "px": 4333.6
     },
     {
       "sym": "NAS100",
-      "px": 29662.0
+      "px": 30783.25
     },
     {
       "sym": "SP500",
-      "px": 7435.0
+      "px": 7615.5
     },
     {
       "sym": "BTCUSD",
-      "px": 66222.42
+      "px": 66304.17
     },
     {
       "sym": "ETHUSD",
-      "px": 1784.79
+      "px": 1792.0
     }
   ],
   "equity_curve": [
@@ -963,6 +975,10 @@
     {
       "t": "2026-06-15T23:25",
       "e": 699386.22
+    },
+    {
+      "t": "2026-06-16T02:08",
+      "e": 699592.86
     }
   ]
 }
