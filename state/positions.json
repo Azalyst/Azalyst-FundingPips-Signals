@@ -1070,12 +1070,12 @@
     "interval": "5m",
     "initial_stop": 65580.212575,
     "be_moved": false,
-    "status": "open",
-    "exit_price": null,
-    "closed_at": null,
-    "pnl_usd": 0.0,
-    "r_multiple": 0.0,
-    "exit_reason": ""
+    "status": "closed",
+    "exit_price": 65580.212575,
+    "closed_at": "2026-06-16T23:20:00+00:00",
+    "pnl_usd": -1000.0,
+    "r_multiple": -1.0,
+    "exit_reason": "sl"
   },
   {
     "id": "smt_divergence-ETHUSD-1781655636771",
@@ -1092,11 +1092,11 @@
     "interval": "5m",
     "initial_stop": 1789.0976052734375,
     "be_moved": false,
-    "status": "open",
-    "exit_price": null,
-    "closed_at": null,
-    "pnl_usd": 0.0,
-    "r_multiple": 0.0,
-    "exit_reason": ""
+    "status": "closed",
+    "exit_price": 1789.0976052734375,
+    "closed_at": "2026-06-17T01:15:00+00:00",
+    "pnl_usd": -1000.0,
+    "r_multiple": -1.0,
+    "exit_reason": "sl"
   }
 ]
