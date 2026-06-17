@@ -1076,5 +1076,27 @@
     "pnl_usd": 0.0,
     "r_multiple": 0.0,
     "exit_reason": ""
+  },
+  {
+    "id": "smt_divergence-ETHUSD-1781655636771",
+    "strategy": "smt_divergence",
+    "symbol": "ETHUSD",
+    "side": "BUY",
+    "entry": 1793.8199462890625,
+    "stop": 1789.0976052734375,
+    "target": 1803.2646283203126,
+    "units": 211.7593788104782,
+    "lots": 211.7593788104782,
+    "risk_usd": 1000.0,
+    "opened_at": "2026-06-17T00:18:34.397542+00:00",
+    "interval": "5m",
+    "initial_stop": 1789.0976052734375,
+    "be_moved": false,
+    "status": "open",
+    "exit_price": null,
+    "closed_at": null,
+    "pnl_usd": 0.0,
+    "r_multiple": 0.0,
+    "exit_reason": ""
   }
 ]
