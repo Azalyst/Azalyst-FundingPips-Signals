@@ -1,5 +1,5 @@
 # Azalyst FundingPips — Phase 1/2 Challenges
-_updated 2026-06-18 14:23 UTC_
+_updated 2026-06-18 17:42 UTC_
 
 **7 strategies** running independent **$100,000** challenges. Phase 1: +8% | Phase 2: +5%. Passed 0 / Failed 1 / Active 6 (P1: 7 / P2: 0).
 
@@ -9,8 +9,8 @@ _updated 2026-06-18 14:23 UTC_
 | jadecap | ACTIVE | P1 | $100,144 | $144.37 (+0.14%) | — | — | 1 | 100.0% |
 | eth_blueprint | ACTIVE | P1 | $100,000 | $0.00 (+0%) | — | — | 1 | 100.0% |
 | smt_divergence | ACTIVE | P1 | $100,000 | $0.00 (+0%) | — | — | 27 | 33.3% |
+| quantx | ACTIVE | P1 | $100,000 | $0.00 (+0%) | — | — | 9 | 33.3% |
 | rebel_funding | ACTIVE | P1 | $100,000 | $0.00 (+0%) | — | — | 0 | 0.0% |
-| quantx | ACTIVE | P1 | $98,000 | $-2,000.00 (-2%) | — | — | 8 | 25.0% |
 | ema5 | FAILED (daily loss) | P1 | $95,000 | $-5,000.00 (-5%) | — | — | 5 | 0.0% |
 
 ## Open positions
@@ -19,12 +19,11 @@ _updated 2026-06-18 14:23 UTC_
 | rsi | XAUUSD | BUY | 4237.3 | 3665.29 | 4809.31 | 0.0174822 | $1,000 |
 | rsi | BTCUSD | BUY | 63561.1 | 50606 | 76516.1 | 0.0771899 | $1,000 |
 | rsi | ETHUSD | BUY | 1672.28 | 1216.93 | 2127.63 | 2.19613 | $1,000 |
-| quantx | BTCUSD | SELL | 63704.5 | 64014 | 63085.4 | 3.23067 | $1,000 |
+| smt_divergence | ETHUSD | SELL | 1678.39 | 1685.43 | 1664.32 | 142.102 | $1,000 |
 
 ## Recent closed trades (last 15)
 | Closed | Strategy | Symbol | Side | Exit | PnL | R |
 |---|---|---|---|---|---|---|
-| 2026-06-15 13:45 | ema5 | NAS100 | SELL | sl | $-1,000.00 | -1R |
 | 2026-06-15 14:00 | jadecap | GBPUSD | BUY | tp | $144.37 | +0.14R |
 | 2026-06-15 13:45 | quantx | BTCUSD | BUY | sl | $-1,000.00 | -1R |
 | 2026-06-15 19:15 | smt_divergence | ETHUSD | BUY | sl | $-1,000.00 | -1R |
@@ -39,3 +38,4 @@ _updated 2026-06-18 14:23 UTC_
 | 2026-06-17 22:00 | smt_divergence | BTCUSD | SELL | tp | $2,000.00 | +2R |
 | 2026-06-17 23:15 | smt_divergence | BTCUSD | SELL | sl | $-1,000.00 | -1R |
 | 2026-06-18 13:35 | smt_divergence | ETHUSD | BUY | sl | $-1,000.00 | -1R |
+| 2026-06-18 15:30 | quantx | BTCUSD | SELL | tp | $2,000.00 | +2R |

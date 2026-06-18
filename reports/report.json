@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T14:23:45.200522+00:00",
+  "updated": "2026-06-18T17:42:09.510585+00:00",
   "model": "multi-phase-challenge",
   "account_size": 100000.0,
   "phase1_target_pct": 8.0,
@@ -19,7 +19,7 @@
       "phase2_days": 0,
       "failed_reason": "",
       "balance": 104000.0,
-      "equity": 104629.42,
+      "equity": 104444.8,
       "net_pnl": 4000.0,
       "net_pnl_pct": 4.0,
       "trades": 2,
@@ -98,14 +98,14 @@
       "phase1_days": 0,
       "phase2_days": 0,
       "failed_reason": "",
-      "balance": 98000.0,
-      "equity": 98000.0,
-      "net_pnl": -2000.0,
-      "net_pnl_pct": -2.0,
-      "trades": 8,
-      "wins": 2,
+      "balance": 100000.0,
+      "equity": 100000.0,
+      "net_pnl": 0.0,
+      "net_pnl_pct": 0.0,
+      "trades": 9,
+      "wins": 3,
       "losses": 6,
-      "win_rate": 25.0
+      "win_rate": 33.3
     },
     {
       "strategy": "rebel_funding",
