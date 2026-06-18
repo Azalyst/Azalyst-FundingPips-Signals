@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T01:43:26.001418+00:00",
+  "updated": "2026-06-18T06:31:17.232786+00:00",
   "model": "multi-phase-challenge",
   "account_size": 100000.0,
   "phase1_target_pct": 8.0,
@@ -19,7 +19,7 @@
       "phase2_days": 0,
       "failed_reason": "",
       "balance": 104000.0,
-      "equity": 104596.9,
+      "equity": 104629.42,
       "net_pnl": 4000.0,
       "net_pnl_pct": 4.0,
       "trades": 2,
