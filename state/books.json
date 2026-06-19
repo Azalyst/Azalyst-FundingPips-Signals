@@ -2,7 +2,7 @@
   "rsi": {
     "strategy": "rsi",
     "account_size": 100000.0,
-    "equity": 104007.44,
+    "equity": 104209.14,
     "balance": 104000.0,
     "today_start_equity": 104629.42,
     "current_day": "2026-06-18",
@@ -119,21 +119,21 @@
   "quantx": {
     "strategy": "quantx",
     "account_size": 100000.0,
-    "equity": 99000.0,
-    "balance": 99000.0,
+    "equity": 98000.0,
+    "balance": 98000.0,
     "today_start_equity": 100000.0,
     "current_day": "2026-06-18",
-    "daily_realized_pnl": -1000.0,
+    "daily_realized_pnl": -2000.0,
     "peak_balance": 103000.0,
     "status": "active",
     "failed_reason": "",
     "resolved_at": "",
     "sl_count": {
-      "quantx": 1
+      "quantx": 2
     },
-    "trades_total": 10,
+    "trades_total": 11,
     "wins": 3,
-    "losses": 7,
+    "losses": 8,
     "phase": 1,
     "phase1_start": "",
     "phase1_passed_at": "",

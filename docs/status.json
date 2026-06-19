@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-19 16:24 UTC",
-  "updated_iso": "2026-06-19T16:24:12.374333+00:00",
+  "updated": "2026-06-19 18:17 UTC",
+  "updated_iso": "2026-06-19T18:17:26.746744+00:00",
   "model": "multi-phase",
   "challenge": {
     "day": 9,
@@ -22,15 +22,15 @@
     "phase1": 7,
     "phase2": 0,
     "size_total": 700000.0,
-    "balance_total": 696144.37,
-    "equity_total": 696151.81,
-    "net_pnl": -3855.63,
-    "net_pnl_pct": -0.55,
-    "trades": 48,
+    "balance_total": 695144.37,
+    "equity_total": 695353.51,
+    "net_pnl": -4855.63,
+    "net_pnl_pct": -0.69,
+    "trades": 49,
     "wins": 16,
-    "losses": 32,
-    "win_rate": 33.3,
-    "open": 4
+    "losses": 33,
+    "win_rate": 32.7,
+    "open": 3
   },
   "books": [
     {
@@ -48,7 +48,7 @@
       "resolved_at": "",
       "size": 100000.0,
       "balance": 104000.0,
-      "equity": 104007.44,
+      "equity": 104209.14,
       "net_pnl": 4000.0,
       "net_pnl_pct": 4.0,
       "today_pnl": 0.0,
@@ -59,9 +59,9 @@
       "win_rate": 100.0,
       "open": 3,
       "daily": {
-        "used": 621.98,
+        "used": 420.28,
         "limit": 5000.0,
-        "remaining": 4378.02
+        "remaining": 4579.72
       },
       "overall": {
         "used": 0.0,
@@ -198,47 +198,6 @@
       }
     },
     {
-      "strategy": "quantx",
-      "status": "active",
-      "phase": 1,
-      "phase_label": "Phase 1",
-      "phase_status": "phase1",
-      "days_elapsed": 9,
-      "phase1_days": 9,
-      "phase2_days": 0,
-      "phase1_passed_at": "",
-      "phase2_start": "",
-      "failed_reason": "",
-      "resolved_at": "",
-      "size": 100000.0,
-      "balance": 99000.0,
-      "equity": 99000.0,
-      "net_pnl": -1000.0,
-      "net_pnl_pct": -1.0,
-      "today_pnl": -1000.0,
-      "peak_balance": 103000.0,
-      "trades": 10,
-      "wins": 3,
-      "losses": 7,
-      "win_rate": 30.0,
-      "open": 1,
-      "daily": {
-        "used": 1000.0,
-        "limit": 5000.0,
-        "remaining": 4000.0
-      },
-      "overall": {
-        "used": 1000.0,
-        "limit": 10000.0,
-        "remaining": 9000.0
-      },
-      "target": {
-        "usd": 108000.0,
-        "pct": 8.0,
-        "progress": 0.0
-      }
-    },
-    {
       "strategy": "smt_divergence",
       "status": "active",
       "phase": 1,
@@ -267,6 +226,47 @@
         "used": 1000.0,
         "limit": 5000.0,
         "remaining": 4000.0
+      },
+      "overall": {
+        "used": 2000.0,
+        "limit": 10000.0,
+        "remaining": 8000.0
+      },
+      "target": {
+        "usd": 108000.0,
+        "pct": 8.0,
+        "progress": 0.0
+      }
+    },
+    {
+      "strategy": "quantx",
+      "status": "active",
+      "phase": 1,
+      "phase_label": "Phase 1",
+      "phase_status": "phase1",
+      "days_elapsed": 9,
+      "phase1_days": 9,
+      "phase2_days": 0,
+      "phase1_passed_at": "",
+      "phase2_start": "",
+      "failed_reason": "",
+      "resolved_at": "",
+      "size": 100000.0,
+      "balance": 98000.0,
+      "equity": 98000.0,
+      "net_pnl": -2000.0,
+      "net_pnl_pct": -2.0,
+      "today_pnl": -2000.0,
+      "peak_balance": 103000.0,
+      "trades": 11,
+      "wins": 3,
+      "losses": 8,
+      "win_rate": 27.3,
+      "open": 0,
+      "daily": {
+        "used": 2000.0,
+        "limit": 5000.0,
+        "remaining": 3000.0
       },
       "overall": {
         "used": 2000.0,
@@ -357,21 +357,19 @@
       "risk": 1000.0,
       "be": false,
       "opened": "2026-06-13 03:56"
-    },
+    }
+  ],
+  "closed": [
     {
       "strategy": "quantx",
       "symbol": "BTCUSD",
       "side": "BUY",
-      "entry": 63322.58984375,
-      "stop": 63024.56488122012,
-      "target": 63918.639768809764,
-      "lots": 3.3554,
-      "risk": 1000.0,
-      "be": false,
-      "opened": "2026-06-19 16:24"
-    }
-  ],
-  "closed": [
+      "exit": 63024.56488122012,
+      "reason": "sl",
+      "pnl": -1000.0,
+      "r": -1.0,
+      "closed": "2026-06-19 16:45"
+    },
     {
       "strategy": "quantx",
       "symbol": "BTCUSD",
@@ -761,16 +759,6 @@
       "pnl": -1000.0,
       "r": -1.0,
       "closed": "2026-06-12 13:30"
-    },
-    {
-      "strategy": "ob",
-      "symbol": "ETHUSD",
-      "side": "BUY",
-      "exit": 1730.33435,
-      "reason": "tp",
-      "pnl": 2000.0,
-      "r": 2.0,
-      "closed": "2026-06-14 21:45"
     }
   ],
   "tape": [
@@ -796,11 +784,11 @@
     },
     {
       "sym": "BTCUSD",
-      "px": 63322.59
+      "px": 63103.99
     },
     {
       "sym": "ETHUSD",
-      "px": 1707.47
+      "px": 1703.59
     }
   ],
   "equity_curve": [
@@ -1079,6 +1067,10 @@
     {
       "t": "2026-06-19T16:24",
       "e": 696151.81
+    },
+    {
+      "t": "2026-06-19T18:17",
+      "e": 695353.51
     }
   ]
 }
