@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-19 20:15 UTC",
-  "updated_iso": "2026-06-19T20:15:56.259107+00:00",
+  "updated": "2026-06-19 21:44 UTC",
+  "updated_iso": "2026-06-19T21:44:56.501554+00:00",
   "model": "multi-phase",
   "challenge": {
     "day": 9,
@@ -23,14 +23,14 @@
     "phase2": 0,
     "size_total": 700000.0,
     "balance_total": 695144.37,
-    "equity_total": 695151.81,
+    "equity_total": 695353.51,
     "net_pnl": -4855.63,
     "net_pnl_pct": -0.69,
     "trades": 49,
     "wins": 16,
     "losses": 33,
     "win_rate": 32.7,
-    "open": 3
+    "open": 4
   },
   "books": [
     {
@@ -48,7 +48,7 @@
       "resolved_at": "",
       "size": 100000.0,
       "balance": 104000.0,
-      "equity": 104007.44,
+      "equity": 104209.14,
       "net_pnl": 4000.0,
       "net_pnl_pct": 4.0,
       "today_pnl": 0.0,
@@ -59,9 +59,9 @@
       "win_rate": 100.0,
       "open": 3,
       "daily": {
-        "used": 621.98,
+        "used": 420.28,
         "limit": 5000.0,
-        "remaining": 4378.02
+        "remaining": 4579.72
       },
       "overall": {
         "used": 0.0,
@@ -221,7 +221,7 @@
       "wins": 9,
       "losses": 20,
       "win_rate": 31.0,
-      "open": 0,
+      "open": 1,
       "daily": {
         "used": 1000.0,
         "limit": 5000.0,
@@ -357,6 +357,18 @@
       "risk": 1000.0,
       "be": false,
       "opened": "2026-06-13 03:56"
+    },
+    {
+      "strategy": "smt_divergence",
+      "symbol": "ETHUSD",
+      "side": "SELL",
+      "entry": 1700.8199462890625,
+      "stop": 1708.2054377929685,
+      "target": 1686.0489632812505,
+      "lots": 135.4006,
+      "risk": 1000.0,
+      "be": false,
+      "opened": "2026-06-19 21:44"
     }
   ],
   "closed": [
@@ -784,11 +796,11 @@
     },
     {
       "sym": "BTCUSD",
-      "px": 63012.94
+      "px": 63030.95
     },
     {
       "sym": "ETHUSD",
-      "px": 1701.52
+      "px": 1700.82
     }
   ],
   "equity_curve": [
@@ -1075,6 +1087,10 @@
     {
       "t": "2026-06-19T20:15",
       "e": 695151.81
+    },
+    {
+      "t": "2026-06-19T21:44",
+      "e": 695353.51
     }
   ]
 }
