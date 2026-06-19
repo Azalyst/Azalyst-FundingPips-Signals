@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-19 05:25 UTC",
-  "updated_iso": "2026-06-19T05:25:27.376864+00:00",
+  "updated": "2026-06-19 10:00 UTC",
+  "updated_iso": "2026-06-19T10:00:09.379576+00:00",
   "model": "multi-phase",
   "challenge": {
     "day": 9,
@@ -23,14 +23,14 @@
     "phase2": 0,
     "size_total": 700000.0,
     "balance_total": 698144.37,
-    "equity_total": 699356.55,
+    "equity_total": 699631.49,
     "net_pnl": -1855.63,
     "net_pnl_pct": -0.27,
     "trades": 46,
     "wins": 16,
     "losses": 30,
     "win_rate": 34.8,
-    "open": 4
+    "open": 5
   },
   "books": [
     {
@@ -48,7 +48,7 @@
       "resolved_at": "",
       "size": 100000.0,
       "balance": 104000.0,
-      "equity": 104393.76,
+      "equity": 104007.44,
       "net_pnl": 4000.0,
       "net_pnl_pct": 4.0,
       "today_pnl": 0.0,
@@ -59,9 +59,9 @@
       "win_rate": 100.0,
       "open": 3,
       "daily": {
-        "used": 235.66,
+        "used": 621.98,
         "limit": 5000.0,
-        "remaining": 4764.34
+        "remaining": 4378.02
       },
       "overall": {
         "used": 0.0,
@@ -180,7 +180,7 @@
       "wins": 3,
       "losses": 6,
       "win_rate": 33.3,
-      "open": 0,
+      "open": 1,
       "daily": {
         "used": 0.0,
         "limit": 5000.0,
@@ -253,7 +253,7 @@
       "resolved_at": "",
       "size": 100000.0,
       "balance": 99000.0,
-      "equity": 99818.42,
+      "equity": 100479.68,
       "net_pnl": -1000.0,
       "net_pnl_pct": -1.0,
       "today_pnl": 0.0,
@@ -269,9 +269,9 @@
         "remaining": 5000.0
       },
       "overall": {
-        "used": 181.58,
+        "used": 0.0,
         "limit": 10000.0,
-        "remaining": 9818.42
+        "remaining": 10000.0
       },
       "target": {
         "usd": 108000.0,
@@ -369,6 +369,18 @@
       "risk": 1000.0,
       "be": false,
       "opened": "2026-06-19 00:09"
+    },
+    {
+      "strategy": "quantx",
+      "symbol": "BTCUSD",
+      "side": "SELL",
+      "entry": 62317.12109375,
+      "stop": 62560.60893947319,
+      "target": 61830.14540230363,
+      "lots": 4.107,
+      "risk": 1000.0,
+      "be": false,
+      "opened": "2026-06-19 10:00"
     }
   ],
   "closed": [
@@ -796,11 +808,11 @@
     },
     {
       "sym": "BTCUSD",
-      "px": 62607.93
+      "px": 62317.12
     },
     {
       "sym": "ETHUSD",
-      "px": 1691.71
+      "px": 1687.55
     }
   ],
   "equity_curve": [
@@ -1067,6 +1079,10 @@
     {
       "t": "2026-06-19T05:25",
       "e": 699356.55
+    },
+    {
+      "t": "2026-06-19T10:00",
+      "e": 699631.49
     }
   ]
 }

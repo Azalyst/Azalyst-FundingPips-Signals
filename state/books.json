@@ -2,7 +2,7 @@
   "rsi": {
     "strategy": "rsi",
     "account_size": 100000.0,
-    "equity": 104393.76,
+    "equity": 104007.44,
     "balance": 104000.0,
     "today_start_equity": 104629.42,
     "current_day": "2026-06-18",
@@ -71,7 +71,7 @@
   "smt_divergence": {
     "strategy": "smt_divergence",
     "account_size": 100000.0,
-    "equity": 99818.42,
+    "equity": 100479.68,
     "balance": 99000.0,
     "today_start_equity": 99000.0,
     "current_day": "2026-06-18",
