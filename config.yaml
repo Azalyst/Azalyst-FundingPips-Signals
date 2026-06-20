@@ -10,12 +10,19 @@ brand:
   name: "Azalyst Montecarlo Quant"
   tagline: "Monte-Carlo-validated gold 2-step quant engine"
 
-# Trading mode:
-#   safe       = high pass-rate grind (~87% pass both, but ~7 weeks)
-#   aggressive = monster-style FAST pass (~6 trading days / 1-2 weeks when it hits,
-#                ~50% per attempt, auto-resets and keeps trying on bust). This is
-#                how the real >100%/month leaderboard traders passed in ~2 days.
+# mode is used only when no `fleet` is defined below (single-account back-compat).
 mode: aggressive
+
+# FLEET: run several aggression levels LIVE in parallel on gold, so you can watch
+# in real-time which passes the 2-step fastest. Each book is its own $100k
+# account, auto-resets on bust, and logs every attempt. Higher risk = faster but
+# lower pass-rate (more busts). All use scale-in (add a tranche on a +1R winner).
+#   MED  1.0%  -> ~80% pass, slower (~3 wk)      AGGRESSIVE 1.5% -> ~50% pass (~2 wk)
+#   MAX  2.25% -> fastest (days) but ~45% pass / high bust
+fleet:
+  - {name: MED,        phase1_risk_pct: 1.00, phase2_risk_pct: 0.70, scale_in: true}
+  - {name: AGGRESSIVE, phase1_risk_pct: 1.50, phase2_risk_pct: 1.00, scale_in: true}
+  - {name: MAX,        phase1_risk_pct: 2.25, phase2_risk_pct: 1.50, scale_in: true}
 
 account:
   size: 100000.0

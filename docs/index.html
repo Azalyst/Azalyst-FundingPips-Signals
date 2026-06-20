@@ -3,462 +3,175 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Azalyst Montecarlo Quant — Gold 2-Step</title>
+<title>Azalyst Montecarlo Quant — Fast-Pass Fleet</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{font-size:13px}
 body{background:#000;font-family:'Courier New',monospace;color:#ff6600;overflow-x:hidden;min-width:1100px}
+a{color:#ff9900;text-decoration:none}
 
-/* ── TOP BAR ── */
 .topbar{background:#ff6600;color:#000;display:flex;align-items:center;gap:12px;padding:5px 12px;font-weight:700;font-size:13px;position:sticky;top:0;z-index:100}
 .logo{background:#000;color:#ff6600;padding:3px 12px;font-size:15px;font-weight:700;letter-spacing:.5px;white-space:nowrap}
 .logo span{color:#fff;font-size:10px;font-weight:400;margin-left:5px}
 .tabs{display:flex;gap:1px;margin-left:8px}
-.tab{background:#cc5200;color:#000;padding:3px 16px;cursor:pointer;font-size:11px;font-weight:700;border:none;font-family:'Courier New',monospace;transition:background .1s}
+.tab{background:#cc5200;color:#000;padding:3px 16px;cursor:pointer;font-size:11px;font-weight:700;border:none;font-family:'Courier New',monospace}
 .tab:hover{background:#e06000}.tab.active{background:#fff;color:#000}
 .topbar-right{margin-left:auto;display:flex;gap:16px;font-size:11px;align-items:center;white-space:nowrap}
 .live-dot{color:#000;font-size:16px;animation:blink 1s step-end infinite}
 @keyframes blink{50%{opacity:0}}
 
-/* ── TICKER TAPE ── */
 .tape{background:#111;padding:3px 0;overflow:hidden;white-space:nowrap;border-bottom:1px solid #222;font-size:11px}
-.tape-inner{display:inline-block;will-change:transform;animation:scroll 38s linear infinite}
+.tape-inner{display:inline-block;animation:scroll 36s linear infinite}
 .tape-item{margin-right:34px}.tape-item b{color:#ff9900}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-/* ── BANNER ── */
-.regime-bar{background:linear-gradient(90deg,#160b00,#0a0a0a);border-bottom:1px solid #333;display:flex;align-items:center;gap:0;padding:0;flex-wrap:wrap}
-.regime-cell{padding:6px 14px;border-right:1px solid #1a1a1a;display:flex;flex-direction:column;gap:2px;min-width:120px}
-.regime-k{font-size:8px;color:#555;text-transform:uppercase;letter-spacing:.5px}
-.regime-v{font-size:14px;font-weight:700;color:#fff}
-.regime-tag{margin-left:auto;padding:6px 14px;font-size:9px;color:#ff9900}
+.explain{background:linear-gradient(90deg,#160b00,#0a0a0a);border-bottom:1px solid #333;padding:8px 14px;font-size:11px;color:#cfa06a;line-height:1.5}
+.explain b{color:#ff9900}.explain .x{color:#ff6b5b}
 
-/* ── TWO-STEP JOURNEY ── */
-.journey{display:flex;align-items:stretch;background:#070707;border-bottom:1px solid #333}
-.jstep{flex:1;padding:7px 14px;border-right:1px solid #161616;display:flex;flex-direction:column;gap:2px}
-.jstep .jn{font-size:8px;color:#555;text-transform:uppercase;letter-spacing:.5px}
-.jstep .jt{font-size:15px;font-weight:700;color:#fff}
-.jstep .js{font-size:9px;font-weight:700}
-.jstep.done{background:#06150c}
-.jstep.active{background:#160b00;box-shadow:inset 0 0 0 1px #ff6600}
-.jstep.failed{background:#160404;box-shadow:inset 0 0 0 1px #cc2200}
-.jstep.locked{opacity:.4}
-.jarrow{display:flex;align-items:center;padding:0 7px;color:#444;font-size:13px}
-.jgoal{margin-left:auto;padding:7px 16px;text-align:right;font-size:9px;color:#888;display:flex;flex-direction:column;justify-content:center;border-left:1px solid #1a1a1a}
-.jgoal b{color:#ff9900;font-size:15px}
-
-/* ── MAIN GRID ── */
-.main{display:grid;gap:2px;background:#333;padding:2px}
-.grid-3{grid-template-columns:1fr 1fr 1fr}
-.grid-2{grid-template-columns:1fr 1fr}
-.panel{background:#0a0a0a;padding:8px 10px}
-.panel-header{color:#ff6600;font-weight:700;font-size:11px;border-bottom:1px solid #333;padding-bottom:4px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center}
-.cmd{color:#ffaa00;font-size:10px}
-.span2{grid-column:span 2}.span3{grid-column:span 3}
-
-/* ── STAT BOXES ── */
-.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px}
-.stat-box{background:#050505;border:1px solid #1a1a1a;padding:6px 8px}
-.stat-label{color:#555;font-size:8px;text-transform:uppercase;letter-spacing:.4px}
-.stat-val{font-size:16px;font-weight:700;margin:2px 0;color:#fff}
-.stat-sub{font-size:8px;color:#444}
-
-/* ── BIG NUMBER ── */
-.bignum{font-size:30px;font-weight:700;color:#fff;line-height:1}
-.bigsub{font-size:11px;margin-top:4px}
-
-/* ── PROGRESS / BARS ── */
-.prog{height:14px;background:#111;border:1px solid #222;overflow:hidden;margin-top:8px}
-.prog>div{height:100%;background:linear-gradient(90deg,#cc5200,#ff9900)}
-.barwrap{background:#111;height:9px;overflow:hidden;margin:5px 0}
-.barwrap>div{height:9px}
-.bar-g{background:#00aa2a}.bar-a{background:#cc7700}.bar-r{background:#cc2200}
-
-/* ── ROWS / TABLES ── */
-.krow{display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid #0d0d0d;font-size:11px}
-.krow .k{color:#777}.krow .v{color:#fff;font-weight:700}
-table{width:100%;border-collapse:collapse;font-size:10px}
-th,td{text-align:right;padding:3px 6px;border-bottom:1px solid #0d0d0d}
-th{color:#555;font-weight:700;text-transform:uppercase;font-size:8px;letter-spacing:.3px}
-td:first-child,th:first-child{text-align:left}
-.tk{color:#ff9900;font-weight:700}
-
-/* ── EVENTS ── */
-.evt{padding:4px 0;border-bottom:1px solid #0d0d0d;font-size:10px;line-height:1.35;display:flex;gap:7px}
-.ecat{font-weight:700;min-width:54px}
-.e-opened{color:#00cc44}.e-closed{color:#00ccff}.e-phase_pass{color:#ffcc00}.e-bust{color:#ff3333}.e-info{color:#888}
-.ehl{color:#bbb}
-
-/* ── POSITION ── */
-.pos-tag{display:inline-block;font-size:10px;font-weight:700;padding:1px 8px;margin-left:6px}
-.pos-BUY{background:#002a0d;color:#00dd33;border:1px solid #00661a}
-.pos-SELL{background:#2a0500;color:#ff5533;border:1px solid #661500}
-
-/* ── PHASE BADGE ── */
+.page{display:none}.page.active{display:block}
+.fleet{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#333;padding:2px}
+.card{background:#0a0a0a;padding:12px 14px;border-top:3px solid #333}
+.card.lead{border-top-color:#00dd55}
+.card.failed{border-top-color:#aa0000}
+.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.cname{font-size:16px;font-weight:700;color:#ff9900;letter-spacing:.5px}
+.crisk{font-size:9px;color:#000;background:#ff6600;padding:2px 7px;font-weight:700}
+.card.MED .crisk{background:#00aa55}.card.AGGRESSIVE .crisk{background:#ff9900}.card.MAX .crisk{background:#ff3300}
 .pb{font-size:9px;font-weight:700;padding:2px 8px;letter-spacing:.5px}
 .pb-phase1{background:#2a1a00;color:#ff9900;border:1px solid #5a3b00}
 .pb-phase2{background:#001a2a;color:#00aaff;border:1px solid #0a4a7a}
 .pb-funded{background:#002a14;color:#00dd55;border:1px solid #0a6a38}
 .pb-failed{background:#2a0000;color:#ff3333;border:1px solid #6a1414}
-.achip{font-size:9px;font-weight:700;padding:2px 7px;border:1px solid}
+.cbal{display:flex;justify-content:space-between;align-items:baseline;margin:4px 0}
+.cbal .big{font-size:26px;font-weight:700;color:#fff}
+.cbal .pnl{font-size:12px;font-weight:700}
+.prog{height:12px;background:#111;border:1px solid #222;overflow:hidden;margin:6px 0 3px}
+.prog>div{height:100%;background:linear-gradient(90deg,#cc5200,#ff9900)}
+.cprogtxt{font-size:9px;color:#888;margin-bottom:8px}
+spark{display:block}
+canvas.spark{width:100%;height:54px;display:block;background:#050505;margin:6px 0}
+.krow{display:flex;justify-content:space-between;padding:2px 0;font-size:10px;border-bottom:1px solid #0d0d0d}
+.krow .k{color:#777}.krow .v{color:#fff;font-weight:700}
+.alog{display:flex;gap:3px;flex-wrap:wrap;margin-top:8px}
+.achip{font-size:8px;font-weight:700;padding:1px 5px;border:1px solid}
 .achip.pass{background:#06150c;color:#00dd55;border-color:#0a6a38}
 .achip.bust{background:#160404;color:#ff5533;border-color:#661500}
+.up{color:#00dd33}.dn{color:#cc2200}.mut{color:#555}.neu{color:#cc7700}
 
-/* ── STATUS BAR ── */
+.lead-banner{background:#06150c;border-bottom:1px solid #0a6a38;padding:7px 14px;font-size:12px;color:#00dd55}
+.lead-banner b{color:#fff}
+
 .statusbar{background:#0a0a0a;border-top:1px solid #222;display:flex;justify-content:space-between;align-items:center;padding:4px 10px;font-size:9px;color:#444;gap:8px}
-.statusbar a{color:#ff9900;text-decoration:none}
 .refresh-btn{background:#1a1a0a;color:#ff9900;border:1px solid #ff6600;padding:2px 10px;font-family:'Courier New',monospace;font-size:9px;font-weight:700;cursor:pointer}
-.refresh-btn:hover{background:#ff6600;color:#000}.refresh-btn:active{transform:scale(.97)}
-
-/* ── PAGES / SEMANTICS ── */
-.page{display:none}.page.active{display:block}
-.up{color:#00dd33}.dn{color:#cc2200}.neu{color:#cc7700}.mut{color:#555}
+.refresh-btn:hover{background:#ff6600;color:#000}
 .live-badge{color:#00ff41;font-size:10px}.stale-badge{color:#ff3333;font-size:10px}
-canvas{width:100%;height:240px;display:block;background:#050505}
-.method p{font-size:11px;color:#bbb;line-height:1.6;margin:6px 0}
+.method{padding:2px;background:#333}.method .panel{background:#0a0a0a;padding:12px 16px}
+.method p{font-size:11px;color:#bbb;line-height:1.6;margin:7px 0}
 .method b{color:#ff9900}.method .hl{color:#fff}.method .x{color:#ff6b5b}
+.ph{color:#ff6600;font-weight:700;font-size:11px;border-bottom:1px solid #333;padding-bottom:4px;margin-bottom:6px}
 </style>
 </head>
 <body>
-<div class="term">
-
-<!-- TOP BAR -->
 <div class="topbar">
   <div class="logo">AZALYST<span>MONTECARLO QUANT</span></div>
   <div class="tabs">
-    <button class="tab active" onclick="switchTab('DASH',this)">DASHBOARD</button>
-    <button class="tab" onclick="switchTab('TRADES',this)">TRADES</button>
-    <button class="tab" onclick="switchTab('METHOD',this)">METHOD</button>
+    <button class="tab active" onclick="sw('FLEET',this)">FLEET</button>
+    <button class="tab" onclick="sw('METHOD',this)">METHOD</button>
   </div>
   <div class="topbar-right">
     <span class="live-dot">●</span>
     <span id="clock">--:--:-- UTC</span>
     <span id="dataStatus" class="stale-badge">● OFFLINE</span>
-    <span id="lastRefresh" style="color:#000;font-size:9px">--</span>
   </div>
 </div>
-
-<!-- TICKER TAPE -->
 <div class="tape"><div class="tape-inner" id="tape">loading…</div></div>
-
-<!-- CHALLENGE BANNER -->
-<div class="regime-bar">
-  <div class="regime-cell"><span class="regime-k">Phase</span><span class="regime-v" id="b-phase">—</span></div>
-  <div class="regime-cell"><span class="regime-k">Target</span><span class="regime-v" id="b-target">—</span></div>
-  <div class="regime-cell"><span class="regime-k">Progress</span><span class="regime-v" id="b-prog">—</span></div>
-  <div class="regime-cell"><span class="regime-k">Trading Days</span><span class="regime-v" id="b-days">—</span></div>
-  <div class="regime-cell"><span class="regime-k">Risk / Trade</span><span class="regime-v" id="b-risk">—</span></div>
-  <div class="regime-cell"><span class="regime-k">Daily Stop</span><span class="regime-v" id="b-dstop">—</span></div>
-  <span class="regime-tag" id="b-start">—</span>
+<div class="explain">
+  <b>⚡ FAST-PASS FLEET</b> — three aggression levels racing the same gold strategy to pass the FundingPips 2-step (Phase 1 +8% → Phase 2 +5%). Higher risk = faster but more busts; each book auto-resets and keeps trying. <span class="x">Watch which passes first.</span> Honest: ~40% per attempt in a trending gold market, lower if it ranges — a trend-rider, not a sure thing.
 </div>
 
-<!-- TWO-STEP JOURNEY: must pass BOTH phases -->
-<div class="journey" id="journey"></div>
-
-<!-- ════ DASHBOARD PAGE ════ -->
-<div class="page active" id="DASH">
-  <div class="main grid-3">
-    <!-- CHALLENGE -->
-    <div class="panel">
-      <div class="panel-header"><span>CHALLENGE</span><span class="cmd" id="h-phase">P1</span></div>
-      <div class="bignum" id="d-balance">—</div>
-      <div class="bigsub" id="d-pnl"></div>
-      <div class="prog"><div id="d-progbar" style="width:0%"></div></div>
-      <div class="stat-sub" id="d-progtxt" style="margin-top:5px;font-size:10px;color:#777"></div>
-    </div>
-    <!-- ACCOUNT -->
-    <div class="panel">
-      <div class="panel-header"><span>ACCOUNT</span><span class="cmd">$100K</span></div>
-      <div class="stat-grid">
-        <div class="stat-box"><div class="stat-label">Equity</div><div class="stat-val" id="d-equity">—</div></div>
-        <div class="stat-box"><div class="stat-label">Balance</div><div class="stat-val" id="d-bal2">—</div></div>
-        <div class="stat-box"><div class="stat-label">Peak</div><div class="stat-val" id="d-peak">—</div></div>
-        <div class="stat-box"><div class="stat-label">Days Traded</div><div class="stat-val" id="d-days2">—</div></div>
-      </div>
-    </div>
-    <!-- DRAWDOWN LINES -->
-    <div class="panel">
-      <div class="panel-header"><span>DRAWDOWN ROOM</span><span class="cmd">5% / 10%</span></div>
-      <div class="krow"><span class="k">Daily → 5% line</span><span class="v" id="d-dailyroom">—</span></div>
-      <div class="barwrap" id="d-dailywrap"><div id="d-dailybar" style="width:100%"></div></div>
-      <div class="krow"><span class="k">Max → 10% static floor</span><span class="v" id="d-maxroom">—</span></div>
-      <div class="barwrap" id="d-maxwrap"><div id="d-maxbar" style="width:100%"></div></div>
-      <div class="stat-sub" style="margin-top:6px;color:#555">Soft-stop −3% daily · stand-down −7% total</div>
-    </div>
-  </div>
-
-  <!-- ATTEMPTS (aggressive multi-attempt track record) -->
-  <div class="main grid-1" id="attemptsRow" style="display:none">
-    <div class="panel">
-      <div class="panel-header"><span>FAST-PASS ATTEMPTS</span><span class="cmd" id="a-cmd">⚡ AGGRESSIVE 1.25%</span></div>
-      <div style="display:flex;gap:18px;align-items:flex-end;flex-wrap:wrap;margin-bottom:8px">
-        <div><div class="stat-label">Attempts</div><div class="bignum" id="a-total" style="font-size:24px">—</div></div>
-        <div><div class="stat-label">Passed / Busted</div><div class="bignum" id="a-pb" style="font-size:24px">—</div></div>
-        <div><div class="stat-label">Pass rate (live)</div><div class="bignum" id="a-rate" style="font-size:24px">—</div></div>
-        <div><div class="stat-label">Median pass</div><div class="bignum" id="a-days" style="font-size:24px">—</div></div>
-        <div style="margin-left:auto;text-align:right;font-size:9px;color:#777;max-width:340px;line-height:1.5">
-          Monster-style: ~1.25% risk + scale-in, auto-resets on bust.<br>
-          Modeled ~66% pass / ~7 trading days; <b style="color:#ff9900">honest ~40%/attempt (≤30% if gold is ranging)</b> — a trend-rider; budget 2–3 attempts.</div>
-      </div>
-      <div id="a-log" style="display:flex;gap:4px;flex-wrap:wrap"></div>
-    </div>
-  </div>
-
-  <div class="main grid-3">
-    <!-- EQUITY CURVE -->
-    <div class="panel span2">
-      <div class="panel-header"><span>EQUITY CURVE</span><span class="cmd" id="eq-cmd">CURRENT ATTEMPT · % OF START</span></div>
-      <canvas id="chart"></canvas>
-    </div>
-    <!-- POSITION -->
-    <div class="panel">
-      <div class="panel-header"><span>OPEN POSITION</span><span class="cmd" id="h-inst">XAUUSD</span></div>
-      <div id="d-pos"><div class="mut" style="padding:24px 0;text-align:center">— FLAT —</div></div>
-    </div>
-  </div>
-
-  <div class="main grid-2">
-    <!-- PERFORMANCE -->
-    <div class="panel">
-      <div class="panel-header"><span>PERFORMANCE</span><span class="cmd" id="h-strat">mom_breakout</span></div>
-      <div class="stat-grid">
-        <div class="stat-box"><div class="stat-label">Trades</div><div class="stat-val" id="d-ntrades">—</div></div>
-        <div class="stat-box"><div class="stat-label">Win Rate</div><div class="stat-val" id="d-wr">—</div></div>
-        <div class="stat-box"><div class="stat-label">Best Trade</div><div class="stat-val up" id="d-best">—</div></div>
-        <div class="stat-box"><div class="stat-label">Worst Trade</div><div class="stat-val dn" id="d-worst">—</div></div>
-      </div>
-    </div>
-    <!-- ACTIVITY LOG -->
-    <div class="panel">
-      <div class="panel-header"><span>ACTIVITY LOG</span><span class="cmd">LIVE</span></div>
-      <div id="d-events"><div class="mut">no events yet</div></div>
-    </div>
-  </div>
+<div class="page active" id="FLEET">
+  <div class="lead-banner" id="leadBanner" style="display:none"></div>
+  <div class="fleet" id="fleet"></div>
 </div>
 
-<!-- ════ TRADES PAGE ════ -->
-<div class="page" id="TRADES">
-  <div class="main grid-1">
-    <div class="panel">
-      <div class="panel-header"><span>CLOSED TRADES</span><span class="cmd" id="h-tradecount">0</span></div>
-      <table><thead><tr><th>Closed (UTC)</th><th>Side</th><th>Entry</th><th>Exit</th><th>Lots</th><th>R</th><th>P&amp;L</th><th>Reason</th></tr></thead>
-        <tbody id="t-body"><tr><td colspan="8" class="mut">no closed trades yet</td></tr></tbody></table>
-    </div>
-  </div>
-  <div class="main grid-1">
-    <div class="panel">
-      <div class="panel-header"><span>PHASE HISTORY</span><span class="cmd">P1 → P2 → FUNDED</span></div>
-      <table><thead><tr><th>Phase</th><th>Result</th><th>Balance</th><th>Date</th></tr></thead>
-        <tbody id="t-hist"><tr><td colspan="4" class="mut">no phase transitions yet</td></tr></tbody></table>
-    </div>
-  </div>
-</div>
-
-<!-- ════ METHOD PAGE ════ -->
 <div class="page method" id="METHOD">
-  <div class="main grid-1"><div class="panel">
-    <div class="panel-header"><span>HOW THIS WAS BUILT</span><span class="cmd">MONTE-CARLO</span></div>
-    <p><b>One strategy the data earned.</b> Reverse-engineered from <span class="hl">301,472 real prop-firm trades</span>: every trader-month was replayed through the exact FundingPips 2-step rules. The finding — traders fail on the <span class="hl">5% daily line</span>, not the target; <span class="hl">12.5%</span> of the biggest winners would have busted. The separator between passers and busters is <span class="hl">worst-trade size</span>, not style. So the whole edge is risk control.</p>
-    <p><b>Instrument:</b> Gold (XAU/USD H1) — the only instrument whose edge survived both halves of a training window <span class="hl">and</span> a held-out out-of-sample test (PF 1.46, +27.5%, 7.5% max DD). A single rule across 9 instruments loses; FX & indices over-fit.</p>
-    <p><b>Entry:</b> momentum breakout (within 0.05·ATR of the prior 20-bar high in an uptrend). <b>Exit:</b> 2·ATR stop → break-even at +1R → 3·ATR trail → 48-bar time stop.</p>
-    <p><b>Two modes.</b> <span class="hl">SAFE</span> = 0.75%/0.50% risk → ~87% pass both phases but a slow ~7-week grind. <span class="hl">AGGRESSIVE (live)</span> = how the real monster traders passed in ~2 days: ~1.25% risk + <b>scale-in</b> (add a tranche on a +1R winner, on house money), letting one runner carry the month. Modeled on the out-of-sample frontier at <span class="hl">~66% pass / ~7 trading days</span>, and it <b>auto-resets on a bust</b> and keeps trying — the multi-attempt model.</p>
-    <p><b>The honest numbers.</b> The 66% is a <span class="x">favourable gold-bull figure</span>. After a regime haircut the realistic per-attempt pass is <span class="hl">~40% in a normal trending year, ≤30% if gold is ranging</span> — this is a <b>trend-rider</b>, not an all-weather edge. So budget <span class="hl">2–3 attempts</span> (fee ~$529, refunded on first payout) and expect to lose one or two before one passes fast. The 5% daily $5k line is the only real governor; the 10% max is measured from the <i>initial</i> balance, so a banked cushion is never near it.</p>
-    <p style="color:#666">Method &amp; figures: <a href="https://github.com/Azalyst/Azalyst-Montecarlo-Quant/blob/main/research/MASTER_REPORT.md">MASTER_REPORT</a> · <a href="https://github.com/Azalyst/Azalyst-Montecarlo-Quant/blob/main/research/PLAYBOOK.md">PLAYBOOK</a> · <a href="https://github.com/Azalyst/Azalyst-Montecarlo-Quant/blob/main/research/FAST_PASS.md">FAST_PASS</a>. Paper-traded live on GitHub Actions vs the exact FundingPips rules — research deliverable, not financial advice.</p>
-  </div></div>
+  <div class="panel">
+    <div class="ph">HOW THIS WORKS</div>
+    <p><b>One edge, three throttles.</b> All books trade the same gold (XAU/USD H1) momentum-breakout edge — reverse-engineered from <span class="hl">301,472 real prop-firm trades</span> — with <b>scale-in</b> (add a tranche on a +1R winner, on house money, the monster mechanic). They differ only in per-trade risk: <span class="hl">MED 1.0% · AGGRESSIVE 1.5% · MAX 2.25%</span>.</p>
+    <p><b>Speed vs survival.</b> The real >100%/month traders hit +8% in ~2 days by sizing huge; the 10% max-drawdown never caught them (it's measured from <i>initial</i> balance), only the 5% daily $5k line does. Cranking risk here buys speed but costs pass-rate: MED is slowest/safest, MAX is fastest but busts most. Each book <b>auto-resets on a bust</b> and logs the attempt — the multi-attempt reality.</p>
+    <p><b>The honest numbers.</b> Out-of-sample, scale-in passes ~52–78% depending on risk; after a regime haircut, realistically <span class="hl">~40% per attempt in a trending year, ≤30% if gold ranges</span>. Budget 2–3 attempts (fee ~$529, refunded on first payout). When it works, both phases take <span class="hl">~2–5 weeks</span> of calendar time — faster books resolve in days, so you'll see real outcomes within ~2 weeks.</p>
+    <p style="color:#666">Method: <a href="https://github.com/Azalyst/Azalyst-Montecarlo-Quant/blob/main/research/FAST_PASS.md">FAST_PASS</a> · <a href="https://github.com/Azalyst/Azalyst-Montecarlo-Quant/blob/main/research/MASTER_REPORT.md">MASTER_REPORT</a> · <a href="https://github.com/Azalyst/Azalyst-Montecarlo-Quant/blob/main/research/PLAYBOOK.md">PLAYBOOK</a>. Paper-traded live on GitHub Actions vs the exact FundingPips rules — not financial advice.</p>
+  </div>
 </div>
 
-<!-- STATUS BAR -->
 <div class="statusbar">
-  <span id="s-left">AZALYST MONTECARLO QUANT · gold 2-step · paper-trading $100k vs live FundingPips rules</span>
-  <span style="display:flex;gap:10px;align-items:center">
-    <span id="s-updated">—</span>
-    <button class="refresh-btn" onclick="load()" title="Force refresh">⟳ REFRESH</button>
-  </span>
-</div>
+  <span>AZALYST MONTECARLO QUANT · fast-pass fleet · paper-trading $100k books vs live FundingPips rules</span>
+  <span style="display:flex;gap:10px;align-items:center"><span id="s-updated">—</span>
+  <button class="refresh-btn" onclick="load()">⟳ REFRESH</button></span>
 </div>
 
 <script>
 const $=id=>document.getElementById(id);
 const money=v=>'$'+Number(v).toLocaleString(undefined,{maximumFractionDigits:0});
-const sign=v=>(v>=0?'+':'')+Number(v).toFixed(2);
-const cls=v=>v>=0?'up':'dn';
-
-function switchTab(id,btn){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  $(id).classList.add('active'); if(btn)btn.classList.add('active');
-}
-
-function clock(){
-  const d=new Date();
-  $('clock').textContent=d.toISOString().slice(11,19)+' UTC';
-}
-setInterval(clock,1000); clock();
+const sgn=v=>(v>=0?'+':'')+Number(v).toFixed(1);
+function sw(id,b){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));$(id).classList.add('active');if(b)b.classList.add('active');}
+function clock(){$('clock').textContent=new Date().toISOString().slice(11,19)+' UTC';}
+setInterval(clock,1000);clock();
 
 async function load(){
-  let s;
-  try{ s=await (await fetch('status.json?_='+Date.now())).json(); }
-  catch(e){ $('dataStatus').className='stale-badge'; $('dataStatus').textContent='● OFFLINE'; return; }
-
-  const c=s.challenge, a=s.account, r=s.rules, st=s.stats||{}, sg=s.strategy||{};
-
-  // freshness: ticks run twice hourly -> stale if >90min old
+  let s; try{ s=await (await fetch('status.json?_='+Date.now())).json(); }
+  catch(e){ $('dataStatus').className='stale-badge';$('dataStatus').textContent='● OFFLINE';return; }
   const ageMin=s.updated_iso?(Date.now()-new Date(s.updated_iso))/60000:1e9;
-  const ds=$('dataStatus');
-  if(ageMin<90){ds.className='live-badge';ds.textContent='● LIVE';}
-  else{ds.className='stale-badge';ds.textContent='● STALE';}
-  $('lastRefresh').textContent=s.updated||'';
+  const ds=$('dataStatus'); if(ageMin<90){ds.className='live-badge';ds.textContent='● LIVE';}else{ds.className='stale-badge';ds.textContent='● STALE';}
   $('s-updated').textContent='updated '+(s.updated||'');
+  const books=s.books||[];
 
   // tape
-  const pos=s.position;
-  $('tape').innerHTML=([
-    ['GOLD', (pos?pos.entry:'—')], ['PHASE', c.phase_label], ['BAL', money(a.balance)],
-    ['EQUITY', money(a.equity)], ['P&L', sign(a.pnl_pct)+'%'], ['TARGET','+'+c.target_pct+'%'],
-    ['DAILY ROOM', money(r.daily_room)], ['MAX ROOM', money(r.max_room)],
-    ['WIN', (st.win_rate||0)+'%'], ['TRADES', st.n_trades||0],
-    ['POS', pos?(pos.side+' '+pos.entry):'FLAT']
-  ].map(([k,v])=>`<span class="tape-item"><b>${k}</b> ${v}</span>`).join('')).repeat(2);
+  $('tape').innerHTML=([['GOLD',s.gold_price||'—'],...books.map(b=>[b.name,money(b.balance)+' ('+sgn(b.pnl_pct)+'%)'])]
+    .map(([k,v])=>`<span class="tape-item"><b>${k}</b> ${v}</span>`).join('')).repeat(2);
 
-  // banner
-  $('b-phase').innerHTML=`<span class="pb pb-${c.phase}">${c.phase_label}</span>`;
-  $('b-target').textContent=c.target_pct?('+'+c.target_pct+'%'):'—';
-  $('b-prog').textContent=c.phase==='funded'?'FUNDED':c.progress_pct.toFixed(0)+'%';
-  $('b-days').textContent=c.trading_days+' / '+c.min_trading_days;
-  $('b-risk').textContent=sg.p1_risk_pct+'% / '+sg.p2_risk_pct+'%';
-  $('b-dstop').textContent=r.daily_loss_stop_pct+'%';
-  const agg=(s.mode==='aggressive');
-  const at=s.attempts||{};
-  $('b-start').innerHTML=agg
-    ? `<span style="color:#ff3300;font-weight:700">⚡ AGGRESSIVE</span> · ATTEMPT #${at.current_attempt||1}`
-    : 'SINCE '+(c.start||'');
+  // leaderboard: most passes, then closest to target
+  const ranked=[...books].sort((a,b)=>(b.attempts.passed-a.attempts.passed)||(b.progress_pct-a.progress_pct));
+  if(ranked.length){const L=ranked[0];
+    $('leadBanner').style.display='';
+    const tp=L.attempts.passed>0?`${L.name} leads — ${L.attempts.passed} pass(es)`:`${L.name} closest — ${L.progress_pct}% to target`;
+    $('leadBanner').innerHTML=`🏁 <b>${tp}</b> · totals: `+books.map(b=>`${b.name} ${b.attempts.passed}✓/${b.attempts.busted}✗`).join(' · ');
+  }
 
-  renderJourney(s);
-  renderAttempts(s);
-
-  // challenge panel
-  $('h-phase').textContent=c.phase==='phase1'?'P1':c.phase==='phase2'?'P2':c.phase.toUpperCase();
-  $('d-balance').textContent=money(a.balance);
-  const pe=$('d-pnl'); pe.textContent=sign(a.pnl_pct)+'%  ('+money(a.pnl)+')  · peak '+sign(a.peak_pct)+'%';
-  pe.className='bigsub '+cls(a.pnl);
-  $('d-progbar').style.width=Math.max(1,c.progress_pct)+'%';
-  $('d-progtxt').textContent=c.phase==='funded'?'Funded — no target, protect the floor':
-    (c.progress_pct.toFixed(0)+'% to +'+c.target_pct+'% · '+c.trading_days+'/'+c.min_trading_days+' min days');
-
-  // account
-  $('d-equity').textContent=money(a.equity);
-  $('d-bal2').textContent=money(a.balance);
-  const pk=$('d-peak'); pk.textContent=sign(a.peak_pct)+'%'; pk.className='stat-val '+cls(a.peak_pct);
-  $('d-days2').textContent=c.trading_days;
-
-  // drawdown bars
-  gauge('d-daily', r.daily_room, a.size*r.max_daily_loss_pct/100);
-  gauge('d-max', r.max_room, a.size*r.max_overall_loss_pct/100);
-
-  // position
-  $('h-inst').textContent=s.instrument;
-  $('d-pos').innerHTML=pos?(
-    `<div style="text-align:center;margin:4px 0 10px"><span class="pos-tag pos-${pos.side}">${pos.side} ${pos.lots} LOTS</span></div>`+
-    `<div class="krow"><span class="k">Entry</span><span class="v">${pos.entry}</span></div>`+
-    `<div class="krow"><span class="k">Stop</span><span class="v">${pos.stop}${pos.be?' · BE':''}</span></div>`+
-    `<div class="krow"><span class="k">Risk</span><span class="v">${money(pos.risk_usd)}</span></div>`+
-    `<div class="krow"><span class="k">Bars held</span><span class="v">${pos.bars}</span></div>`
-  ):'<div class="mut" style="padding:24px 0;text-align:center">— FLAT —</div>';
-
-  // performance
-  $('h-strat').textContent=sg.rule+' '+JSON.stringify(sg.params);
-  $('d-ntrades').textContent=st.n_trades||0;
-  $('d-wr').textContent=(st.win_rate||0)+'% ('+(st.wins||0)+'/'+(st.losses||0)+')';
-  $('d-best').textContent=(st.best_r>=0?'+':'')+(st.best_r||0)+'R';
-  $('d-worst').textContent=(st.worst_r||0)+'R';
-
-  // events
-  $('d-events').innerHTML=(s.events&&s.events.length)?s.events.map(e=>
-    `<div class="evt"><span class="ecat e-${e.kind}">${e.kind.toUpperCase()}</span><span class="ehl"><b>${e.title}</b> ${e.detail||''}</span></div>`
-  ).join(''):'<div class="mut">no events yet</div>';
-
-  // trades page
-  $('h-tradecount').textContent=(st.n_trades||0)+' TOTAL';
-  $('t-body').innerHTML=(s.trades&&s.trades.length)?s.trades.map(t=>
-    `<tr><td>${(t.closed||'').slice(0,16)}</td><td class="${t.side==='BUY'?'up':'dn'}">${t.side}</td>`+
-    `<td>${t.entry}</td><td>${t.exit}</td><td>${t.lots}</td>`+
-    `<td class="${t.r>=0?'up':'dn'}">${t.r>=0?'+':''}${t.r}R</td>`+
-    `<td class="${t.pnl>=0?'up':'dn'}">${money(t.pnl)}</td><td class="mut">${t.reason||''}</td></tr>`
-  ).join(''):'<tr><td colspan="8" class="mut">no closed trades yet</td></tr>';
-  $('t-hist').innerHTML=(s.phase_history&&s.phase_history.length)?s.phase_history.map(h=>
-    `<tr><td class="tk">${(h.phase||'').toUpperCase()}</td><td class="${(h.result||'').includes('PASS')?'up':'dn'}">${h.result}</td>`+
-    `<td>${money(h.balance)}</td><td>${(h.date||'').slice(0,16)}</td></tr>`
-  ).join(''):'<tr><td colspan="4" class="mut">no phase transitions yet</td></tr>';
-
-  drawChart(s.equity_curve||[], c.target_pct);
+  $('fleet').innerHTML=books.map(b=>card(b,ranked[0]&&b.name===ranked[0].name)).join('');
+  books.forEach(b=>spark(b));
 }
 
-function renderAttempts(s){
-  const row=$('attemptsRow');
-  if(s.mode!=='aggressive'){ if(row)row.style.display='none'; const e=$('eq-cmd'); if(e)e.textContent='% OF START'; return; }
-  if(row)row.style.display='';
-  const at=s.attempts||{};
-  $('a-cmd').textContent='⚡ AGGRESSIVE '+(s.strategy.p1_risk_pct).toFixed(2)+'% + SCALE-IN';
-  $('a-total').textContent=at.attempts||0;
-  $('a-pb').innerHTML='<span class="up">'+(at.passed||0)+'</span> / <span class="dn">'+(at.busted||0)+'</span>';
-  $('a-rate').textContent=at.attempts?((at.pass_rate||0)+'%'):'—';
-  $('a-days').textContent=(at.median_pass_days!=null)?(at.median_pass_days+'d'):'—';
-  const log=at.log||[];
-  $('a-log').innerHTML=log.length?log.map(a=>{
-    const pass=a.result==='PASSED';
-    return `<span class="achip ${pass?'pass':'bust'}">#${a.n} ${pass?('PASS'+(a.days!=null?' '+a.days+'d':'')):'BUST'}</span>`;
-  }).join(''):'<span class="mut" style="font-size:10px">no completed attempts yet — current attempt in progress</span>';
+function card(b,isLead){
+  const a=b.attempts||{}, p=b.position;
+  const cls=b.phase==='failed'?'failed':(isLead?'lead':'');
+  return `<div class="card ${b.name} ${cls}">
+    <div class="card-top"><span class="cname">${b.name}</span><span class="crisk">${b.risk_pct}% RISK</span></div>
+    <div style="margin-bottom:6px"><span class="pb pb-${b.phase}">${b.phase_label}</span>
+      ${p?`<span class="mut" style="font-size:9px;margin-left:6px">${p.side} ${p.lots} lots</span>`:'<span class="mut" style="font-size:9px;margin-left:6px">flat</span>'}</div>
+    <div class="cbal"><span class="big">${money(b.balance)}</span><span class="pnl ${b.pnl_pct>=0?'up':'dn'}">${sgn(b.pnl_pct)}%</span></div>
+    <div class="prog"><div style="width:${Math.max(2,b.progress_pct)}%"></div></div>
+    <div class="cprogtxt">${b.phase==='funded'?'FUNDED — passed both phases':b.progress_pct+'% to +'+b.target_pct+'%'} · attempt #${a.current_attempt} · ${b.days_running!=null?b.days_running+'d running':''}</div>
+    <canvas class="spark" id="sp-${b.name}"></canvas>
+    <div class="krow"><span class="k">Attempts</span><span class="v">${a.attempts} (${a.passed}✓ / ${a.busted}✗)</span></div>
+    <div class="krow"><span class="k">Pass rate / median</span><span class="v">${a.attempts?a.pass_rate+'%':'—'} ${a.median_pass_days!=null?'· '+a.median_pass_days+'d':''}</span></div>
+    <div class="krow"><span class="k">Trades · win</span><span class="v">${b.stats.n_trades||0} · ${b.stats.win_rate||0}%</span></div>
+    <div class="alog">${(b.attempt_log||[]).length?b.attempt_log.map(x=>{const pa=x.result==='PASSED';return `<span class="achip ${pa?'pass':'bust'}">#${x.n} ${pa?'PASS'+(x.days!=null?' '+x.days+'d':''):'BUST'}</span>`;}).join(''):'<span class="mut" style="font-size:9px">attempt #1 in progress…</span>'}</div>
+  </div>`;
 }
 
-function renderJourney(s){
-  const c=s.challenge, hist=s.phase_history||[];
-  const passed=new Set(hist.filter(h=>(h.result||'').includes('PASS')).map(h=>h.phase));
-  const failed=hist.find(h=>(h.result||'').includes('FAIL'));
-  const cur=c.phase;
-  const steps=[['phase1','PHASE 1','+8%'],['phase2','PHASE 2','+5%'],['funded','FUNDED','PAYOUT']];
-  let html='';
-  steps.forEach(([key,label,tgt],i)=>{
-    let cl='locked',badge='LOCKED',bc='mut';
-    if(passed.has(key)){cl='done';badge='✓ PASSED';bc='up';}
-    else if(failed&&failed.phase===key){cl='failed';badge='✗ FAILED';bc='dn';}
-    else if(cur===key){cl='active';bc='neu';
-      badge=key==='funded'?'● LIVE · PAYOUTS':('● ACTIVE · '+c.progress_pct.toFixed(0)+'% to '+tgt);}
-    html+=`<div class="jstep ${cl}"><span class="jn">${label}</span><span class="jt">${tgt}</span>`+
-          `<span class="js ${bc}">${badge}</span></div>`;
-    if(i<steps.length-1)html+='<div class="jarrow">▶</div>';
-  });
-  html+=`<div class="jgoal">PASS <b>BOTH</b> → FUNDED<br><span class="mut">~87% simulated full-pass</span></div>`;
-  $('journey').innerHTML=html;
+function spark(b){
+  const cv=$('sp-'+b.name); if(!cv)return; const dpr=window.devicePixelRatio||1;
+  const W=cv.clientWidth||300,H=54; cv.width=W*dpr;cv.height=H*dpr; const ctx=cv.getContext('2d');ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);
+  const c=b.curve||[]; if(c.length<2){ctx.fillStyle='#444';ctx.font='9px Courier New';ctx.fillText('warming up…',8,30);return;}
+  const ys=c.map(p=>p[1]); const lo=Math.min(-1,Math.min(...ys)),hi=Math.max(b.target_pct||8,Math.max(...ys));
+  const x=i=>4+i/(c.length-1)*(W-8),y=v=>H-4-(v-lo)/(hi-lo)*(H-8);
+  // target + zero lines
+  [[0,'#2a3340'],[b.target_pct||8,'#5a3b00']].forEach(([lv,col])=>{if(lv<lo||lv>hi)return;ctx.strokeStyle=col;ctx.beginPath();ctx.moveTo(4,y(lv));ctx.lineTo(W-4,y(lv));ctx.stroke();});
+  ctx.beginPath();ctx.moveTo(x(0),y(ys[0]));c.forEach((p,i)=>ctx.lineTo(x(i),y(p[1])));
+  ctx.strokeStyle=ys[ys.length-1]>=0?'#00dd55':'#ff5533';ctx.lineWidth=1.4;ctx.stroke();
 }
-
-function gauge(prefix,room,budget){
-  const f=budget>0?Math.max(0,Math.min(1,room/budget)):1;
-  $(prefix+'room').textContent=money(room)+' ('+(f*100).toFixed(0)+'%)';
-  const bar=$(prefix+'bar');
-  bar.style.width=(f*100)+'%';
-  bar.className=f>0.5?'bar-g':f>0.25?'bar-a':'bar-r';
-}
-
-function drawChart(curve,targetPct){
-  const cv=$('chart'), dpr=window.devicePixelRatio||1;
-  const W=cv.clientWidth||900, H=240; cv.width=W*dpr; cv.height=H*dpr;
-  const ctx=cv.getContext('2d'); ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,W,H);
-  if(!curve.length){ctx.fillStyle='#555';ctx.font='12px Courier New';ctx.fillText('awaiting first ticks…',14,28);return;}
-  const ys=curve.map(p=>p[1]);
-  const lo=Math.min(-2,Math.min(...ys)), hi=Math.max((targetPct>0?targetPct:0)+1,Math.max(...ys));
-  const padL=6,padR=44,padB=6, x=i=>padL+i/Math.max(1,curve.length-1)*(W-padL-padR), y=v=>H-padB-(v-lo)/(hi-lo)*(H-padB-10);
-  [[0,'#333','#666'],[targetPct,'#5a3b00','#ff9900'],[-10,'#5a1a1a','#cc2200']].forEach(([lv,ln,tx])=>{
-    if(lv===targetPct&&!(targetPct>0))return; if(lv<lo||lv>hi)return;
-    ctx.strokeStyle=ln;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(padL,y(lv));ctx.lineTo(W-padR,y(lv));ctx.stroke();
-    ctx.fillStyle=tx;ctx.font='10px Courier New';ctx.fillText((lv>0?'+':'')+lv+'%',W-padR+4,y(lv)+3);
-  });
-  ctx.beginPath();ctx.moveTo(x(0),y(ys[0]));curve.forEach((p,i)=>ctx.lineTo(x(i),y(p[1])));
-  ctx.strokeStyle='#ff9900';ctx.lineWidth=1.6;ctx.stroke();
-  ctx.lineTo(x(curve.length-1),y(lo));ctx.lineTo(x(0),y(lo));ctx.closePath();
-  ctx.fillStyle='rgba(255,140,0,.12)';ctx.fill();
-}
-
-load(); setInterval(load,60000); window.addEventListener('resize',load);
+load();setInterval(load,60000);window.addEventListener('resize',load);
 </script>
 </body>
 </html>

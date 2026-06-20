@@ -99,8 +99,11 @@ def build_status(state: dict, cfg: dict) -> dict:
 
 
 def write_status(state: dict, cfg: dict, path: str = "docs/status.json"):
+    return write_json(build_status(state, cfg), path)
+
+
+def write_json(status: dict, path: str = "docs/status.json"):
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    status = build_status(state, cfg)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(status, f, indent=2)
     return status
