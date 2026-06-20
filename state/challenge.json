@@ -5,18 +5,36 @@
   "initial_balance": 100000.0,
   "phase": "phase1",
   "phase_num": 1,
-  "phase_start_iso": null,
+  "phase_start_iso": "2026-06-19 03:00:00+00:00",
   "balance": 100000.0,
-  "equity": 100000.0,
+  "equity": 100488.78031023541,
   "peak_balance": 100000.0,
-  "last_bar_iso": null,
-  "day_key": null,
+  "last_bar_iso": "2026-06-19 03:00:00+00:00",
+  "day_key": "2026-06-18",
   "day_anchor": 100000.0,
-  "trades_today": 0,
-  "phase_trading_days": [],
-  "position": null,
+  "trades_today": 1,
+  "phase_trading_days": [
+    "2026-06-18"
+  ],
+  "position": {
+    "dir": -1,
+    "entry": 4194.0,
+    "stop": 4234.662439921992,
+    "init_risk": 40.66243992199184,
+    "size": 18.444540008883497,
+    "lots": 0.18444540008883498,
+    "risk_usd": 750.0,
+    "be": false,
+    "bars": 0,
+    "opened_iso": "2026-06-19 03:00:00+00:00"
+  },
   "trades": [],
-  "equity_curve": [],
+  "equity_curve": [
+    [
+      "2026-06-19 03:00:00+00:00",
+      0.489
+    ]
+  ],
   "stats": {
     "n_trades": 0,
     "wins": 0,
@@ -28,6 +46,13 @@
     "worst_r": 0.0
   },
   "phase_history": [],
-  "events": [],
-  "updated_iso": null
+  "events": [
+    {
+      "kind": "opened",
+      "title": "SELL XAUUSD @ 4194.00",
+      "detail": "stop 4234.66 | risk $750 (0.75%) | 0.184 lots",
+      "ts": "2026-06-20T10:32:56.420379+00:00"
+    }
+  ],
+  "updated_iso": "2026-06-20T10:32:56.420379+00:00"
 }
