@@ -181,6 +181,8 @@ def tick(state: dict, signals: pd.DataFrame, cfg: dict) -> tuple[dict, list[Even
         # ---- mark equity + bust checks (on equity) ----
         eq = _mark_equity(state, cl, cost_per_unit)
         state["equity"] = eq
+        # record one equity-curve point per processed bar (denser, back-filling chart)
+        state["equity_curve"].append([str(ts), round((eq / state["initial_balance"] - 1) * 100, 3)])
         static_floor = risk.static_floor()
         daily_floor = risk.daily_floor(state["day_anchor"])
         if eq <= static_floor + 1e-9 or eq <= daily_floor + 1e-9:
