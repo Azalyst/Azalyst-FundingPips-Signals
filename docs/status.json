@@ -3,17 +3,8 @@
   "tagline": "Monte-Carlo-validated gold 2-step quant engine",
   "mode": "fleet",
   "instrument": "XAUUSD",
-  "gold_price": 4167.5,
-  "market": {
-    "price": 4167.5,
-    "atr": 20.33,
-    "trend": "DOWN",
-    "rsi": 21.0,
-    "dist_hi_atr": 8.01,
-    "dist_lo_atr": -1.08,
-    "change_24h_pct": -3.78,
-    "bar_time": "2026-06-19 03:00:00+00:00"
-  },
+  "gold_price": null,
+  "market": {},
   "rules": {
     "p1": 8.0,
     "p2": 5.0,
@@ -21,186 +12,16 @@
     "max": 10.0
   },
   "fleet_stats": {
-    "books": 3,
+    "books": 0,
     "total_attempts": 0,
     "total_passed": 0,
     "total_busted": 0,
     "combined_pass_rate": 0,
-    "best_book": "MED",
+    "best_book": null,
     "best_passes": 0
   },
-  "events": [
-    {
-      "kind": "opened",
-      "title": "SELL XAUUSD @ 4194.00",
-      "detail": "stop 4234.66 | risk $2,250 (2.25%) | 0.553 lots",
-      "ts": "2026-06-20T13:12:32.669910+00:00",
-      "book": "MAX"
-    },
-    {
-      "kind": "opened",
-      "title": "SELL XAUUSD @ 4194.00",
-      "detail": "stop 4234.66 | risk $1,500 (1.50%) | 0.369 lots",
-      "ts": "2026-06-20T13:12:32.669030+00:00",
-      "book": "AGGRESSIVE"
-    },
-    {
-      "kind": "opened",
-      "title": "SELL XAUUSD @ 4194.00",
-      "detail": "stop 4234.66 | risk $1,000 (1.00%) | 0.246 lots",
-      "ts": "2026-06-20T13:12:32.667980+00:00",
-      "book": "MED"
-    }
-  ],
-  "updated_iso": "2026-06-20T13:12:32.669960+00:00",
+  "events": [],
+  "updated_iso": null,
   "updated": "2026-06-20 13:12 UTC",
-  "books": [
-    {
-      "name": "MED",
-      "risk_pct": 1.0,
-      "phase": "phase1",
-      "phase_label": "Phase 1",
-      "balance": 100000.0,
-      "equity": 100652.0,
-      "pnl_pct": 0.0,
-      "progress_pct": 0.0,
-      "target_pct": 8.0,
-      "days_running": 0.0,
-      "attempts": {
-        "attempts": 0,
-        "passed": 0,
-        "busted": 0,
-        "pass_rate": 0.0,
-        "median_pass_days": null,
-        "current_attempt": 1
-      },
-      "position": {
-        "side": "SELL",
-        "lots": 0.246
-      },
-      "attempt_log": [],
-      "stats": {
-        "n_trades": 0,
-        "wins": 0,
-        "losses": 0,
-        "win_rate": 0.0,
-        "gross_win": 0.0,
-        "gross_loss": 0.0,
-        "best_r": 0.0,
-        "worst_r": 0.0
-      },
-      "events": [
-        {
-          "kind": "opened",
-          "title": "SELL XAUUSD @ 4194.00",
-          "detail": "stop 4234.66 | risk $1,000 (1.00%) | 0.246 lots",
-          "ts": "2026-06-20T13:12:32.667980+00:00"
-        }
-      ],
-      "curve": [
-        [
-          "2026-06-19 03:00:00+00:00",
-          0.652
-        ]
-      ]
-    },
-    {
-      "name": "AGGRESSIVE",
-      "risk_pct": 1.5,
-      "phase": "phase1",
-      "phase_label": "Phase 1",
-      "balance": 100000.0,
-      "equity": 100978.0,
-      "pnl_pct": 0.0,
-      "progress_pct": 0.0,
-      "target_pct": 8.0,
-      "days_running": 0.0,
-      "attempts": {
-        "attempts": 0,
-        "passed": 0,
-        "busted": 0,
-        "pass_rate": 0.0,
-        "median_pass_days": null,
-        "current_attempt": 1
-      },
-      "position": {
-        "side": "SELL",
-        "lots": 0.369
-      },
-      "attempt_log": [],
-      "stats": {
-        "n_trades": 0,
-        "wins": 0,
-        "losses": 0,
-        "win_rate": 0.0,
-        "gross_win": 0.0,
-        "gross_loss": 0.0,
-        "best_r": 0.0,
-        "worst_r": 0.0
-      },
-      "events": [
-        {
-          "kind": "opened",
-          "title": "SELL XAUUSD @ 4194.00",
-          "detail": "stop 4234.66 | risk $1,500 (1.50%) | 0.369 lots",
-          "ts": "2026-06-20T13:12:32.669030+00:00"
-        }
-      ],
-      "curve": [
-        [
-          "2026-06-19 03:00:00+00:00",
-          0.978
-        ]
-      ]
-    },
-    {
-      "name": "MAX",
-      "risk_pct": 2.25,
-      "phase": "phase1",
-      "phase_label": "Phase 1",
-      "balance": 100000.0,
-      "equity": 101466.0,
-      "pnl_pct": 0.0,
-      "progress_pct": 0.0,
-      "target_pct": 8.0,
-      "days_running": 0.0,
-      "attempts": {
-        "attempts": 0,
-        "passed": 0,
-        "busted": 0,
-        "pass_rate": 0.0,
-        "median_pass_days": null,
-        "current_attempt": 1
-      },
-      "position": {
-        "side": "SELL",
-        "lots": 0.553
-      },
-      "attempt_log": [],
-      "stats": {
-        "n_trades": 0,
-        "wins": 0,
-        "losses": 0,
-        "win_rate": 0.0,
-        "gross_win": 0.0,
-        "gross_loss": 0.0,
-        "best_r": 0.0,
-        "worst_r": 0.0
-      },
-      "events": [
-        {
-          "kind": "opened",
-          "title": "SELL XAUUSD @ 4194.00",
-          "detail": "stop 4234.66 | risk $2,250 (2.25%) | 0.553 lots",
-          "ts": "2026-06-20T13:12:32.669910+00:00"
-        }
-      ],
-      "curve": [
-        [
-          "2026-06-19 03:00:00+00:00",
-          1.466
-        ]
-      ]
-    }
-  ]
+  "books": []
 }
