@@ -3,16 +3,16 @@
   "tagline": "Monte-Carlo-validated gold 2-step quant engine",
   "mode": "fleet",
   "instrument": "XAUUSD",
-  "gold_price": 4199.4,
+  "gold_price": 4222.7,
   "market": {
-    "price": 4199.4,
-    "atr": 22.3,
+    "price": 4222.7,
+    "atr": 36.54,
     "trend": "DOWN",
-    "rsi": 39.0,
-    "dist_hi_atr": 4.34,
-    "dist_lo_atr": 2.15,
-    "change_24h_pct": -2.94,
-    "bar_time": "2026-06-22 04:00:00+00:00"
+    "rsi": 49.0,
+    "dist_hi_atr": 0.44,
+    "dist_lo_atr": 1.95,
+    "change_24h_pct": -0.54,
+    "bar_time": "2026-06-22 10:00:00+00:00"
   },
   "rules": {
     "p1": 8.0,
@@ -30,6 +30,27 @@
     "best_passes": 0
   },
   "events": [
+    {
+      "kind": "closed",
+      "title": "Closed SELL @ 4220.61",
+      "detail": "-1,489 USD (-0.66R, stop)",
+      "ts": "2026-06-22T11:17:58.794642+00:00",
+      "book": "MAX"
+    },
+    {
+      "kind": "closed",
+      "title": "Closed SELL @ 4220.61",
+      "detail": "-993 USD (-0.66R, stop)",
+      "ts": "2026-06-22T11:17:58.792798+00:00",
+      "book": "AGGRESSIVE"
+    },
+    {
+      "kind": "closed",
+      "title": "Closed SELL @ 4220.61",
+      "detail": "-662 USD (-0.66R, stop)",
+      "ts": "2026-06-22T11:17:58.790917+00:00",
+      "book": "MED"
+    },
     {
       "kind": "opened",
       "title": "SELL XAUUSD @ 4194.00",
@@ -52,20 +73,20 @@
       "book": "MED"
     }
   ],
-  "updated_iso": "2026-06-22T05:23:58.776934+00:00",
-  "updated": "2026-06-22 05:23 UTC",
+  "updated_iso": "2026-06-22T11:17:58.794685+00:00",
+  "updated": "2026-06-22 11:17 UTC",
   "books": [
     {
       "name": "MED",
       "risk_pct": 1.0,
       "phase": "phase1",
       "phase_label": "Phase 1",
-      "balance": 100000.0,
-      "equity": 99867.0,
-      "pnl_pct": 0.0,
+      "balance": 99338.0,
+      "equity": 99338.0,
+      "pnl_pct": -0.66,
       "progress_pct": 0.0,
       "target_pct": 8.0,
-      "days_running": 3.0,
+      "days_running": 3.3,
       "attempts": {
         "attempts": 0,
         "passed": 0,
@@ -74,22 +95,25 @@
         "median_pass_days": null,
         "current_attempt": 1
       },
-      "position": {
-        "side": "SELL",
-        "lots": 0.246
-      },
+      "position": null,
       "attempt_log": [],
       "stats": {
-        "n_trades": 0,
+        "n_trades": 1,
         "wins": 0,
-        "losses": 0,
+        "losses": 1,
         "win_rate": 0.0,
         "gross_win": 0.0,
-        "gross_loss": 0.0,
+        "gross_loss": 661.9126112274262,
         "best_r": 0.0,
-        "worst_r": 0.0
+        "worst_r": -0.66
       },
       "events": [
+        {
+          "kind": "closed",
+          "title": "Closed SELL @ 4220.61",
+          "detail": "-662 USD (-0.66R, stop)",
+          "ts": "2026-06-22T11:17:58.790917+00:00"
+        },
         {
           "kind": "opened",
           "title": "SELL XAUUSD @ 4194.00",
@@ -117,6 +141,30 @@
         [
           "2026-06-22 04:00:00+00:00",
           -0.133
+        ],
+        [
+          "2026-06-22 05:00:00+00:00",
+          -0.425
+        ],
+        [
+          "2026-06-22 06:00:00+00:00",
+          -0.662
+        ],
+        [
+          "2026-06-22 07:00:00+00:00",
+          -0.662
+        ],
+        [
+          "2026-06-22 08:00:00+00:00",
+          -0.662
+        ],
+        [
+          "2026-06-22 09:00:00+00:00",
+          -0.662
+        ],
+        [
+          "2026-06-22 10:00:00+00:00",
+          -0.662
         ]
       ]
     },
@@ -125,12 +173,12 @@
       "risk_pct": 1.5,
       "phase": "phase1",
       "phase_label": "Phase 1",
-      "balance": 100000.0,
-      "equity": 99801.0,
-      "pnl_pct": 0.0,
+      "balance": 99007.0,
+      "equity": 99007.0,
+      "pnl_pct": -0.99,
       "progress_pct": 0.0,
       "target_pct": 8.0,
-      "days_running": 3.0,
+      "days_running": 3.3,
       "attempts": {
         "attempts": 0,
         "passed": 0,
@@ -139,22 +187,25 @@
         "median_pass_days": null,
         "current_attempt": 1
       },
-      "position": {
-        "side": "SELL",
-        "lots": 0.369
-      },
+      "position": null,
       "attempt_log": [],
       "stats": {
-        "n_trades": 0,
+        "n_trades": 1,
         "wins": 0,
-        "losses": 0,
+        "losses": 1,
         "win_rate": 0.0,
         "gross_win": 0.0,
-        "gross_loss": 0.0,
+        "gross_loss": 992.8689168411393,
         "best_r": 0.0,
-        "worst_r": 0.0
+        "worst_r": -0.66
       },
       "events": [
+        {
+          "kind": "closed",
+          "title": "Closed SELL @ 4220.61",
+          "detail": "-993 USD (-0.66R, stop)",
+          "ts": "2026-06-22T11:17:58.792798+00:00"
+        },
         {
           "kind": "opened",
           "title": "SELL XAUUSD @ 4194.00",
@@ -182,6 +233,30 @@
         [
           "2026-06-22 04:00:00+00:00",
           -0.199
+        ],
+        [
+          "2026-06-22 05:00:00+00:00",
+          -0.638
+        ],
+        [
+          "2026-06-22 06:00:00+00:00",
+          -0.993
+        ],
+        [
+          "2026-06-22 07:00:00+00:00",
+          -0.993
+        ],
+        [
+          "2026-06-22 08:00:00+00:00",
+          -0.993
+        ],
+        [
+          "2026-06-22 09:00:00+00:00",
+          -0.993
+        ],
+        [
+          "2026-06-22 10:00:00+00:00",
+          -0.993
         ]
       ]
     },
@@ -190,12 +265,12 @@
       "risk_pct": 2.25,
       "phase": "phase1",
       "phase_label": "Phase 1",
-      "balance": 100000.0,
-      "equity": 99701.0,
-      "pnl_pct": 0.0,
+      "balance": 98511.0,
+      "equity": 98511.0,
+      "pnl_pct": -1.49,
       "progress_pct": 0.0,
       "target_pct": 8.0,
-      "days_running": 3.0,
+      "days_running": 3.3,
       "attempts": {
         "attempts": 0,
         "passed": 0,
@@ -204,22 +279,25 @@
         "median_pass_days": null,
         "current_attempt": 1
       },
-      "position": {
-        "side": "SELL",
-        "lots": 0.553
-      },
+      "position": null,
       "attempt_log": [],
       "stats": {
-        "n_trades": 0,
+        "n_trades": 1,
         "wins": 0,
-        "losses": 0,
+        "losses": 1,
         "win_rate": 0.0,
         "gross_win": 0.0,
-        "gross_loss": 0.0,
+        "gross_loss": 1489.3033752617087,
         "best_r": 0.0,
-        "worst_r": 0.0
+        "worst_r": -0.66
       },
       "events": [
+        {
+          "kind": "closed",
+          "title": "Closed SELL @ 4220.61",
+          "detail": "-1,489 USD (-0.66R, stop)",
+          "ts": "2026-06-22T11:17:58.794642+00:00"
+        },
         {
           "kind": "opened",
           "title": "SELL XAUUSD @ 4194.00",
@@ -247,6 +325,30 @@
         [
           "2026-06-22 04:00:00+00:00",
           -0.299
+        ],
+        [
+          "2026-06-22 05:00:00+00:00",
+          -0.957
+        ],
+        [
+          "2026-06-22 06:00:00+00:00",
+          -1.489
+        ],
+        [
+          "2026-06-22 07:00:00+00:00",
+          -1.489
+        ],
+        [
+          "2026-06-22 08:00:00+00:00",
+          -1.489
+        ],
+        [
+          "2026-06-22 09:00:00+00:00",
+          -1.489
+        ],
+        [
+          "2026-06-22 10:00:00+00:00",
+          -1.489
         ]
       ]
     }
