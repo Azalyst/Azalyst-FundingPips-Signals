@@ -3,16 +3,16 @@
   "tagline": "Monte-Carlo-validated gold 2-step quant engine",
   "mode": "fleet",
   "instrument": "XAUUSD",
-  "gold_price": 4209.1,
+  "gold_price": 4172.9,
   "market": {
-    "price": 4209.1,
-    "atr": 41.23,
+    "price": 4172.9,
+    "atr": 40.93,
     "trend": "DOWN",
-    "rsi": 46.0,
-    "dist_hi_atr": 0.7,
-    "dist_lo_atr": 1.4,
-    "change_24h_pct": 0.0,
-    "bar_time": "2026-06-22 18:00:00+00:00"
+    "rsi": 35.0,
+    "dist_hi_atr": 1.59,
+    "dist_lo_atr": 0.4,
+    "change_24h_pct": -0.5,
+    "bar_time": "2026-06-22 20:00:00+00:00"
   },
   "rules": {
     "p1": 8.0,
@@ -73,8 +73,8 @@
       "book": "MED"
     }
   ],
-  "updated_iso": "2026-06-22T19:56:26.744691+00:00",
-  "updated": "2026-06-22 19:56 UTC",
+  "updated_iso": "2026-06-22T22:11:03.560777+00:00",
+  "updated": "2026-06-22 22:11 UTC",
   "books": [
     {
       "name": "MED",
@@ -86,7 +86,7 @@
       "pnl_pct": -0.66,
       "progress_pct": 0.0,
       "target_pct": 8.0,
-      "days_running": 3.6,
+      "days_running": 3.7,
       "attempts": {
         "attempts": 0,
         "passed": 0,
@@ -197,6 +197,14 @@
         [
           "2026-06-22 18:00:00+00:00",
           -0.662
+        ],
+        [
+          "2026-06-22 19:00:00+00:00",
+          -0.662
+        ],
+        [
+          "2026-06-22 20:00:00+00:00",
+          -0.662
         ]
       ]
     },
@@ -210,7 +218,7 @@
       "pnl_pct": -0.99,
       "progress_pct": 0.0,
       "target_pct": 8.0,
-      "days_running": 3.6,
+      "days_running": 3.7,
       "attempts": {
         "attempts": 0,
         "passed": 0,
@@ -321,6 +329,14 @@
         [
           "2026-06-22 18:00:00+00:00",
           -0.993
+        ],
+        [
+          "2026-06-22 19:00:00+00:00",
+          -0.993
+        ],
+        [
+          "2026-06-22 20:00:00+00:00",
+          -0.993
         ]
       ]
     },
@@ -334,7 +350,7 @@
       "pnl_pct": -1.49,
       "progress_pct": 0.0,
       "target_pct": 8.0,
-      "days_running": 3.6,
+      "days_running": 3.7,
       "attempts": {
         "attempts": 0,
         "passed": 0,
@@ -444,6 +460,14 @@
         ],
         [
           "2026-06-22 18:00:00+00:00",
+          -1.489
+        ],
+        [
+          "2026-06-22 19:00:00+00:00",
+          -1.489
+        ],
+        [
+          "2026-06-22 20:00:00+00:00",
           -1.489
         ]
       ]
