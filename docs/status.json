@@ -3,16 +3,16 @@
   "tagline": "Monte-Carlo-validated gold 2-step quant engine",
   "mode": "fleet",
   "instrument": "XAUUSD",
-  "gold_price": 4001.3,
+  "gold_price": 3999.2,
   "market": {
-    "price": 4001.3,
-    "atr": 17.85,
+    "price": 3999.2,
+    "atr": 20.6,
     "trend": "DOWN",
-    "rsi": 27.0,
-    "dist_hi_atr": 4.99,
-    "dist_lo_atr": -0.6,
-    "change_24h_pct": -1.85,
-    "bar_time": "2026-06-30 00:00:00+00:00"
+    "rsi": 33.0,
+    "dist_hi_atr": 4.08,
+    "dist_lo_atr": 2.13,
+    "change_24h_pct": -1.88,
+    "bar_time": "2026-06-30 04:00:00+00:00"
   },
   "rules": {
     "p1": 8.0,
@@ -30,6 +30,27 @@
     "best_passes": 0
   },
   "events": [
+    {
+      "kind": "opened",
+      "title": "SELL XAUUSD @ 4000.50",
+      "detail": "stop 4040.20 | risk $2,300 (2.25%) | 0.579 lots",
+      "ts": "2026-06-30T05:52:14.608302+00:00",
+      "book": "MAX"
+    },
+    {
+      "kind": "opened",
+      "title": "SELL XAUUSD @ 4000.50",
+      "detail": "stop 4040.20 | risk $1,522 (1.50%) | 0.383 lots",
+      "ts": "2026-06-30T05:52:14.606908+00:00",
+      "book": "AGGRESSIVE"
+    },
+    {
+      "kind": "opened",
+      "title": "SELL XAUUSD @ 4000.50",
+      "detail": "stop 4040.20 | risk $1,010 (1.00%) | 0.254 lots",
+      "ts": "2026-06-30T05:52:14.605476+00:00",
+      "book": "MED"
+    },
     {
       "kind": "opened",
       "title": "Scaled IN XAUUSD @ 4078.30",
@@ -106,31 +127,10 @@
       "detail": "-993 USD (-0.66R, stop)",
       "ts": "2026-06-22T11:17:58.792798+00:00",
       "book": "AGGRESSIVE"
-    },
-    {
-      "kind": "closed",
-      "title": "Closed SELL @ 4220.61",
-      "detail": "-662 USD (-0.66R, stop)",
-      "ts": "2026-06-22T11:17:58.790917+00:00",
-      "book": "MED"
-    },
-    {
-      "kind": "opened",
-      "title": "SELL XAUUSD @ 4194.00",
-      "detail": "stop 4234.66 | risk $2,250 (2.25%) | 0.553 lots",
-      "ts": "2026-06-20T13:13:23.602605+00:00",
-      "book": "MAX"
-    },
-    {
-      "kind": "opened",
-      "title": "SELL XAUUSD @ 4194.00",
-      "detail": "stop 4234.66 | risk $1,500 (1.50%) | 0.369 lots",
-      "ts": "2026-06-20T13:13:23.601594+00:00",
-      "book": "AGGRESSIVE"
     }
   ],
-  "updated_iso": "2026-06-30T01:33:15.845186+00:00",
-  "updated": "2026-06-30 01:33 UTC",
+  "updated_iso": "2026-06-30T05:52:14.608345+00:00",
+  "updated": "2026-06-30 05:52 UTC",
   "books": [
     {
       "name": "MED",
@@ -138,11 +138,11 @@
       "phase": "phase1",
       "phase_label": "Phase 1",
       "balance": 100995.0,
-      "equity": 100995.0,
+      "equity": 101028.0,
       "pnl_pct": 1.0,
       "progress_pct": 12.0,
       "target_pct": 8.0,
-      "days_running": 10.9,
+      "days_running": 11.0,
       "attempts": {
         "attempts": 0,
         "passed": 0,
@@ -151,7 +151,10 @@
         "median_pass_days": null,
         "current_attempt": 1
       },
-      "position": null,
+      "position": {
+        "side": "SELL",
+        "lots": 0.254
+      },
       "attempt_log": [],
       "stats": {
         "n_trades": 2,
@@ -164,6 +167,12 @@
         "worst_r": -0.66
       },
       "events": [
+        {
+          "kind": "opened",
+          "title": "SELL XAUUSD @ 4000.50",
+          "detail": "stop 4040.20 | risk $1,010 (1.00%) | 0.254 lots",
+          "ts": "2026-06-30T05:52:14.605476+00:00"
+        },
         {
           "kind": "opened",
           "title": "Scaled IN XAUUSD @ 4078.30",
@@ -181,23 +190,9 @@
           "title": "SELL XAUUSD @ 4164.90",
           "detail": "stop 4235.14 | risk $993 (1.00%) | 0.141 lots",
           "ts": "2026-06-23T08:05:38.990615+00:00"
-        },
-        {
-          "kind": "closed",
-          "title": "Closed SELL @ 4220.61",
-          "detail": "-662 USD (-0.66R, stop)",
-          "ts": "2026-06-22T11:17:58.790917+00:00"
         }
       ],
       "curve": [
-        [
-          "2026-06-24 03:00:00+00:00",
-          0.518
-        ],
-        [
-          "2026-06-24 04:00:00+00:00",
-          0.498
-        ],
         [
           "2026-06-24 05:00:00+00:00",
           0.144
@@ -549,6 +544,14 @@
         [
           "2026-06-30 00:00:00+00:00",
           0.995
+        ],
+        [
+          "2026-06-30 01:00:00+00:00",
+          0.995
+        ],
+        [
+          "2026-06-30 04:00:00+00:00",
+          1.028
         ]
       ]
     },
@@ -558,11 +561,11 @@
       "phase": "phase1",
       "phase_label": "Phase 1",
       "balance": 101484.0,
-      "equity": 101484.0,
+      "equity": 101534.0,
       "pnl_pct": 1.48,
       "progress_pct": 19.0,
       "target_pct": 8.0,
-      "days_running": 10.9,
+      "days_running": 11.0,
       "attempts": {
         "attempts": 0,
         "passed": 0,
@@ -571,7 +574,10 @@
         "median_pass_days": null,
         "current_attempt": 1
       },
-      "position": null,
+      "position": {
+        "side": "SELL",
+        "lots": 0.383
+      },
       "attempt_log": [],
       "stats": {
         "n_trades": 2,
@@ -584,6 +590,12 @@
         "worst_r": -0.66
       },
       "events": [
+        {
+          "kind": "opened",
+          "title": "SELL XAUUSD @ 4000.50",
+          "detail": "stop 4040.20 | risk $1,522 (1.50%) | 0.383 lots",
+          "ts": "2026-06-30T05:52:14.606908+00:00"
+        },
         {
           "kind": "opened",
           "title": "Scaled IN XAUUSD @ 4078.30",
@@ -601,23 +613,9 @@
           "title": "SELL XAUUSD @ 4164.90",
           "detail": "stop 4235.14 | risk $1,485 (1.50%) | 0.211 lots",
           "ts": "2026-06-23T08:05:38.992259+00:00"
-        },
-        {
-          "kind": "closed",
-          "title": "Closed SELL @ 4220.61",
-          "detail": "-993 USD (-0.66R, stop)",
-          "ts": "2026-06-22T11:17:58.792798+00:00"
         }
       ],
       "curve": [
-        [
-          "2026-06-24 03:00:00+00:00",
-          0.771
-        ],
-        [
-          "2026-06-24 04:00:00+00:00",
-          0.741
-        ],
         [
           "2026-06-24 05:00:00+00:00",
           0.212
@@ -969,6 +967,14 @@
         [
           "2026-06-30 00:00:00+00:00",
           1.484
+        ],
+        [
+          "2026-06-30 01:00:00+00:00",
+          1.484
+        ],
+        [
+          "2026-06-30 04:00:00+00:00",
+          1.534
         ]
       ]
     },
@@ -978,11 +984,11 @@
       "phase": "phase1",
       "phase_label": "Phase 1",
       "balance": 102208.0,
-      "equity": 102208.0,
+      "equity": 102283.0,
       "pnl_pct": 2.21,
       "progress_pct": 28.0,
       "target_pct": 8.0,
-      "days_running": 10.9,
+      "days_running": 11.0,
       "attempts": {
         "attempts": 0,
         "passed": 0,
@@ -991,7 +997,10 @@
         "median_pass_days": null,
         "current_attempt": 1
       },
-      "position": null,
+      "position": {
+        "side": "SELL",
+        "lots": 0.579
+      },
       "attempt_log": [],
       "stats": {
         "n_trades": 2,
@@ -1004,6 +1013,12 @@
         "worst_r": -0.66
       },
       "events": [
+        {
+          "kind": "opened",
+          "title": "SELL XAUUSD @ 4000.50",
+          "detail": "stop 4040.20 | risk $2,300 (2.25%) | 0.579 lots",
+          "ts": "2026-06-30T05:52:14.608302+00:00"
+        },
         {
           "kind": "opened",
           "title": "Scaled IN XAUUSD @ 4078.30",
@@ -1021,23 +1036,9 @@
           "title": "SELL XAUUSD @ 4164.90",
           "detail": "stop 4235.14 | risk $2,216 (2.25%) | 0.316 lots",
           "ts": "2026-06-23T08:05:38.993880+00:00"
-        },
-        {
-          "kind": "closed",
-          "title": "Closed SELL @ 4220.61",
-          "detail": "-1,489 USD (-0.66R, stop)",
-          "ts": "2026-06-22T11:17:58.794642+00:00"
         }
       ],
       "curve": [
-        [
-          "2026-06-24 03:00:00+00:00",
-          1.143
-        ],
-        [
-          "2026-06-24 04:00:00+00:00",
-          1.098
-        ],
         [
           "2026-06-24 05:00:00+00:00",
           0.309
@@ -1389,6 +1390,14 @@
         [
           "2026-06-30 00:00:00+00:00",
           2.208
+        ],
+        [
+          "2026-06-30 01:00:00+00:00",
+          2.208
+        ],
+        [
+          "2026-06-30 04:00:00+00:00",
+          2.283
         ]
       ]
     }
