@@ -3,16 +3,16 @@
   "tagline": "Monte-Carlo-validated gold 2-step quant engine",
   "mode": "fleet",
   "instrument": "XAUUSD",
-  "gold_price": 4047.4,
+  "gold_price": 3992.9,
   "market": {
-    "price": 4047.4,
-    "atr": 20.21,
-    "trend": "UP",
-    "rsi": 51.0,
-    "dist_hi_atr": 4.14,
-    "dist_lo_atr": 3.68,
-    "change_24h_pct": 0.52,
-    "bar_time": "2026-07-01 23:00:00+00:00"
+    "price": 3992.9,
+    "atr": 17.5,
+    "trend": "DOWN",
+    "rsi": 37.0,
+    "dist_hi_atr": 4.87,
+    "dist_lo_atr": 0.57,
+    "change_24h_pct": 0.43,
+    "bar_time": "2026-07-01 03:00:00+00:00"
   },
   "rules": {
     "p1": 8.0,
@@ -129,8 +129,8 @@
       "book": "AGGRESSIVE"
     }
   ],
-  "updated_iso": "2026-07-02T00:17:58.667112+00:00",
-  "updated": "2026-07-02 00:17 UTC",
+  "updated_iso": "2026-07-02T04:44:10.222070+00:00",
+  "updated": "2026-07-02 04:44 UTC",
   "books": [
     {
       "name": "MED",
